@@ -13,6 +13,8 @@ services:
     ports:
       - "30120:30120/tcp"
       - "30120:30120/udp"
+    depends_on:
+      - mariadb
 
   mariadb:
     image: mariadb
@@ -26,3 +28,5 @@ services:
     restart: always
     ports:
       - 8080:8080
+    depends_on:
+      - fivem
