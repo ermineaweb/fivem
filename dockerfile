@@ -22,6 +22,7 @@ RUN git clone https://github.com/ESX-Org/es_extended ./resources/[essential]/es_
 RUN git clone https://github.com/ESX-Org/esx_menu_default ./resources/[esx]/[ui]/esx_menu_default
 RUN git clone https://github.com/ESX-Org/esx_menu_dialog ./resources/[esx]/[ui]/esx_menu_dialog
 RUN git clone https://github.com/ESX-Org/esx_menu_list ./resources/[esx]/[ui]/esx_menu_list
+RUN git clone https://github.com/esx-framework/skinchanger ./resources/[esx]/[ui]/skinchanger
 RUN git clone https://github.com/esx-framework/async ./resources/async
 RUN git clone https://github.com/esx-framework/cron ./resources/cron
 
