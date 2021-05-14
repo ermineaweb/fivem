@@ -18,13 +18,12 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # mkdir -p modules/__user__ && \
 # touch modules/__user__/modules.json
 # esx framework
-RUN git clone https://github.com/esx-framework/es_extended ./resources/es_extended
-RUN git clone https://github.com/esx-framework/esx_menu_default ./resources/esx_menu_default
-RUN git clone https://github.com/esx-framework/esx_menu_dialog ./resources/esx_menu_dialog
-RUN git clone https://github.com/esx-framework/esx_menu_list ./resources/esx_menu_list
+RUN git clone https://github.com/ESX-Org/es_extended ./resources/[essential]/es_extended
+RUN git clone https://github.com/ESX-Org/esx_menu_default ./resources/[esx]/[ui]/esx_menu_default
+RUN git clone https://github.com/ESX-Org/esx_menu_dialog ./resources/[esx]/[ui]/esx_menu_dialog
+RUN git clone https://github.com/ESX-Org/esx_menu_list ./resources/[esx]/[ui]/esx_menu_list
 RUN git clone https://github.com/esx-framework/async ./resources/async
 RUN git clone https://github.com/esx-framework/cron ./resources/cron
-RUN git clone https://github.com/esx-framework/skinchanger ./resources/skinchanger
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
