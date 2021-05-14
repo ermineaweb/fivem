@@ -11,12 +11,14 @@ RUN git clone https://github.com/citizenfx/cfx-server-data && \
 mv cfx-server-data/resources ./
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/[local]/mysql-async
+# # esx framework
+# RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/[local]/es_extended && \
+# cd ./resources/[local]/es_extended && \
+# npm install --production && \
+# mkdir -p modules/__user__ && \
+# touch modules/__user__/modules.json
 # esx framework
-RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/[local]/es_extended && \
-cd ./resources/[local]/es_extended && \
-npm install --production && \
-mkdir -p modules/__user__ && \
-touch modules/__user__/modules.json
+RUN git clone https://github.com/esx-framework/es_extended ./resources/[local]/es_extended
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
