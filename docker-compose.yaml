@@ -21,6 +21,8 @@ services:
     environment:
       - MARIADB_ROOT_PASSWORD=fivemRoRo124578
       - MARIADB_DATABASE=es_extended
+    volumes:
+      - /srv/db:/var/lib/mysql
 
   adminer:
     image: adminer
