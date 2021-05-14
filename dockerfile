@@ -1,6 +1,4 @@
-FROM node:14-slim
-
-RUN apt upgrade && apt install curl
+FROM node:14
 
 WORKDIR /srv
 
