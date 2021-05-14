@@ -2,7 +2,7 @@ FROM node:14-slim
 
 WORKDIR /srv
 
-RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
+RUN wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 # esx framework
