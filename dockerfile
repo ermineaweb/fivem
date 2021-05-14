@@ -9,7 +9,7 @@ RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 # esx framework
-RUN git clone --branch develop https://github.com/esx-framework/es_extended/tree/develop ./resources/es_extended \
+RUN git clone --branch develop https://github.com/esx-framework ./resources/es_extended \
 && cd ./resources/es_extended \
 && npm install --production
 
