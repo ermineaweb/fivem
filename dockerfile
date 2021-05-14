@@ -1,10 +1,10 @@
 FROM node:14-slim
 
-RUN apt-get update && apt-get install -y ca-certificates wget
+RUN apt-get update && apt-get install -y ca-certificates curl
 
 WORKDIR /srv
 
-RUN wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
+RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 # esx framework
