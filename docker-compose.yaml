@@ -16,16 +16,14 @@ services:
     depends_on:
       - mariadb
 
-  mariadb:
+  db:
     image: mariadb
-    restart: always
     environment:
       - MARIADB_ROOT_PASSWORD=fivemRoRo124578
       - MARIADB_DATABASE=es_extended
 
   adminer:
     image: adminer
-    restart: always
     ports:
       - 8080:8080
     depends_on:
