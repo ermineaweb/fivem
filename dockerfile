@@ -1,6 +1,6 @@
 FROM node:14-slim
 
-RUN apt-get update && apt-get install -y ca-certificates curl
+RUN apt-get update && apt-get install -y ca-certificates curl git
 
 WORKDIR /srv
 
