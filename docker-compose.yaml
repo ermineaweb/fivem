@@ -18,7 +18,8 @@ services:
     image: mariadb
     restart: always
     environment:
-      - MARIADB_ROOT_PASSWORD=roro
+      - MARIADB_ROOT_PASSWORD=fivemRoRo124578
+      - MARIADB_DATABASE=es_extended
 
   adminer:
     image: adminer
