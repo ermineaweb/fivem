@@ -18,12 +18,12 @@ services:
 
   db:
     image: mariadb
-    user: 3000:3000
+    # user: 3000:3000
     environment:
       - MARIADB_ROOT_PASSWORD=rom
       - MARIADB_DATABASE=es_extended
-    volumes:
-      - ./db:/var/lib/mysql
+    # volumes:
+    #   - ./db:/var/lib/mysql
 
   adminer:
     image: adminer
