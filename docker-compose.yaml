@@ -18,8 +18,9 @@ services:
 
   db:
     image: mariadb
+    user: 3000:3000
     environment:
-      - MARIADB_ROOT_PASSWORD=fivemRoRo124578
+      - MARIADB_ROOT_PASSWORD=rom
       - MARIADB_DATABASE=es_extended
     volumes:
       - ./db:/var/lib/mysql
