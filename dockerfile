@@ -1,6 +1,6 @@
 FROM node:14-slim
 
-RUN apt-get update && apt-get install -qq ca-certificates curl git
+RUN apt-get update && apt-get install -qq ca-certificates curl git unzip
 
 WORKDIR /srv
 
@@ -17,8 +17,8 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # Cops_FiveM
 RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
 mv Cops_FiveM/police ./resources/police
-RUN git clone https://github.com/GHMatti/ghmattimysql && \
-mv ghmattimysql/packages/ghmattimysql ./resources/ghmattimysql
+RUN curl https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip -O -J -L && \
+unzip ghmattimysql.zip ./resources/ghmattimysql
 
 # # esx framework
 # RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/[local]/es_extended && \
