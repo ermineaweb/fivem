@@ -16,8 +16,9 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 
 # Cops_FiveM
 RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
-mv Cops_FiveM/police ./resources
-RUN git clone https://github.com/GHMatti/ghmattimysql/tree/1.3.2/packages/ghmattimysql ./resources/ghmattimysql
+mv Cops_FiveM/police ./resources/
+RUN git clone https://github.com/GHMatti/ghmattimysql ./resources/ghmattimysql && \
+mv ghmattimysql/packages/ghmattimysql ./resources/
 
 # # esx framework
 # RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/[local]/es_extended && \
