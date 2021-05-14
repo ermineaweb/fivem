@@ -18,7 +18,11 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/[local]
 # mkdir -p modules/__user__ && \
 # touch modules/__user__/modules.json
 # esx framework
-RUN git clone https://github.com/esx-framework/es_extended ./resources/[local]/es_extended
+RUN git clone https://github.com/esx-framework/es_extended ./resources/[esx]/es_extended
+RUN git clone https://github.com/esx-framework/esx_menu_default ./resources/[esx]/[ui]/esx_menu_default
+RUN git clone https://github.com/esx-framework/esx_menu_dialog ./resources/[esx]/[ui]/esx_menu_dialog
+RUN git clone https://github.com/esx-framework/esx_menu_list ./resources/[esx]/[ui]/esx_menu_list
+RUN git clone https://github.com/esx-framework/async ./resources/[esx]/async
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
