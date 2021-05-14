@@ -15,11 +15,11 @@ mv cfx-server-data/resources ./
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 
 # Cops_FiveM
-RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
-mv Cops_FiveM/police ./resources/police
-RUN curl https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip -O -J -L && \
-unzip ghmattimysql.zip -d ./resources && \
-rm ./resources/ghmattimysql/config.json
+# RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
+# mv Cops_FiveM/police ./resources/police
+# RUN curl https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip -O -J -L && \
+# unzip ghmattimysql.zip -d ./resources && \
+# rm ./resources/ghmattimysql/config.json
 
 # # esx framework
 # RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/[local]/es_extended && \
@@ -27,6 +27,9 @@ rm ./resources/ghmattimysql/config.json
 # npm install --production && \
 # mkdir -p modules/__user__ && \
 # touch modules/__user__/modules.json
+
+# fsn
+RUN git clone https://github.com/Diabl0h/FiveM-FSN-Framework ./resources
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
