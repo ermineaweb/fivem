@@ -9,9 +9,11 @@ RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 # esx framework
-RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/es_extended \
-&& cd ./resources/es_extended \
-&& npm install --production
+RUN git clone --branch develop https://github.com/esx-framework/es_extended ./resources/es_extended &&\
+cd ./resources/es_extended &&\
+npm install --production &&\
+mkdir -p modules/__user__ &&\
+touch modules/__user__/modules.json
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
