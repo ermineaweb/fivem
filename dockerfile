@@ -23,6 +23,7 @@ RUN git clone https://github.com/esx-framework/esx_menu_default ./resources/[esx
 RUN git clone https://github.com/esx-framework/esx_menu_dialog ./resources/[esx]/[ui]/esx_menu_dialog
 RUN git clone https://github.com/esx-framework/esx_menu_list ./resources/[esx]/[ui]/esx_menu_list
 RUN git clone https://github.com/esx-framework/async ./resources/async
+RUN git clone https://github.com/esx-framework/cron ./resources/cron
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
