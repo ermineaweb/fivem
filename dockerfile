@@ -7,12 +7,13 @@ WORKDIR /srv
 # fivem server
 RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
 
+WORKDIR /srv/resources
+
 # fivem common resources
-RUN git clone https://github.com/citizenfx/cfx-server-data && \
-mv cfx-server-data/resources ./
+COPY cfx-server-data/resources ./
 
 # mysql async 
-RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
+RUN git clone https://github.com/brouznouf/fivem-mysql-async mysql-async
 
 # Cops_FiveM
 # RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
@@ -40,7 +41,7 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # mv vRP/* ./resources
 
 # test js chat 
-COPY logo ./resources/logo
+COPY logo ./
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
