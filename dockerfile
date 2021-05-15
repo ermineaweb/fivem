@@ -40,9 +40,6 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async mysql-async
 # RUN git clone https://github.com/ImagicTheCat/vRP && \
 # mv vRP/* ./resources
 
-# test js chat 
-COPY logo ./logo
-
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
 EXPOSE 30120/tcp 30120/udp
