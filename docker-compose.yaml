@@ -23,6 +23,7 @@ services:
       - MARIADB_ROOT_PASSWORD=rom
       - MARIADB_DATABASE=es_extended
     volumes:
+      - mariadb:/var/lib/mysql
 
   adminer:
     image: adminer
@@ -30,3 +31,6 @@ services:
       - 8080:8080
     depends_on:
       - fivem
+
+volumes:
+  mariadb:
