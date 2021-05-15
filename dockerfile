@@ -11,7 +11,7 @@ COPY ./resources ./resources
 
 # fivem common resources
 RUN git clone https://github.com/citizenfx/cfx-server-data && \
-mv cfx-server-data/resources ./resources
+mv cfx-server-data/resources/ ./resources/
 
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
