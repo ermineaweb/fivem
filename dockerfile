@@ -46,6 +46,10 @@ RUN git clone https://github.com/extendedmode/esx_addonaccount ./resources/esx_a
 RUN git clone https://github.com/extendedmode/esx_addoninventory ./resources/esx_addoninventory
 RUN git clone https://github.com/extendedmode/esx_society ./resources/esx_society
 
+RUN git clone https://github.com/esx-framework/esx_service ./resources/esx_service
+RUN git clone https://github.com/esx-framework/instance ./resources/instance
+RUN git clone https://github.com/esx-framework/esx_datastore ./resources/esx_datastore
+
 RUN git clone https://github.com/esx-framework/cron ./resources/cron
 
 
