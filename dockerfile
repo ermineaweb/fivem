@@ -27,6 +27,7 @@ RUN git clone https://github.com/extendedmode/esx_menu_dialog ./resources/esx_me
 RUN git clone https://github.com/extendedmode/esx_menu_list ./resources/esx_menu_list
 
 RUN git clone https://github.com/extendedmode/skinchanger ./resources/skinchanger
+RUN git clone https://github.com/extendedmode/esx_skin ./resources/esx_skin
 
 RUN git clone https://github.com/extendedmode/esx_ambulancejob ./resources/esx_ambulancejob
 RUN git clone https://github.com/extendedmode/esx_vehicleshop ./resources/esx_vehicleshop
@@ -40,6 +41,7 @@ RUN git clone https://github.com/extendedmode/esx_weaponshop ./resources/esx_wea
 RUN git clone https://github.com/extendedmode/esx_drugs ./resources/esx_drugs
 
 RUN git clone https://github.com/extendedmode/esx_phone ./resources/esx_phone
+RUN git clone https://github.com/extendedmode/esx_license ./resources/esx_license
 
 RUN git clone https://github.com/extendedmode/esx_billing ./resources/esx_billing
 RUN git clone https://github.com/extendedmode/esx_addonaccount ./resources/esx_addonaccount
