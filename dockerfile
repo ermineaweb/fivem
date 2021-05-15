@@ -21,6 +21,9 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 
 # extendedmode
 RUN git clone https://github.com/extendedmode/extendedmode ./resources/extendedmode
+RUN git clone https://github.com/ESX-Org/esx_menu_default ./resources/esx_menu_default
+RUN git clone https://github.com/ESX-Org/esx_menu_dialog ./resources/esx_menu_dialog
+RUN git clone https://github.com/ESX-Org/esx_menu_list ./resources/esx_menu_list
 
 # Cops_FiveM
 # RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
