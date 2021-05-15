@@ -21,9 +21,28 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 
 # extendedmode
 RUN git clone https://github.com/extendedmode/extendedmode ./resources/extendedmode
-RUN git clone https://github.com/ESX-Org/esx_menu_default ./resources/esx_menu_default
-RUN git clone https://github.com/ESX-Org/esx_menu_dialog ./resources/esx_menu_dialog
-RUN git clone https://github.com/ESX-Org/esx_menu_list ./resources/esx_menu_list
+
+RUN git clone https://github.com/extendedmode/esx_menu_default ./resources/esx_menu_default
+RUN git clone https://github.com/extendedmode/esx_menu_dialog ./resources/esx_menu_dialog
+RUN git clone https://github.com/extendedmode/esx_menu_list ./resources/esx_menu_list
+
+RUN git clone https://github.com/extendedmode/skinchanger ./resources/skinchanger
+
+RUN git clone https://github.com/extendedmode/esx_ambulancejob ./resources/esx_ambulancejob
+RUN git clone https://github.com/extendedmode/esx_vehicleshop ./resources/esx_vehicleshop
+RUN git clone https://github.com/extendedmode/esx_taxijob ./resources/esx_taxijob
+RUN git clone https://github.com/extendedmode/esx_policejob ./resources/esx_policejob
+RUN git clone https://github.com/extendedmode/esx_jobs ./resources/esx_jobs
+
+RUN git clone https://github.com/extendedmode/esx_shops ./resources/esx_shops
+RUN git clone https://github.com/extendedmode/esx_holdup ./resources/esx_holdup
+RUN git clone https://github.com/extendedmode/esx_weaponshop ./resources/esx_weaponshop
+RUN git clone https://github.com/extendedmode/esx_drugs ./resources/esx_drugs
+
+RUN git clone https://github.com/extendedmode/esx_phone ./resources/esx_phone
+
+RUN git clone https://github.com/extendedmode/esx_billing ./resources/esx_billing
+
 
 # Cops_FiveM
 # RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
