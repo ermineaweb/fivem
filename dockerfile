@@ -10,8 +10,8 @@ RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895
 COPY ./resources ./resources
 
 # fivem common resources
-# RUN git clone https://github.com/citizenfx/cfx-server-data && \
-# mv -v cfx-server-data/resources/* ./resources/
+RUN git clone https://github.com/citizenfx/cfx-server-data && \
+mv -v cfx-server-data/resources/* ./resources/
 
 # RUN git clone https://github.com/ItsikNox/FiveM-Arkadia_ && \
 # mv -v FiveM-Arkadia_/resources/* ./resources/
