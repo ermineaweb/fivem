@@ -29,8 +29,12 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # touch modules/__user__/modules.json
 
 # fsn
-RUN git clone https://github.com/Diabl0h/FiveM-FSN-Framework && \
-mv FiveM-FSN-Framework/* ./resources
+# RUN git clone https://github.com/Diabl0h/FiveM-FSN-Framework && \
+# mv FiveM-FSN-Framework/* ./resources
+
+# vRP
+RUN git clone https://github.com/ImagicTheCat/vRP && \
+mv vRP/* ./resources
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
