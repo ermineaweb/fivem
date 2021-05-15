@@ -22,6 +22,8 @@ services:
     environment:
       - MARIADB_ROOT_PASSWORD=rom
       - MARIADB_DATABASE=es_extended
+    volumes:
+    - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
     # volumes:
     #   - ./db:/var/lib/mysql
 
