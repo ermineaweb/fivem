@@ -33,6 +33,7 @@ function isPlayerAuthorized(source)
     -- end
 
     -- return false
+    return true
 end
 
 function fetchZone()

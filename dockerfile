@@ -36,7 +36,7 @@ COPY ./resources ./resources
 # RUN git clone https://github.com/esx-framework/esx_holdup ./resources/esx_holdup
 # RUN git clone https://github.com/esx-framework/esx_weaponshop ./resources/esx_weaponshop
 # RUN git clone https://github.com/esx-framework/esx_drugs ./resources/esx_drugs
-# RUN git clone https://github.com/esx-framework/esx_phone ./resources/esx_phone
+# RUN git clone https://github.com/esx-frameYYwork/esx_phone ./resources/esx_phone
 # RUN git clone https://github.com/esx-framework/esx_license ./resources/esx_license
 # RUN git clone https://github.com/esx-framework/esx_billing ./resources/esx_billing
 # RUN git clone https://github.com/esx-framework/esx_addonaccount ./resources/esx_addonaccount
