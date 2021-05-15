@@ -19,6 +19,9 @@ COPY ./resources ./resources
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 
+# extendedmode
+RUN git clone https://github.com/extendedmode/extendedmode ./resources/extendedmode
+
 # Cops_FiveM
 # RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
 # mv Cops_FiveM/police ./resources/police
