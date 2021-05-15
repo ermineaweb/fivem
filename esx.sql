@@ -1,3 +1,5 @@
+USE `es_extended`;
+
 CREATE TABLE `users` (
 	`identifier` VARCHAR(60) NOT NULL,
 	`license` VARCHAR(60) DEFAULT NULL,

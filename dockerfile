@@ -42,6 +42,11 @@ RUN git clone https://github.com/extendedmode/esx_drugs ./resources/esx_drugs
 RUN git clone https://github.com/extendedmode/esx_phone ./resources/esx_phone
 
 RUN git clone https://github.com/extendedmode/esx_billing ./resources/esx_billing
+RUN git clone https://github.com/extendedmode/esx_addonaccount ./resources/esx_addonaccount
+RUN git clone https://github.com/extendedmode/esx_addoninventory ./resources/esx_addoninventory
+RUN git clone https://github.com/extendedmode/esx_society ./resources/esx_society
+
+RUN git clone https://github.com/esx-framework/cron ./resources/cron
 
 
 # Cops_FiveM
