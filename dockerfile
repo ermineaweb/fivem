@@ -10,7 +10,7 @@ RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895
 WORKDIR /srv/resources
 
 # fivem common resources
-COPY cfx-server-data/resources ./
+COPY resources/ ./
 
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async mysql-async
