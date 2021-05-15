@@ -25,7 +25,6 @@ mv -v cfx-server-data/resources/* ./resources/
 # RUN git clone https://github.com/esx-framework/esx_menu_default ./resources/esx_menu_default
 # RUN git clone https://github.com/esx-framework/esx_menu_dialog ./resources/esx_menu_dialog
 # RUN git clone https://github.com/esx-framework/esx_menu_list ./resources/esx_menu_list
-
 # RUN git clone https://github.com/esx-framework/skinchanger ./resources/skinchanger
 # RUN git clone https://github.com/esx-framework/esx_skin ./resources/esx_skin
 
