@@ -13,8 +13,8 @@ COPY ./resources ./resources
 # RUN git clone https://github.com/citizenfx/cfx-server-data && \
 # mv -v cfx-server-data/resources/* ./resources/
 
-RUN git clone https://github.com/ItsikNox/FiveM-Arkadia_ && \
-mv -v FiveM-Arkadia_/resources/* ./resources/
+# RUN git clone https://github.com/ItsikNox/FiveM-Arkadia_ && \
+# mv -v FiveM-Arkadia_/resources/* ./resources/
 
 # mysql async 
 RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
