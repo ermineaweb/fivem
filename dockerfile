@@ -10,10 +10,11 @@ RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895
 WORKDIR /srv/resources
 
 # fivem common resources
-COPY resources/ ./
+RUN git clone https://github.com/citizenfx/cfx-server-data && \
+mv cfx-server-data/resources ./
 
 # mysql async 
-RUN git clone https://github.com/brouznouf/fivem-mysql-async mysql-async
+RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-async
 
 # Cops_FiveM
 # RUN git clone https://github.com/FiveM-Scripts/Cops_FiveM && \
@@ -39,6 +40,8 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async mysql-async
 # vRP
 # RUN git clone https://github.com/ImagicTheCat/vRP && \
 # mv vRP/* ./resources
+
+COPY resources/ ./
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
