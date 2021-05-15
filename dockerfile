@@ -40,7 +40,7 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # mv vRP/* ./resources
 
 # test js chat 
-COPY jsChat ./resources/jsChat
+COPY logo ./resources/logo
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/30120'
 
