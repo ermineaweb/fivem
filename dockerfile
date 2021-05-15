@@ -7,7 +7,7 @@ WORKDIR /srv
 # fivem server
 RUN curl https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3895-c7462577b1ab6f3e5a10acdd80a47be28366ccee/fx.tar.xz | tar xJ -C ./
 
-# COPY ./resources ./resources
+COPY ./resources ./resources
 
 # fivem common resources
 # RUN git clone https://github.com/citizenfx/cfx-server-data && \
