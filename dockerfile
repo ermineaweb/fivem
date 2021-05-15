@@ -19,7 +19,8 @@ RUN git clone https://github.com/brouznouf/fivem-mysql-async ./resources/mysql-a
 # mv Cops_FiveM/police ./resources/police
 
 # ghmattimysql
-RUN curl https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip -O -J -L && \
+# RUN curl https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip -O -J -L && \
+RUN curl https://github.com/GHMatti/FiveM-MySQL/releases/download/0.6.1/GHMattiMySQL.zip -O -J -L && \
 unzip ghmattimysql.zip -d ./resources && \
 rm ./resources/ghmattimysql/config.json
 
