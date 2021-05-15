@@ -1,4 +1,5 @@
 USE `es_extended`;
+
 CREATE TABLE `billing` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`identifier` varchar(40) NOT NULL,

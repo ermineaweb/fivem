@@ -27,30 +27,24 @@ COPY ./resources ./resources
 # RUN git clone https://github.com/esx-framework/esx_menu_list ./resources/esx_menu_list
 # RUN git clone https://github.com/esx-framework/skinchanger ./resources/skinchanger
 # RUN git clone https://github.com/esx-framework/esx_skin ./resources/esx_skin
-
 # RUN git clone https://github.com/esx-framework/esx_ambulancejob ./resources/esx_ambulancejob
 # RUN git clone https://github.com/esx-framework/esx_vehicleshop ./resources/esx_vehicleshop
 # RUN git clone https://github.com/esx-framework/esx_taxijob ./resources/esx_taxijob
 # RUN git clone https://github.com/esx-framework/esx_policejob ./resources/esx_policejob
 # RUN git clone https://github.com/esx-framework/esx_jobs ./resources/esx_jobs
-
 # RUN git clone https://github.com/esx-framework/esx_shops ./resources/esx_shops
 # RUN git clone https://github.com/esx-framework/esx_holdup ./resources/esx_holdup
 # RUN git clone https://github.com/esx-framework/esx_weaponshop ./resources/esx_weaponshop
 # RUN git clone https://github.com/esx-framework/esx_drugs ./resources/esx_drugs
-
 # RUN git clone https://github.com/esx-framework/esx_phone ./resources/esx_phone
 # RUN git clone https://github.com/esx-framework/esx_license ./resources/esx_license
-
 # RUN git clone https://github.com/esx-framework/esx_billing ./resources/esx_billing
 # RUN git clone https://github.com/esx-framework/esx_addonaccount ./resources/esx_addonaccount
 # RUN git clone https://github.com/esx-framework/esx_addoninventory ./resources/esx_addoninventory
 # RUN git clone https://github.com/esx-framework/esx_society ./resources/esx_society
-
 # RUN git clone https://github.com/esx-framework/esx_service ./resources/esx_service
 # RUN git clone https://github.com/esx-framework/instance ./resources/instance
 # RUN git clone https://github.com/esx-framework/esx_datastore ./resources/esx_datastore
-
 # RUN git clone https://github.com/esx-framework/cron ./resources/cron
 
 
