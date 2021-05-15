@@ -6,7 +6,7 @@ Config.NPCJobEarnings             = {min = 300, max = 600}
 Config.MinimumDistance            = 2000 -- Minimum NPC job destination distance from the pickup in GTA units, a higher number prevents nearby destionations.
 
 Config.MaxInService               = 3 -- How much people can be in service at once?
-Config.EnablePlayerManagement     = false -- Enable society managing.
+Config.EnablePlayerManagement     = true -- Enable society managing.
 Config.EnableSocietyOwnedVehicles = false
 
 Config.Locale                     = 'fr'
