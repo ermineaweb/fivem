@@ -4,12 +4,26 @@ Translation = {}
 Config.Shopkeeper = 416176080 -- hash of the shopkeeper ped
 Config.Locale = 'fr' -- 'en', 'sv' or 'custom'
 
+local globalCooldown = {hour = 0, minute = 30, second = 0}
+local globalMoney = {5000, 15000}
+local globalMoney = {5000, 15000}
+local globalBlip = true
+local globalCops = 0
+
 Config.Shops = {
     -- {coords = vector3(x, y, z), heading = peds heading, money = {min, max}, cops = amount of cops required to rob, blip = true: add blip on map false: don't add blip, name = name of the store (when cops get alarm, blip name etc)}
-    {coords = vector3(24.03, -1345.63, 29.5-0.98), heading = 266.0, money = {5000, 15000}, cops = 0, blip = true, name = '7/11', cooldown = {hour = 0, minute = 30, second = 0}, robbed = false},
-    {coords = vector3(-705.73, -914.91, 19.22-0.98), heading = 91.0, money = {7500, 20000}, cops = 0, blip = true, name = '7/11', cooldown = {hour = 0, minute = 30, second = 0}, robbed = false},
-    {coords = vector3(-165, -302, 40-0.98), heading = 91.0, money = {7500, 20000}, cops = 0, blip = true, name = 'Boutique de Vêtements', cooldown = {hour = 0, minute = 30, second = 0}, robbed = false},
-    {coords = vector3(-1486, -377, 41-0.98), heading = 91.0, money = {7500, 20000}, cops = 0, blip = true, name = '7/11', cooldown = {hour = 0, minute = 30, second = 0}, robbed = false},
+    -- superettes
+    {coords = vector3(24.03, -1345.63, 29.5-0.98), heading = 266.0, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(-705.73, -914.91, 19.22-0.98), heading = 91.0, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
+    -- robs liquor
+    {coords = vector3(-1486.07, -377.92, 41.16-0.98), heading = 131.5, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Rob\'s Liquor', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(-1222.21, -908.54, 12.33-0.98), heading = 43.09, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Rob\'s Liquor', cooldown = globalCooldown, robbed = false},
+    -- coiffeurs
+    {coords = vector3(-1284.19, 1115.2, 6.99-0.98), heading = 121.09, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
+    -- tattoos
+    {coords = vector3(-1152.06, -1423.77, 4.95-0.98), heading = 127.33, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Tatoueur', cooldown = globalCooldown, robbed = false},
+    -- vetements
+    {coords = vector3(-823.07, -1072.28, 11.33-0.98), heading = 205.24, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
 }
 
 Translation = {

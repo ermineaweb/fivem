@@ -75,7 +75,7 @@ Citizen.CreateThread(function()
 		local PlayerPed = GetPlayerPed(-1)
 		local coords_ped = GetEntityCoords(PlayerPed, true)
 		  if((GetEntitySpeed(PlayerPed) * 3.6) > 155)then
-					StartScreenEffect('RaceTurbo',  0,  false)
+				StartScreenEffect('RaceTurbo',  500,  false)
 			else
 				StopScreenEffect('RaceTurbo')
 			end
