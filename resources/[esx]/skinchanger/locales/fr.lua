@@ -1,5 +1,16 @@
 Locales['fr'] = {
   ['sex'] = 'sexe',
+  ['mom'] = 'Visage de la mère',
+  ['dad'] = 'Visage du père',
+  ['resemblance'] = 'ressemblance',
+  ['skin_tone'] = 'Teinte de la peau',
+  ['nose_1'] = 'Largeur du nez',
+  ['nose_2'] = 'Hauteur du bout du nez',
+  ['nose_3'] = 'Longueur du bout du nez',
+  ['nose_4'] = 'Largeur de la base du nez',
+  ['nose_5'] = 'Nez plus ou moins crochu',
+  ['nose_6'] = 'Torsion du nez',
+
   ['face'] = 'visage',
   ['skin'] = 'peau',
   ['wrinkles'] = 'rides',
