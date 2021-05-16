@@ -1032,3 +1032,12 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
 	('bread', 'Pain', 1),
 	('water', 'Eau', 1)
 ;
+
+-- PERMIS DIVERS
+USE `es_extended`;
+INSERT INTO `licenses` (`type`, `label`) VALUES
+	('dmv', 'Code de la route'),
+	('drive', 'Permis de conduire'),
+	('drive_bike', 'Permis moto'),
+	('drive_truck', 'Permis camion')
+;
