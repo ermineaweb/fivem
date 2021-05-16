@@ -6,7 +6,6 @@ Config.Locale = 'fr' -- 'en', 'sv' or 'custom'
 
 local globalCooldown = {hour = 0, minute = 30, second = 0}
 local globalMoney = {5000, 15000}
-local globalMoney = {5000, 15000}
 local globalBlip = true
 local globalCops = 0
 
@@ -20,10 +19,14 @@ Config.Shops = {
     {coords = vector3(-1222.21, -908.54, 12.33-0.98), heading = 43.09, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Rob\'s Liquor', cooldown = globalCooldown, robbed = false},
     -- coiffeurs
     {coords = vector3(-1284.19, 1115.2, 6.99-0.98), heading = 121.09, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(134.46, -1707.86, 29.29-0.98), heading = 147, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
     -- tattoos
     {coords = vector3(-1152.06, -1423.77, 4.95-0.98), heading = 127.33, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Tatoueur', cooldown = globalCooldown, robbed = false},
     -- vetements
     {coords = vector3(-823.07, -1072.28, 11.33-0.98), heading = 205.24, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(73.97, -1392.69, 29.38-0.98), heading = 275.3, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
+    -- unicorn club
+    {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {5000, 15000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
 }
 
 Translation = {
