@@ -40,7 +40,8 @@ Citizen.CreateThread(function()
 	for _, ATMLocation in pairs(Config.ATMLocations) do
 		ATMLocation.blip = AddBlipForCoord(ATMLocation.x, ATMLocation.y, ATMLocation.z - Config.ZDiff)
 		SetBlipSprite(ATMLocation.blip, Config.BlipSprite)
-		SetBlipDisplay(ATMLocation.blip, 4)
+		-- 5 = minimap only
+		SetBlipDisplay(ATMLocation.blip, 5)
 		SetBlipScale(ATMLocation.blip, 0.9)
 		SetBlipColour(ATMLocation.blip, 2)
 		SetBlipAsShortRange(ATMLocation.blip, true)

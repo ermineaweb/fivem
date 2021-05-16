@@ -52,7 +52,8 @@ function CreateBlips()
 			Blips[property.name] = AddBlipForCoord(property.entering.x, property.entering.y, property.entering.z)
 
 			SetBlipSprite (Blips[property.name], 369)
-			SetBlipDisplay(Blips[property.name], 4)
+			--0 = Doesn't show up, ever, anywhere. - 5 = minimap only
+			SetBlipDisplay(Blips[property.name], 5)
 			SetBlipScale  (Blips[property.name], 1.0)
 			SetBlipAsShortRange(Blips[property.name], true)
 

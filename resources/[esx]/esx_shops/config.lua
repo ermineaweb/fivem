@@ -1,6 +1,6 @@
 Config = {}
 Config.DrawDistance = 30
-Config.MarkerSize = {x = 1.1, y = 1.1, z = 0.9}
+Config.MarkerSize = {x = 1.1, y = 1.1, z = 1.1}
 Config.MarkerType =  21
 Config.MarkerColor = {r = 102, g = 102, b = 204, a = 255}
 Config.Locale = 'fr'

@@ -1,5 +1,5 @@
 Config              = {}
-Config.DrawDistance = 20.0
+Config.DrawDistance = 25.0
 Config.MaxDelivery	= 10
 Config.TruckPrice	= 1500
 Config.Locale       = 'fr'
