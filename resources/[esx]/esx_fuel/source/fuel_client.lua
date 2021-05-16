@@ -3,7 +3,7 @@ if Config.UseESX then
 		while not ESX do
 			TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-			Citizen.Wait(500)
+			Citizen.Wait(300)
 		end
 	end)
 end
@@ -374,10 +374,10 @@ if Config.EnableHUD then
 	Citizen.CreateThread(function()
 		while true do
 			if displayHud then
-				DrawAdvancedText(0.130 - x, 0.77 - y, 0.005, 0.0028, 0.6, mph, 255, 255, 255, 255, 6, 1)
+				-- DrawAdvancedText(0.130 - x, 0.77 - y, 0.005, 0.0028, 0.6, mph, 255, 255, 255, 255, 6, 1)
 				DrawAdvancedText(0.174 - x, 0.77 - y, 0.005, 0.0028, 0.6, kmh, 255, 255, 255, 255, 6, 1)
 				DrawAdvancedText(0.2195 - x, 0.77 - y, 0.005, 0.0028, 0.6, fuel, 255, 255, 255, 255, 6, 1)
-				DrawAdvancedText(0.148 - x, 0.7765 - y, 0.005, 0.0028, 0.4, "mp/h              km/h              Fuel", 255, 255, 255, 255, 6, 1)
+				DrawAdvancedText(0.148 - x, 0.7765 - y, 0.005, 0.0028, 0.4, "km/h              Fuel", 255, 255, 255, 255, 6, 1)
 			else
 				Citizen.Wait(750)
 			end

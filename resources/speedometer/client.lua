@@ -92,7 +92,7 @@ Citizen.CreateThread(function()
 			local PedCar = GetVehiclePedIsIn(Ped, false)
 			if PedCar and GetPedInVehicleSeat(PedCar, -1) == Ped then
 				carSpeed = math.ceil(GetEntitySpeed(PedCar) * 3.6)
-				fuel = exports["esx_legacyfuel"]:GetFuel(PedCar)
+				fuel = exports["esx_fuel"]:GetFuel(PedCar)
 				rpm = GetVehicleCurrentRpm(PedCar)
 				
 

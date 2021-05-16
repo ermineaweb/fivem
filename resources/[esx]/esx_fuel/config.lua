@@ -25,23 +25,23 @@ Config.CostMultiplier = 1.0
 
 -- Configure the strings as you wish here.
 Config.Strings = {
-	ExitVehicle = "Exit the vehicle to refuel",
-	EToRefuel = "Press ~g~E ~w~to refuel vehicle",
-	JerryCanEmpty = "Jerry can is empty",
-	FullTank = "Tank is full",
-	PurchaseJerryCan = "Press ~g~E ~w~to purchase a jerry can for ~g~$" .. Config.JerryCanCost,
-	CancelFuelingPump = "Press ~g~E ~w~to cancel the fueling",
-	CancelFuelingJerryCan = "Press ~g~E ~w~to cancel the fueling",
-	NotEnoughCash = "Not enough cash",
-	RefillJerryCan = "Press ~g~E ~w~ to refill the jerry can for ",
-	NotEnoughCashJerryCan = "Not enough cash to refill jerry can",
-	JerryCanFull = "Jerry can is full",
-	TotalCost = "Cost",
+	ExitVehicle = "Sortez du véhivule pour faire le plein",
+	EToRefuel = "Appuyez sur ~g~E ~w~pour faire le plein",
+	JerryCanEmpty = "Le jerrican est vide",
+	FullTank = "Le réservoir est plein",
+	PurchaseJerryCan = "Appuyez sur ~g~E ~w~pour acheter un jerrican pour ~g~$" .. Config.JerryCanCost,
+	CancelFuelingPump = "Appuyez sur ~g~E ~w~pour annuler le plein",
+	CancelFuelingJerryCan = "Appuyez sur ~g~E ~w~pour annuler le plein",
+	NotEnoughCash = "Pas assez d'argent",
+	RefillJerryCan = "Appuyez sur ~g~E ~w~ pour remplir le jerrican ",
+	NotEnoughCashJerryCan = "Pas assez d'argent pour remplir le jerrican",
+	JerryCanFull = "Le jerrican est plein",
+	TotalCost = "Cout",
 }
 
 if not Config.UseESX then
-	Config.Strings.PurchaseJerryCan = "Press ~g~E ~w~to grab a jerry can"
-	Config.Strings.RefillJerryCan = "Press ~g~E ~w~ to refill the jerry can"
+	Config.Strings.PurchaseJerryCan = "Appuyez sur ~g~E ~w~pour prendre un jerrican"
+	Config.Strings.RefillJerryCan = "Appuyez sur ~g~E ~w~ pour vendre le jerrican"
 end
 
 Config.PumpModels = {
