@@ -132,9 +132,9 @@ Config.AuthorizedVehicles = {
 		},
 
 		officer = {
-			{model = 'police', price = 16500}
-			{model = 'police2', price = 20000}
-			{model = 'police3', price = 24500}
+			{model = 'police', price = 16500},
+			{model = 'police2', price = 20000},
+			{model = 'police3', price = 24500},
 			{model = 'policet', price = 23500},
 			{model = 'policeb', price = 22000}
 		},
@@ -145,7 +145,7 @@ Config.AuthorizedVehicles = {
 		},
 		
 		lieutenant = {
-			{model = 'fbi2', price = 45000}
+			{model = 'fbi2', price = 45000},
 			{model = 'fbi', price = 60000}
 		},
 
@@ -164,12 +164,12 @@ Config.AuthorizedVehicles = {
 		},
 
 		lieutenant = {
-			{model = 'polmav', props = {modLivery = 0}, price = 200000}
+			{model = 'polmav', props = {modLivery = 0}, price = 200000},
 			{model = 'buzzard', props = {modLivery = 0}, price = 300000}
 		},
 		
 		boss = {
-			{model = 'buzzard', props = {modLivery = 0}, price = 300000}
+			{model = 'buzzard', props = {modLivery = 0}, price = 300000},
 			{model = 'polmav', props = {modLivery = 0}, price = 200000}
 		}
 	}
