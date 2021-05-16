@@ -914,3 +914,103 @@ USE `es_extended`;
 ALTER TABLE `users`
 	ADD COLUMN `tattoos` LONGTEXT
 ;
+
+-- UNICORN JOB
+USE `es_extended`;
+
+SET @job_name = 'unicorn';
+SET @society_name = 'society_unicorn';
+SET @job_Name_Caps = 'Unicorn';
+
+INSERT INTO `addon_account` (name, label, shared) VALUES
+  (@society_name, @job_Name_Caps, 1)
+;
+
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+  (@society_name, @job_Name_Caps, 1),
+  ('society_unicorn_fridge', 'Unicorn (frigo)', 1)
+;
+
+INSERT INTO `datastore` (name, label, shared) VALUES 
+    (@society_name, @job_Name_Caps, 1)
+;
+
+INSERT INTO `jobs` (name, label, whitelisted) VALUES
+  (@job_name, @job_Name_Caps, 1)
+;
+
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+  (@job_name, 0, 'barman', 'Barman', 300, '{}', '{}'),
+  (@job_name, 1, 'dancer', 'Danseur', 300, '{}', '{}'),
+  (@job_name, 2, 'viceboss', 'Co-gérant', 500, '{}', '{}'),
+  (@job_name, 3, 'boss', 'Gérant', 600, '{}', '{}')
+;
+
+INSERT INTO `items` (`name`, `label`, `limit`) VALUES  
+    ('jager', 'Jägermeister', 5),
+    ('vodka', 'Vodka', 5),
+    ('rhum', 'Rhum', 5),
+    ('whisky', 'Whisky', 5),
+    ('tequila', 'Tequila', 5),
+    ('martini', 'Martini blanc', 5),
+    ('soda', 'Soda', 5),
+    ('jusfruit', 'Jus de fruits', 5),
+    ('icetea', 'Ice Tea', 5),
+    ('energy', 'Energy Drink', 5),
+    ('drpepper', 'Dr. Pepper', 5),
+    ('limonade', 'Limonade', 5),
+    ('bolcacahuetes', 'Bol de cacahuètes', 5),
+    ('bolnoixcajou', 'Bol de noix de cajou', 5),
+    ('bolpistache', 'Bol de pistaches', 5),
+    ('bolchips', 'Bol de chips', 5),
+    ('saucisson', 'Saucisson', 5),
+    ('grapperaisin', 'Grappe de raisin', 5),
+    ('jagerbomb', 'Jägerbomb', 5),
+    ('golem', 'Golem', 5),
+    ('whiskycoca', 'Whisky-coca', 5),
+    ('vodkaenergy', 'Vodka-energy', 5),
+    ('vodkafruit', 'Vodka-jus de fruits', 5),
+    ('rhumfruit', 'Rhum-jus de fruits', 5),
+    ('teqpaf', "Teq'paf", 5),
+    ('rhumcoca', 'Rhum-coca', 5),
+    ('mojito', 'Mojito', 5),
+    ('ice', 'Glaçon', 5),
+    ('mixapero', 'Mix Apéritif', 3),
+    ('metreshooter', 'Mètre de shooter', 3),
+    ('jagercerbere', 'Jäger Cerbère', 3),
+    ('menthe', 'Feuille de menthe', 10)
+;
+
+-- VIGNERON
+USE `es_extended`;
+INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
+	('society_vigne','Vigneron',1)
+;
+INSERT INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
+	('society_vigne','Vigneron', 1)
+;
+INSERT INTO `datastore` (`name`, `label`, `shared`) VALUES
+	('society_vigne', 'Vigneron', 1)
+;
+INSERT INTO `jobs`(`name`, `label`, `whitelisted`) VALUES
+	('vigne', 'Vigneron', 1)
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('vigne',0,'recrue','Intérimaire', 500, '{"tshirt_1":59,"tshirt_2":0,"torso_1":12,"torso_2":5,"shoes_1":7,"shoes_2":2,"pants_1":9, "pants_2":7, "arms":1, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}','{"tshirt_1":0,"tshirt_2":0,"torso_1":56,"torso_2":0,"shoes_1":27,"shoes_2":0,"pants_1":36, "pants_2":0, "arms":63, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}'),
+	('vigne',1,'novice','Vigneron', 750, '{"tshirt_1":57,"tshirt_2":0,"torso_1":13,"torso_2":5,"shoes_1":7,"shoes_2":2,"pants_1":9, "pants_2":7, "arms":11, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}','{"tshirt_1":0,"tshirt_2":0,"torso_1":56,"torso_2":0,"shoes_1":27,"shoes_2":0,"pants_1":36, "pants_2":0, "arms":63, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}'),
+	('vigne',2,'cdisenior','Chef de chai', 1200, '{"tshirt_1":57,"tshirt_2":0,"torso_1":13,"torso_2":5,"shoes_1":7,"shoes_2":2,"pants_1":9, "pants_2":7, "arms":11, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}','{"tshirt_1":0,"tshirt_2":0,"torso_1":56,"torso_2":0,"shoes_1":27,"shoes_2":0,"pants_1":36, "pants_2":0, "arms":63, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}'),
+	('vigne',3,'boss','Patron', 1600,'{"tshirt_1":57,"tshirt_2":0,"torso_1":13,"torso_2":5,"shoes_1":7,"shoes_2":2,"pants_1":9, "pants_2":7, "arms":11, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}','{"tshirt_1":15,"tshirt_2":0,"torso_1":14,"torso_2":15,"shoes_1":12,"shoes_2":0,"pants_1":9, "pants_2":5, "arms":1, "helmet_1":11, "helmet_2":0,"bags_1":0,"bags_2":0,"ears_1":0,"glasses_1":0,"ears_2":0,"glasses_2":0}')
+;
+INSERT INTO `items` (`name`, `label`) VALUES
+	('raisin', 'Raisin'),
+	('jus_raisin', 'Jus de raisin'),
+	('grand_cru', 'Grand cru'),
+	('vine', 'Vin')
+;
+
+-- JOB LIVREUR
+USE `es_extended`;
+INSERT INTO `jobs` (`name`, `label`) VALUES
+('trucker', 'Chauffeur');
+INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+('trucker', 0, 'employee', 'Employ�', 200, '{"tshirt_1":59,"torso_1":89,"arms":31,"pants_1":36,"glasses_1":19,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":2,"glasses_2":0,"torso_2":1,"shoes":35,"hair_1":0,"skin":0,"sex":0,"glasses_1":19,"pants_2":0,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":5}', '{"tshirt_1":36,"torso_1":0,"arms":68,"pants_1":30,"glasses_1":15,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":27,"glasses_2":0,"torso_2":11,"shoes":26,"hair_1":5,"skin":0,"sex":1,"glasses_1":15,"pants_2":2,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":19}');
