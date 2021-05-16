@@ -25,7 +25,7 @@ AddEventHandler('esx_jobCounter:set', function(jobs_online)
 
 	if jobs['police'] < 1 then
 		cops_online = 'red'
-	elseif jobs['police'] < 5 then
+	elseif jobs['police'] <= 3 then
 		cops_online = 'yellow'
 	elseif jobs['police'] >= 5 then
 		cops_online = 'green'
@@ -33,7 +33,7 @@ AddEventHandler('esx_jobCounter:set', function(jobs_online)
 
 	if jobs['ambulance'] < 1 then
 		sani_online = 'red'
-	elseif jobs['ambulance'] < 5 then
+	elseif jobs['ambulance'] <= 3 then
 		sani_online = 'yellow'
 	elseif jobs['ambulance'] >= 5 then
 		sani_online = 'green'
@@ -41,7 +41,7 @@ AddEventHandler('esx_jobCounter:set', function(jobs_online)
 
 	if jobs['mecano'] < 1 then
 		meca_online = 'red'
-	elseif jobs['mecano'] < 5 then
+	elseif jobs['mecano'] <= 3 then
 		meca_online = 'yellow'
 	elseif jobs['mecano'] >= 5 then
 		meca_online = 'green'
@@ -49,7 +49,7 @@ AddEventHandler('esx_jobCounter:set', function(jobs_online)
 
 	if jobs['taxi'] < 1 then
 		taxi_online = 'red'
-	elseif jobs['taxi'] < 5 then
+	elseif jobs['taxi'] <= 3 then
 		taxi_online = 'yellow'
 	elseif jobs['taxi'] >= 5 then
 		taxi_online = 'green'

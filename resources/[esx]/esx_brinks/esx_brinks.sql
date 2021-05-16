@@ -1,4 +1,3 @@
-USE `es_extended`;
 INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
 ('brinks', 'Brinks', 0);
 

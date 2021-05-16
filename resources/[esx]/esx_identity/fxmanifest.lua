@@ -14,6 +14,7 @@ server_scripts {
 	'locales/cs.lua',
 	'locales/pl.lua',
 	'locales/fi.lua',	
+	'locales/fr.lua',	
 	'config.lua',
 	'server/main.lua'
 }
