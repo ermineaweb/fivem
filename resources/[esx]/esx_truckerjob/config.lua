@@ -6,6 +6,7 @@ Config.Locale       = 'fr'
 
 Config.Trucks = {
 	"mule3",
+	"biff",	
 	"phantom3"	
 }
 

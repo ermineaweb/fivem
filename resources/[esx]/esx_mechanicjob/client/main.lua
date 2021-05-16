@@ -813,23 +813,6 @@ end)
 
 -- Create Blips
 Citizen.CreateThread(function()
-
-	local blip1 = AddBlipForCoord(-2480.9, -212.0, 17.4)
-	SetBlipSprite (blip1, 446)
-	SetBlipDisplay(blip1, 4)
-	local blip3 =AddBlipForCoord(-2723.4, 13.2, 15.1)
-	SetBlipSprite (blip3, 446)
-	SetBlipDisplay(blip3, 4)
-	local blip2 =AddBlipForCoord(-3169.6, 976.2, 15.0)
-	SetBlipSprite (blip2, 446)
-	SetBlipDisplay(blip2, 4)
-	local blip4 =AddBlipForCoord(-3139.8, 1078.7, 20.2)
-	SetBlipSprite (blip4, 446)
-	SetBlipDisplay(blip4, 4)
-	local blip5 =AddBlipForCoord(-1656.9, -246.2, 54.5)
-	SetBlipSprite (blip5, 446)
-	SetBlipDisplay(blip5, 4)
-
 	local blip = AddBlipForCoord(Config.Zones.MechanicActions.Pos.x, Config.Zones.MechanicActions.Pos.y, Config.Zones.MechanicActions.Pos.z)
 
 	SetBlipSprite (blip, 446)
