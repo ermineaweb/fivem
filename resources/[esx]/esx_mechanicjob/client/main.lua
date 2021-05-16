@@ -813,11 +813,18 @@ end)
 
 -- Create Blips
 Citizen.CreateThread(function()
+
+	AddBlipForCoord(-2480.9, -212.0, 17.4),
+	AddBlipForCoord(-2723.4, 13.2, 15.1),
+	AddBlipForCoord(-3169.6, 976.2, 15.0),
+	AddBlipForCoord(-3139.8, 1078.7, 20.2),
+	AddBlipForCoord(-1656.9, -246.2, 54.5),
+
 	local blip = AddBlipForCoord(Config.Zones.MechanicActions.Pos.x, Config.Zones.MechanicActions.Pos.y, Config.Zones.MechanicActions.Pos.z)
 
 	SetBlipSprite (blip, 446)
 	SetBlipDisplay(blip, 4)
-	SetBlipScale  (blip, 1.0)
+	SetBlipScale  (blip, 1.2)
 	SetBlipColour (blip, 5)
 	SetBlipAsShortRange(blip, true)
 
