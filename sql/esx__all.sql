@@ -1041,3 +1041,9 @@ INSERT INTO `licenses` (`type`, `label`) VALUES
 	('drive_bike', 'Permis moto'),
 	('drive_truck', 'Permis camion')
 ;
+
+-- BIJOUTERIE HOLDUP
+USE `es_extended`;
+INSERT INTO `items` (name, label, `weight`) VALUES
+	('jewels', 'Jewels', 1)
+;
