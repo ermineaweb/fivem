@@ -8,7 +8,7 @@ Config.MarkerType = 1
 Config.MarkerText = true
 
 Config.RentModifier = 200 -- rent price: <property price> / <rent modifier> (rounded)
-Config.SellModifier = 2   -- sell price: <property price> / <sell modifier> (rounded)
+Config.SellModifier = 1.5   -- sell price: <property price> / <sell modifier> (rounded)
 
 Config.Properties = {}
 

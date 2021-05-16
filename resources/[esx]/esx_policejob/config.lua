@@ -1,11 +1,11 @@
 Config                            = {}
 
-Config.DrawDistance               = 25.0 -- How close do you need to be for the markers to be drawn (in GTA units).
+Config.DrawDistance               = 30.0 -- How close do you need to be for the markers to be drawn (in GTA units).
 Config.MarkerType                 = {Cloakrooms = 20, Armories = 21, BossActions = 22, Vehicles = 36, Helicopters = 34}
 Config.MarkerSize                 = {x = 1.5, y = 1.5, z = 0.5}
 Config.MarkerColor                = {r = 50, g = 50, b = 204}
 
-Config.EnablePlayerManagement     = true -- Enable if you want society managing.
+Config.EnablePlayerManagement     = false -- Enable if you want society managing.
 Config.EnableArmoryManagement     = true
 Config.EnableESXIdentity          = true -- Enable if you're using esx_identity.
 Config.EnableLicenses             = true -- Enable if you're using esx_license.
@@ -127,23 +127,31 @@ Config.AuthorizedWeapons = {
 
 Config.AuthorizedVehicles = {
 	car = {
-		recruit = {},
+		recruit = {
+			{model = 'police', price = 16500}
+		},
 
 		officer = {
-			{model = 'police3', price = 20000}
+			{model = 'police', price = 16500}
+			{model = 'police2', price = 20000}
+			{model = 'police3', price = 24500}
+			{model = 'policet', price = 23500},
+			{model = 'policeb', price = 22000}
 		},
-
+		
 		sergeant = {
-			{model = 'policet', price = 18500},
-			{model = 'policeb', price = 30500}
+			{model = 'riot', price = 65000},
+			{model = 'fbi2', price = 45000}
 		},
-
+		
 		lieutenant = {
-			{model = 'riot', price = 70000},
-			{model = 'fbi2', price = 60000}
+			{model = 'fbi2', price = 45000}
+			{model = 'fbi', price = 60000}
 		},
 
-		boss = {}
+		boss = {
+			{model = 'fbi', price = 60000}
+		}
 	},
 
 	helicopter = {
@@ -151,14 +159,18 @@ Config.AuthorizedVehicles = {
 
 		officer = {},
 
-		sergeant = {},
-
-		lieutenant = {
+		sergeant = {
 			{model = 'polmav', props = {modLivery = 0}, price = 200000}
 		},
 
+		lieutenant = {
+			{model = 'polmav', props = {modLivery = 0}, price = 200000}
+			{model = 'buzzard', props = {modLivery = 0}, price = 300000}
+		},
+		
 		boss = {
-			{model = 'polmav', props = {modLivery = 0}, price = 100000}
+			{model = 'buzzard', props = {modLivery = 0}, price = 300000}
+			{model = 'polmav', props = {modLivery = 0}, price = 200000}
 		}
 	}
 }
@@ -168,17 +180,23 @@ Config.CustomPeds = {
 		{label = 'Sheriff Ped', maleModel = 's_m_y_sheriff_01', femaleModel = 's_f_y_sheriff_01'},
 		{label = 'Police Ped', maleModel = 's_m_y_cop_01', femaleModel = 's_f_y_cop_01'}
 	},
-
-	recruit = {},
-
-	officer = {},
-
-	sergeant = {},
-
-	lieutenant = {},
+	
+	recruit = {
+	},
+	
+	officer = {
+	},
+	
+	sergeant = {
+		{label = 'SWAT', maleModel = 's_m_y_swat_01', femaleModel = 's_f_y_swat_01'}
+	},
+	
+	lieutenant = {
+		{label = 'FIB', maleModel = 's_m_m_fibsec_01', femaleModel = 's_f_m_fibsec_01'}
+	},
 
 	boss = {
-		{label = 'SWAT Ped', maleModel = 's_m_y_swat_01', femaleModel = 's_m_y_swat_01'}
+		{label = 'FIB Boss', maleModel = 's_m_m_fiboffice_02', femaleModel = 's_f_m_fiboffice_02'}
 	}
 }
 
