@@ -20,10 +20,10 @@ Config.UseDeferrals     = false -- EXPERIMENTAL Character Registration Method.
 
 -- These values are for the second input validation in server/main.lua
 Config.MaxNameLength    = 20
-Config.MinHeight        = 45
-Config.MaxHeight        = 96
-Config.LowestYear       = 1900
-Config.HighestYear      = 2021
+Config.MinHeight        = 155
+Config.MaxHeight        = 210
+Config.LowestYear       = 1950
+Config.HighestYear      = 2010
 
 Config.FullCharDelete   = false
 Config.EnableDebugging  = false

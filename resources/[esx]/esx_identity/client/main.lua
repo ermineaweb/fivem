@@ -11,7 +11,7 @@ end)
 RegisterNetEvent('esx_identity:alreadyRegistered')
 AddEventHandler('esx_identity:alreadyRegistered', function()
 	while not loadingScreenFinished do
-		Citizen.Wait(100)
+		Citizen.Wait(50)
 	end
 
 	TriggerEvent('esx_skin:playerRegistered')
@@ -47,7 +47,7 @@ if not Config.UseDeferrals then
 		TriggerEvent('esx_skin:resetFirstSpawn')
 
 		if not isDead then
-			EnableGui(true)
+			-- EnableGui(true)
 		end
 	end)
 
