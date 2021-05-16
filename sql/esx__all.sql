@@ -1025,3 +1025,10 @@ INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_
 
 INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
 ('sacbillets', 'Sac de Billets', 100, 0, 1);
+
+-- BESOINS VITAUX
+USE `es_extended`;
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES
+	('bread', 'Pain', 1),
+	('water', 'Eau', 1)
+;

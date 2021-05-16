@@ -1,5 +1,5 @@
-const pedFrequency = 0.2;
-const trafficFrequency = 1.2;
+const pedFrequency = 0.1;
+const trafficFrequency = 0.1;
 
 setTick(async () => {
   SetPedDensityMultiplierThisFrame(pedFrequency);

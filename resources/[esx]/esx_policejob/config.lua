@@ -1,6 +1,6 @@
 Config                            = {}
 
-Config.DrawDistance               = 20.0 -- How close do you need to be for the markers to be drawn (in GTA units).
+Config.DrawDistance               = 25.0 -- How close do you need to be for the markers to be drawn (in GTA units).
 Config.MarkerType                 = {Cloakrooms = 20, Armories = 21, BossActions = 22, Vehicles = 36, Helicopters = 34}
 Config.MarkerSize                 = {x = 1.5, y = 1.5, z = 0.5}
 Config.MarkerColor                = {r = 50, g = 50, b = 204}
