@@ -532,7 +532,9 @@ function OpenGetStocksMenu()
 				local count = tonumber(data2.value)
 
 				if count == nil then
-					ESX.ShowNotification(_U('invalid_quantity'))
+					-- fix https://forum.cfx.re/t/release-esx-mechanic-job/42521/47
+					AttachEntityToEntity(targetVehicle, vehicle, 20, 0.0, -2.0, 1.4, 0.0, 0.0, 0.0, false, false, false, false, 20, true)
+					-- ESX.ShowNotification(_U('invalid_quantity'))
 				else
 					menu2.close()
 					menu.close()

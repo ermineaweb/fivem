@@ -1,7 +1,7 @@
 Config = {}
-Config.DrawDistance = 20.0
+Config.DrawDistance = 25.0
 
-Config.EnablePlayerManagement = false
+Config.EnablePlayerManagement = true
 Config.EnableSocietyOwnedVehicles = false
 Config.EnableVaultManagement = true
 Config.EnableHelicopters = false
