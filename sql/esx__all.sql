@@ -32,13 +32,13 @@ CREATE TABLE `job_grades` (
 	`skin_female` LONGTEXT NOT NULL,
 	PRIMARY KEY (`id`)
 );
-INSERT INTO `job_grades` VALUES (1,'unemployed',0,'unemployed','Unemployed', 50,'{}','{}');
+INSERT INTO `job_grades` VALUES (1,'unemployed',0,'unemployed','Chômeur', 50,'{}','{}');
 CREATE TABLE `jobs` (
 	`name` VARCHAR(50) NOT NULL,
 	`label` VARCHAR(50) DEFAULT NULL,
 	PRIMARY KEY (`name`)
 );
-INSERT INTO `jobs` VALUES ('unemployed','Unemployed');
+INSERT INTO `jobs` VALUES ('unemployed','Chômeur');
 
 -- SKIN
 USE `es_extended`;
@@ -50,13 +50,13 @@ INSERT INTO `addon_account` (name, label, shared) VALUES
 	('caution', 'Caution', 0)
 ;
 INSERT INTO `jobs` (name, label) VALUES
-	('slaughterer', 'Abatteur'),
-	('fisherman', 'Pêcheur'),
-	('miner', 'Mineur'),
-	('lumberjack', 'Bûcheron'),
-	('fueler', 'Raffineur'),
 	('reporter', 'Journaliste'),
-	('tailor', 'Couturier')
+	('tailor', 'Couturier'),
+	('slaughterer', 'Boucher'),
+	('fisherman', 'Pêcheur'),
+	('lumberjack', 'Bûcheron'),
+	('miner', 'Mineur'),
+	('fueler', 'Raffineur')
 ;
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
 	('lumberjack', 0, 'employee', 'Intérimaire', 0, '{}', '{}'),
@@ -756,8 +756,8 @@ INSERT INTO `jobs` (name, label) VALUES
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
 	('police',0,'recruit','Recrue',20,'{}','{}'),
 	('police',1,'officer','Officier',40,'{}','{}'),
-	('police',2,'sergeant','Sergent',60,'{}','{}'),
-	('police',3,'lieutenant','Lieutenant',85,'{}','{}'),
+	('police',2,'sergeant','SWAT',60,'{}','{}'),
+	('police',3,'lieutenant','FIB',85,'{}','{}'),
 	('police',4,'boss','Commandant',100,'{}','{}')
 ;
 CREATE TABLE `fine_types` (
@@ -844,9 +844,9 @@ INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_
 	('mechanic',4,'boss','Patron',0,'{}','{}')
 ;
 INSERT INTO `items` (name, label, weight) VALUES
-	('gazbottle', 'bouteille de gaz', 2),
-	('fixtool', 'outils réparation', 2),
-	('carotool', 'outils carosserie', 2),
+	('gazbottle', 'Bouteille de gaz', 2),
+	('fixtool', 'Outils réparation', 2),
+	('carotool', 'Outils carosserie', 2),
 	('blowpipe', 'Chalumeaux', 2),
 	('fixkit', 'Kit réparation', 3),
 	('carokit', 'Kit carosserie', 3)
@@ -1013,12 +1013,12 @@ USE `es_extended`;
 INSERT INTO `jobs` (`name`, `label`) VALUES
 ('trucker', 'Chauffeur');
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
-('trucker', 0, 'employee', 'Employ�', 200, '{"tshirt_1":59,"torso_1":89,"arms":31,"pants_1":36,"glasses_1":19,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":2,"glasses_2":0,"torso_2":1,"shoes":35,"hair_1":0,"skin":0,"sex":0,"glasses_1":19,"pants_2":0,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":5}', '{"tshirt_1":36,"torso_1":0,"arms":68,"pants_1":30,"glasses_1":15,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":27,"glasses_2":0,"torso_2":11,"shoes":26,"hair_1":5,"skin":0,"sex":1,"glasses_1":15,"pants_2":2,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":19}');
+('trucker', 0, 'employee', 'Employé', 200, '{"tshirt_1":59,"torso_1":89,"arms":31,"pants_1":36,"glasses_1":19,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":2,"glasses_2":0,"torso_2":1,"shoes":35,"hair_1":0,"skin":0,"sex":0,"glasses_1":19,"pants_2":0,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":5}', '{"tshirt_1":36,"torso_1":0,"arms":68,"pants_1":30,"glasses_1":15,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":27,"glasses_2":0,"torso_2":11,"shoes":26,"hair_1":5,"skin":0,"sex":1,"glasses_1":15,"pants_2":2,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":19}');
 
 -- CONVOYEUR JOB
 USE `es_extended`;
 INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
-('brinks', 'Brinks', 0);
+('brinks', 'Convoyeur', 0);
 
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
 ('brinks', 0, 'interim', 'Convoyeur de fonds', 400, '{}', '{}');
