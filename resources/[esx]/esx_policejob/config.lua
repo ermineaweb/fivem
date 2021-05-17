@@ -196,7 +196,7 @@ Config.CustomPeds = {
 	},
 
 	boss = {
-		{label = 'FIB Boss', maleModel = 's_m_m_fiboffice_02', femaleModel = 's_f_m_fiboffice_02'}
+		{label = 'Commandant', maleModel = 's_m_m_fiboffice_02', femaleModel = 's_f_m_fiboffice_02'}
 	}
 }
 
@@ -215,7 +215,7 @@ Config.Uniforms = {
 			ears_1 = 2,     ears_2 = 0
 		},
 		female = {
-			tshirt_1 = 36,  tshirt_2 = 1,
+			tshirt_1 = 159,  tshirt_2 = 0,
 			torso_1 = 48,   torso_2 = 0,
 			decals_1 = 0,   decals_2 = 0,
 			arms = 44,
@@ -231,7 +231,7 @@ Config.Uniforms = {
 		male = {
 			tshirt_1 = 58,  tshirt_2 = 0,
 			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
+			decals_1 = 7,   decals_2 = 2,
 			arms = 41,
 			pants_1 = 25,   pants_2 = 0,
 			shoes_1 = 25,   shoes_2 = 0,
@@ -242,7 +242,7 @@ Config.Uniforms = {
 		female = {
 			tshirt_1 = 35,  tshirt_2 = 0,
 			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
+			decals_1 = 7,   decals_2 = 1,
 			arms = 44,
 			pants_1 = 34,   pants_2 = 0,
 			shoes_1 = 27,   shoes_2 = 0,
@@ -265,10 +265,10 @@ Config.Uniforms = {
 			ears_1 = 2,     ears_2 = 0
 		},
 		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
+			tshirt_1 = 161,  tshirt_2 = 0,
 			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 1,
-			arms = 44,
+			decals_1 = 7,   decals_2 = 2,
+			arms = 19,
 			pants_1 = 34,   pants_2 = 0,
 			shoes_1 = 27,   shoes_2 = 0,
 			helmet_1 = -1,  helmet_2 = 0,
@@ -292,7 +292,7 @@ Config.Uniforms = {
 		female = {
 			tshirt_1 = 35,  tshirt_2 = 0,
 			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 2,
+			decals_1 = 0,   decals_2 = 0,
 			arms = 44,
 			pants_1 = 34,   pants_2 = 0,
 			shoes_1 = 27,   shoes_2 = 0,

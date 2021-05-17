@@ -1,11 +1,11 @@
 Config = {}
 Translation = {}
 
-Config.Shopkeeper = 416176080 -- hash of the shopkeeper ped
+Config.Shopkeeper = -1211756494 -- hash of the shopkeeper ped
 Config.Locale = 'fr' -- 'en', 'sv' or 'custom'
 
-local globalCooldown = {hour = 0, minute = 60, second = 0}
-local globalMoney = {500, 4000}
+local globalCooldown = {hour = 0, minute = 120, second = 0}
+local globalMoney = {1000, 2500}
 local globalBlip = true
 local globalCops = 0
 
@@ -27,7 +27,7 @@ Config.Shops = {
     {coords = vector3(-823.07, -1072.28, 11.33-0.98), heading = 205.24, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
     {coords = vector3(73.97, -1392.69, 29.38-0.98), heading = 275.3, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
     -- unicorn club
-    {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {4000, 12000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
+    {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {3000, 8000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
 }
 
 Translation = {
