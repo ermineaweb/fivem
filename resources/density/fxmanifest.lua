@@ -3,6 +3,6 @@ author 'ro'
 description 'density traffic'
 fx_version 'cerulean'
 
-client_script 'main.js'
+client_script 'main.lua'
 
 games { 'gta5' }

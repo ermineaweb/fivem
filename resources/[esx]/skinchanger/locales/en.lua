@@ -39,6 +39,7 @@ Locales['en'] = {
   ['eyebrow_color_2'] = 'eyebrow color 2',
   ['eyebrow_depth'] = 'eyebrow depth',
   ['eyebrow_height'] = 'eyebrow height',
+  
   ['makeup_type'] = 'makeup type',
   ['makeup_thickness'] = 'makeup thickness',
   ['makeup_color_1'] = 'makeup color 1',
