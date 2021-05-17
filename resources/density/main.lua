@@ -58,4 +58,4 @@ Citizen.CreateThread(function()
 		Citizen.Wait(1000)
 		SetNoWeaponDrops()
 	end
-end
+end)
