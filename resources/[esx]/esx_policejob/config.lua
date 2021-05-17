@@ -285,7 +285,7 @@ Config.Uniforms = {
 			arms = 59,
 			pants_1 = 59,   pants_2 = 9,
 			shoes_1 = 24,   shoes_2 = 0,
-			helmet_1 = 0,  helmet_2 = 0,
+			helmet_1 = -1,  helmet_2 = 0,
 			chain_1 = 0,    chain_2 = 0,
 			ears_1 = 2,     ears_2 = 0
 		},

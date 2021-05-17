@@ -13,7 +13,7 @@ Config.EnableSocietyPayouts = false -- pay from the society account that the pla
 Config.DisableWantedLevel   = true
 Config.EnableHud            = false -- enable the default hud? Display current job and accounts (black, bank & cash)
 Config.EnablePvP            = true -- enable pvp?
-Config.MaxWeight            = 24000 -- the max inventory weight without backpack(this is in grams, not kg!)
+Config.MaxWeight            = 24000   -- the max inventory weight without backpack(this is in grams, not kg!)
 
 Config.PaycheckInterval     = 15 * 60000 -- how often to recieve pay checks in milliseconds
 
@@ -24,6 +24,6 @@ Config.PrimaryIdentifier	= "steam" -- Options: steam, license (social club), fiv
 -- We have set a MP ped as default since if you use another script that controls your player model
 -- then this will make them invisible until the actual outfit/model has loaded, this looks better than
 -- loading another model then changing it immediately after
-Config.DefaultPlayerModel	= `mp_m_freemode_01`
+Config.DefaultPlayerModel	= `mp_m_freemode_01` 
 
 Config.DefaultPickupModel = `prop_money_bag_01`

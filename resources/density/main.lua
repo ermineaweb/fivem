@@ -1,17 +1,17 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.6,
-	vehicles = 0.5,
+	peds = 1.0,
+	vehicles = 0.6,
 	parked = 0.3
 }
 
 Citizen.CreateThread(function()
     while true do
 		-- NEIGE
-SetSnowLevel(1.0)
+-- SetSnowLevel(1.0)
 -- WAR MODE
-SetRiotModeEnabled(true)
+-- SetRiotModeEnabled(true)
 -- ECHELLE DE TEMPS
-SetTimeScale(1.0)
+-- SetTimeScale(1.0)
     	if NetworkIsHost() then
 			-- These natives has to be called every frame.
 			SetPedDensityMultiplierThisFrame(density.peds)
