@@ -30,6 +30,7 @@ Config.Shops = {
     {coords = vector3(1211.58, -470.78, 66.21-0.98), heading = 66.5, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-30.71, -151.91, 57.08-0.98), heading = 344.0, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-277.81, 6230.29, 31.7-0.98), heading = 49.26, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(-1284.04, -1115.21, 6.99-0.98), heading = 118.49, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Coiffeur', cooldown = globalCooldown, robbed = false},
     -- tattoos
     {coords = vector3(-1152.06, -1423.77, 4.95-0.98), heading = 127.33, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Tatoueur', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1324.69, -1650.29, 52.28-0.98), heading = 136.41, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Tatoueur', cooldown = globalCooldown, robbed = false},

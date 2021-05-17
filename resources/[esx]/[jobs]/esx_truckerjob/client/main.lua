@@ -565,7 +565,7 @@ end)
 
 -- CREATE BLIPS
 Citizen.CreateThread(function()
-	if IsJobTrucker() then
+	-- if IsJobTrucker() then
 		local blip = AddBlipForCoord(Config.Cloakroom.CloakRoom.Pos.x, Config.Cloakroom.CloakRoom.Pos.y, Config.Cloakroom.CloakRoom.Pos.z)
 		SetBlipSprite (blip, 67)
 		SetBlipDisplay(blip, 4)
@@ -575,7 +575,7 @@ Citizen.CreateThread(function()
 		BeginTextCommandSetBlipName("STRING")
 		AddTextComponentString(_U('blip_job'))
 		EndTextCommandSetBlipName(blip)
-	end
+	-- end
 end)
 
 -------------------------------------------------
