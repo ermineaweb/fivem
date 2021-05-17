@@ -70,13 +70,13 @@ end
 Citizen.CreateThread(function()
 	while true do
 		
-		-- Citizen.Wait(0)
+		Citizen.Wait(0)
 		
 		local PlayerPed = GetPlayerPed(-1)
 		-- local coords_ped = GetEntityCoords(PlayerPed, true)
 		  if((GetEntitySpeed(PlayerPed) * 3.6) > 155)then
 				StartScreenEffect('DefaultFlash',  100,  false)
-				StopScreenEffect('DefaultFlash')
+				-- StopScreenEffect('DefaultFlash')
 			else
 				-- StopScreenEffect('DefaultFlash')
 			end

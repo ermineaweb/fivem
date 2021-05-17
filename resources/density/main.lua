@@ -5,11 +5,11 @@ local density = { -- 0.0 to 1.0
 }
 
 -- NEIGE
--- SetSnowLevel(1.0)
+SetSnowLevel(1.0)
 -- WAR MODE
--- SetRiotModeEnabled(true)
+SetRiotModeEnabled(true)
 -- ECHELLE DE TEMPS
--- SetTimeScale(1.0)
+SetTimeScale(1.0)
 
 Citizen.CreateThread(function()
     while true do
