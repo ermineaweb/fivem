@@ -170,12 +170,15 @@ end)
 RegisterNetEvent('checkD')
 AddEventHandler('checkD', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local meth = xPlayer.getInventoryItem('meth_pooch').count
+	local meth = xPlayer.getInventoryItem('meth_pooch')
 	local coke 	  = xPlayer.getInventoryItem('coke_pooch').count
 	local weed = xPlayer.getInventoryItem('weed_pooch').count
 	local opium = xPlayer.getInventoryItem('opium_pooch').count
+	if meth ~= nil or coke ~= nil or weed ~= nil or opium ~= nil then
+		return
+	end 
 
-	if meth >= 1 or coke >= 1 or weed >= 1 or opium >= 1 then
+	if meth.count >= 1 or coke.count >= 1 or weed.count >= 1 or opium.count >= 1 then
 		TriggerClientEvent("checkR", source, true)
 	else
 		TriggerClientEvent("checkR", source, false)

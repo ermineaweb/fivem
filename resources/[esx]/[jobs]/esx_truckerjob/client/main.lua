@@ -565,17 +565,19 @@ end)
 
 -- CREATE BLIPS
 Citizen.CreateThread(function()
-	local blip = AddBlipForCoord(Config.Cloakroom.CloakRoom.Pos.x, Config.Cloakroom.CloakRoom.Pos.y, Config.Cloakroom.CloakRoom.Pos.z)
-  
-	SetBlipSprite (blip, 67)
-	SetBlipDisplay(blip, 4)
-	SetBlipScale  (blip, 1.2)
-	SetBlipColour (blip, 5)
-	SetBlipAsShortRange(blip, true)
+	if PlayerData.job ~= nil and PlayerData.job == "trucker"  then
+		local blip = AddBlipForCoord(Config.Cloakroom.CloakRoom.Pos.x, Config.Cloakroom.CloakRoom.Pos.y, Config.Cloakroom.CloakRoom.Pos.z)
+	
+		SetBlipSprite (blip, 67)
+		SetBlipDisplay(blip, 4)
+		SetBlipScale  (blip, 1.2)
+		SetBlipColour (blip, 5)
+		SetBlipAsShortRange(blip, true)
 
-	BeginTextCommandSetBlipName("STRING")
-	AddTextComponentString(_U('blip_job'))
-	EndTextCommandSetBlipName(blip)
+		BeginTextCommandSetBlipName("STRING")
+		AddTextComponentString(_U('blip_job'))
+		EndTextCommandSetBlipName(blip)
+	end
 end)
 
 -------------------------------------------------
