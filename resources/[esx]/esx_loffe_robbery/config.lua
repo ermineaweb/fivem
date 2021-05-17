@@ -26,6 +26,7 @@ Config.Shops = {
     -- vetements
     {coords = vector3(-823.07, -1072.28, 11.33-0.98), heading = 205.24, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
     {coords = vector3(73.97, -1392.69, 29.38-0.98), heading = 275.3, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(427.09, -806.42, 29.49-0.98), heading = 84.65, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Boutique de fringues', cooldown = globalCooldown, robbed = false},
     -- unicorn club
     {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {3000, 8000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
 }
