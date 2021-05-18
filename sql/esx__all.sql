@@ -1068,7 +1068,7 @@ INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES -- 
     ('id_card_f', 'Carte frauduleuse', 1, 3, 1),
     ('secure_card', 'Carte de sécurité', 1, 3, 1);
 
--- GANGS
+-- GANGS A SUPPRIMER ?
 USE `es_extended`;
 INSERT INTO `addon_account` (name, label, shared) VALUES
 	('society_bloods', 'Bloods', 1)
