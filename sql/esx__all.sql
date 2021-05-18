@@ -1067,3 +1067,112 @@ USE `es_extended`;
 INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES -- chech if you 
     ('id_card_f', 'Carte frauduleuse', 1, 3, 1),
     ('secure_card', 'Carte de sécurité', 1, 3, 1);
+
+-- GANGS
+USE `es_extended`;
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_bloods', 'Bloods', 1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_bloods', 'Bloods', 1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_bloods', 'Bloods', 1)
+;
+INSERT INTO `jobs` (name, label) VALUES
+	('bloods', 'Bloods')
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('bloods',0,'prospect','Prospect',200,'{}','{}'),
+	('bloods',1,'enforcer','Enforcer',400,'{}','{}'),
+	('bloods',2,'lieutenant','Lieuteant',600,'{}','{}'),
+	('bloods',3,'vicepresident','Vice President',800,'{}','{}'),
+	('bloods',4,'boss','President',1000,'{}','{}')
+;
+
+USE `es_extended`;
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_crips', 'Crips', 1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_crips', 'Crips', 1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_crips', 'Crips', 1)
+;
+INSERT INTO `jobs` (name, label) VALUES
+	('crips', 'Crips')
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('crips',0,'prospect','Prospect',200,'{}','{}'),
+	('crips',1,'enforcer','Enforcer',400,'{}','{}'),
+	('crips',2,'lieutenant','Lieuteant',600,'{}','{}'),
+	('crips',3,'vicepresident','Vice President',800,'{}','{}'),
+	('crips',4,'boss','President',1000,'{}','{}')
+;
+
+USE `es_extended`;
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_thefirm', 'The Firm', 1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_thefirm', 'The Firm', 1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_thefirm', 'The Firm', 1)
+;
+INSERT INTO `jobs` (name, label) VALUES
+	('thefirm', 'The Firm')
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('thefirm',0,'prospect','Prospect',200,'{}','{}'),
+	('thefirm',1,'enforcer','Enforcer',400,'{}','{}'),
+	('thefirm',2,'lieutenant','Lieuteant',600,'{}','{}'),
+	('thefirm',3,'vicepresident','Vice President',800,'{}','{}'),
+	('thefirm',4,'boss','President',1000,'{}','{}')
+;
+
+USE `es_extended`;
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_moneyfirst', 'Money First', 1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_moneyfirst', 'Money First', 1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_moneyfirst', 'Money First', 1)
+;
+INSERT INTO `jobs` (name, label) VALUES
+	('moneyfirst', 'Money First')
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('moneyfirst',0,'prospect','Prospect',200,'{}','{}'),
+	('moneyfirst',1,'enforcer','Enforcer',400,'{}','{}'),
+	('moneyfirst',2,'lieutenant','Lieuteant',600,'{}','{}'),
+	('moneyfirst',3,'vicepresident','Vice President',800,'{}','{}'),
+	('moneyfirst',4,'boss','President',1000,'{}','{}')
+;
+
+USE `es_extended`;
+INSERT INTO `addon_account` (name, label, shared) VALUES
+	('society_londonkings', 'London Kings', 1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES
+	('society_londonkings', 'London Kings', 1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES
+	('society_londonkings', 'London Kings', 1)
+;
+INSERT INTO `jobs` (name, label) VALUES
+	('londonkings', 'London Kings')
+;
+INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
+	('londonkings',0,'prospect','Prospect',200,'{}','{}'),
+	('londonkings',1,'enforcer','Enforcer',400,'{}','{}'),
+	('londonkings',2,'lieutenant','Lieuteant',600,'{}','{}'),
+	('londonkings',3,'vicepresident','Vice President',800,'{}','{}'),
+	('londonkings',4,'boss','President',1000,'{}','{}')
+;
+
+
+
