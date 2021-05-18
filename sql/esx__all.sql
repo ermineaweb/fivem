@@ -1061,3 +1061,9 @@ CREATE TABLE `car_parking`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 INSERT INTO `items`(`name`, `label`, `limit`) VALUES ('parkingcard', 'Parking Card', -1);
+
+-- FLEECA HOLDUPS
+USE `es_extended`;
+INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES -- chech if you 
+    ('id_card_f', 'Carte frauduleuse', 1, 3, 1),
+    ('secure_card', 'Carte de sécurité', 1, 3, 1);
