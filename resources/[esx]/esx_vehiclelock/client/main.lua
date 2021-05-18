@@ -64,14 +64,14 @@ function ToggleVehicleLock()
 				SetVehicleDoorsLocked(vehicle, 2)
 				PlayVehicleDoorCloseSound(vehicle, 1)
 
-				ESX.ShowNotification(_U('message_locked'))
+				ESX.ShowNotification(_U('message_locked'), true, true, 210)
 				
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_locked') } })
 			elseif lockStatus == 2 then -- locked
 				SetVehicleDoorsLocked(vehicle, 1)
 				PlayVehicleDoorOpenSound(vehicle, 0)
 				
-				ESX.ShowNotification(_U('message_unlocked'))
+				ESX.ShowNotification(_U('message_unlocked'), true, true, 130)
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_unlocked') } })
 			end
 		end
