@@ -1,10 +1,10 @@
 -- BELOVE IS YOUR SETTINGS, CHANGE THEM TO WHATEVER YOU'D LIKE & MORE SETTINGS WILL COME IN THE FUTURE! --
 local useBilling = true -- OPTIONS: (true/false)
-local useCameraSound = true -- OPTIONS: (true/false)
+local useCameraSound = false -- OPTIONS: (true/false)
 local useFlashingScreen = true -- OPTIONS: (true/false)
-local useBlips = true -- OPTIONS: (true/false)
+local useBlips = false -- OPTIONS: (true/false)
 local alertPolice = true -- OPTIONS: (true/false)
-local alertSpeed = 150 -- OPTIONS: (1-5000 KMH)
+local alertSpeed = 100 -- OPTIONS: (1-5000 KMH)
 
 local defaultPrice60 = 100 -- THIS IS THE DEFAULT PRICE WITHOUT EXTRA COST FOR 60 ZONES
 local defaultPrice80 = 300 -- THIS IS THE DEFAULT PRICE WITHOUT EXTRA COST FOR 80 ZONES
@@ -137,7 +137,7 @@ Citizen.CreateThread(function()
 									end
 									
 									if useFlashingScreen == true then
-										Citizen.Wait(200)
+										Citizen.Wait(80)
 										TriggerServerEvent('esx_speedcamera:closeGUI')
 									end
 									-- FLASHING EFFECT (END)								
