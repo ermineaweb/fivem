@@ -1068,111 +1068,70 @@ INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES -- 
     ('id_card_f', 'Carte frauduleuse', 1, 3, 1),
     ('secure_card', 'Carte de sécurité', 1, 3, 1);
 
--- GANGS A SUPPRIMER ?
+-- PILOT JOB
 USE `es_extended`;
-INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_bloods', 'Bloods', 1)
-;
-INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_bloods', 'Bloods', 1)
-;
-INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_bloods', 'Bloods', 1)
-;
-INSERT INTO `jobs` (name, label) VALUES
-	('bloods', 'Bloods')
-;
-INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('bloods',0,'prospect','Prospect',200,'{}','{}'),
-	('bloods',1,'enforcer','Enforcer',400,'{}','{}'),
-	('bloods',2,'lieutenant','Lieuteant',600,'{}','{}'),
-	('bloods',3,'vicepresident','Vice President',800,'{}','{}'),
-	('bloods',4,'boss','President',1000,'{}','{}')
-;
+INSERT INTO jobs (`name`, `label`, `whitelisted`) VALUES
+('pilot', 'Pilot', 0); -- You may want to whitelist this job if you have issues with trolls joining your server
 
+INSERT INTO job_grades (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+('pilot', 0, 'hobbypilot', 'Hobbypilot', 60, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}'),
+('pilot', 1, 'freightpilot', 'Freightpilot', 80, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}'),
+('pilot', 2, 'airlinepilot', 'Airlinepilot', 150, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}');
+
+-- AIR PLANE DEALER
 USE `es_extended`;
-INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_crips', 'Crips', 1)
-;
-INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_crips', 'Crips', 1)
-;
-INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_crips', 'Crips', 1)
-;
-INSERT INTO `jobs` (name, label) VALUES
-	('crips', 'Crips')
-;
-INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('crips',0,'prospect','Prospect',200,'{}','{}'),
-	('crips',1,'enforcer','Enforcer',400,'{}','{}'),
-	('crips',2,'lieutenant','Lieuteant',600,'{}','{}'),
-	('crips',3,'vicepresident','Vice President',800,'{}','{}'),
-	('crips',4,'boss','President',1000,'{}','{}')
-;
+CREATE TABLE `avaible_aeronef` (
+  `id` int(11) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `label` varchar(50) NOT NULL,
+  `price` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-USE `es_extended`;
-INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_thefirm', 'The Firm', 1)
-;
-INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_thefirm', 'The Firm', 1)
-;
-INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_thefirm', 'The Firm', 1)
-;
-INSERT INTO `jobs` (name, label) VALUES
-	('thefirm', 'The Firm')
-;
-INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('thefirm',0,'prospect','Prospect',200,'{}','{}'),
-	('thefirm',1,'enforcer','Enforcer',400,'{}','{}'),
-	('thefirm',2,'lieutenant','Lieuteant',600,'{}','{}'),
-	('thefirm',3,'vicepresident','Vice President',800,'{}','{}'),
-	('thefirm',4,'boss','President',1000,'{}','{}')
-;
+ALTER TABLE `avaible_aeronef`
+  ADD PRIMARY KEY (`id`);
 
-USE `es_extended`;
-INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_moneyfirst', 'Money First', 1)
-;
-INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_moneyfirst', 'Money First', 1)
-;
-INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_moneyfirst', 'Money First', 1)
-;
-INSERT INTO `jobs` (name, label) VALUES
-	('moneyfirst', 'Money First')
-;
-INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('moneyfirst',0,'prospect','Prospect',200,'{}','{}'),
-	('moneyfirst',1,'enforcer','Enforcer',400,'{}','{}'),
-	('moneyfirst',2,'lieutenant','Lieuteant',600,'{}','{}'),
-	('moneyfirst',3,'vicepresident','Vice President',800,'{}','{}'),
-	('moneyfirst',4,'boss','President',1000,'{}','{}')
-;
+ALTER TABLE `avaible_aeronef`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
-USE `es_extended`;
-INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_londonkings', 'London Kings', 1)
-;
-INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_londonkings', 'London Kings', 1)
-;
-INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_londonkings', 'London Kings', 1)
-;
-INSERT INTO `jobs` (name, label) VALUES
-	('londonkings', 'London Kings')
-;
-INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('londonkings',0,'prospect','Prospect',200,'{}','{}'),
-	('londonkings',1,'enforcer','Enforcer',400,'{}','{}'),
-	('londonkings',2,'lieutenant','Lieuteant',600,'{}','{}'),
-	('londonkings',3,'vicepresident','Vice President',800,'{}','{}'),
-	('londonkings',4,'boss','President',1000,'{}','{}')
-;
+-- Part 2
+
+CREATE TABLE `owned_aeronef` (
+  `id` int(11) NOT NULL,
+  `license` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `props` text NOT NULL,
+  `outside` int(11) NOT NULL DEFAULT '0',
+  `ownedAt` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `owned_aeronef`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `owned_aeronef`
 
 
+-- VEHICLE SHOP
+CREATE TABLE IF NOT EXISTS `vehicleshop_categories` (
+  `name` VARCHAR(100) DEFAULT NULL,
+  `label` VARCHAR(100) DEFAULT NULL,
 
+  PRIMARY KEY (`name`)
+);
+
+CREATE TABLE IF NOT EXISTS `vehicleshop_vehicles` (
+  `code` VARCHAR(100) DEFAULT NULL,
+  `hash` VARCHAR(11) NOT NULL,
+  `price` INT(11) NOT NULL,
+  `category` VARCHAR(100) DEFAULT NULL,
+
+  PRIMARY KEY (`code`)
+);
+
+CREATE TABLE IF NOT EXISTS `owned_vehicles` (
+  `owner` varchar(40) NOT NULL,
+  `plate` varchar(12) NOT NULL,
+  `vehicle` LONGTEXT DEFAULT NULL,
+  `type` varchar(20) NOT NULL DEFAULT 'car',
+  `stored` tinyint(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`plate`)
+);

@@ -1,7 +1,7 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.6,
-	vehicles = 0.5,
-	parked = 0.30
+	peds = 0.8,
+	vehicles = 0.8,
+	parked = 0.8
 }
 
 Citizen.CreateThread(function()
