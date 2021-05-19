@@ -76,7 +76,7 @@ Drugs.TriggerZoneProcessor = function(playerId, locationName, cb)
     local lastTimeAlive = ((Drugs.ProcessActions or {})[tostring(xPlayer.source)] or {}).lastTimeAlive or os.time()
 
     if (((lastTimeTriggerd + timeToWait) <= os.time()) and ((lastTimeAlive) >= (os.time() - 45))) then
-        local requiredCops = location.requiredCops or 1
+        local requiredCops = location.requiredCops or 0
 
         if (Drugs.NumberOfCops < requiredCops) then
             xPlayer.showNotification(_U('required_cops', Drugs.NumberOfCops, requiredCops))

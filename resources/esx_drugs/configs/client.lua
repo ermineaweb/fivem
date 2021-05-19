@@ -1,7 +1,7 @@
 Config                      = {}
-Config.Locale               = 'nl'
+Config.Locale               = 'en'
 Config.DrawDistance         = 10
-Config.CurrancySymbol       = '€'
+Config.CurrancySymbol       = '$'
 Config.CanProcessInVehicle  = false -- when `true` players are allowed to sit in their vehicle and use the circle
 
 Config.Marker = {
