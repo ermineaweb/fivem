@@ -9,7 +9,7 @@ CREATE TABLE `users` (
 	`job` VARCHAR(20) NULL DEFAULT 'unemployed',
 	`job_grade` INT NULL DEFAULT 0,
 	`loadout` LONGTEXT NULL DEFAULT NULL,
-	`position` VARCHAR(255) NULL DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
+	`position` VARCHAR(255) NULL DEFAULT '{"x":-1044.7,"y":-2749.38,"z":21.36,"heading":320.68}',
 	PRIMARY KEY (`identifier`)
 );
 CREATE TABLE `items` (
@@ -40,11 +40,71 @@ CREATE TABLE `jobs` (
 );
 INSERT INTO `jobs` VALUES ('unemployed','Chômeur');
 
+-- ACCOUNT
+USE `es_extended`;
+CREATE TABLE `addon_account` (
+	`name` VARCHAR(60) NOT NULL,
+	`label` VARCHAR(100) NOT NULL,
+	`shared` INT NOT NULL,
+	PRIMARY KEY (`name`)
+);
+CREATE TABLE `addon_account_data` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`account_name` VARCHAR(100) DEFAULT NULL,
+	`money` INT NOT NULL,
+	`owner` VARCHAR(40) DEFAULT NULL,
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `index_addon_account_data_account_name_owner` (`account_name`, `owner`),
+	INDEX `index_addon_account_data_account_name` (`account_name`)
+);
+
+-- INVENTORY
+USE `es_extended`;
+CREATE TABLE `addon_inventory` (
+	`name` VARCHAR(60) NOT NULL,
+	`label` VARCHAR(100) NOT NULL,
+	`shared` INT NOT NULL,
+	PRIMARY KEY (`name`)
+);
+CREATE TABLE `addon_inventory_items` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`inventory_name` VARCHAR(100) NOT NULL,
+	`name` VARCHAR(100) NOT NULL,
+	`count` INT NOT NULL,
+	`owner` VARCHAR(40) DEFAULT NULL,
+	PRIMARY KEY (`id`),
+	INDEX `index_addon_inventory_items_inventory_name_name` (`inventory_name`, `name`),
+	INDEX `index_addon_inventory_items_inventory_name_name_owner` (`inventory_name`, `name`, `owner`),
+	INDEX `index_addon_inventory_inventory_name` (`inventory_name`)
+);
+
+-- DATASTORE
+USE `es_extended`;
+CREATE TABLE `datastore` (
+	`name` VARCHAR(60) NOT NULL,
+	`label` VARCHAR(100) NOT NULL,
+	`shared` INT NOT NULL,
+	PRIMARY KEY (`name`)
+);
+CREATE TABLE `datastore_data` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(60) NOT NULL,
+	`owner` VARCHAR(40),
+	`data` LONGTEXT,
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `index_datastore_data_name_owner` (`name`, `owner`),
+	INDEX `index_datastore_data_name` (`name`)
+);
+
 -- SKIN
 USE `es_extended`;
 ALTER TABLE `users` ADD COLUMN `skin` LONGTEXT NULL DEFAULT NULL;
 
--- ACCOUNT
+-- JOBS
+USE `es_extended`;
+ALTER TABLE jobs add whitelisted BOOLEAN NOT NULL DEFAULT FALSE;
+
+-- JOBS
 USE `es_extended`;
 INSERT INTO `addon_account` (name, label, shared) VALUES
 	('caution', 'Caution', 0)
@@ -88,10 +148,6 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
 	('fabric', 'Tissu', 1),
 	('clothe', 'Vêtement', 1)
 ;
-
--- JOBS
-USE `es_extended`;
-ALTER TABLE jobs add whitelisted BOOLEAN NOT NULL DEFAULT FALSE;
 
 -- SHOPS
 USE `es_extended`;
@@ -156,25 +212,21 @@ INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_
 	('taxi',4,'boss','Patron',0,'{"hair_2":0,"hair_color_2":0,"torso_1":29,"bags_1":0,"helmet_2":0,"chain_2":0,"eyebrows_3":0,"makeup_3":0,"makeup_2":0,"tshirt_1":31,"makeup_1":0,"bags_2":0,"makeup_4":0,"eyebrows_4":0,"chain_1":0,"lipstick_4":0,"bproof_2":0,"hair_color_1":0,"decals_2":0,"pants_2":4,"age_2":0,"glasses_2":0,"ears_2":0,"arms":1,"lipstick_1":0,"ears_1":-1,"mask_2":0,"sex":0,"lipstick_3":0,"helmet_1":-1,"shoes_2":0,"beard_2":0,"beard_1":0,"lipstick_2":0,"beard_4":0,"glasses_1":0,"bproof_1":0,"mask_1":0,"decals_1":0,"hair_1":0,"eyebrows_2":0,"beard_3":0,"age_1":0,"tshirt_2":0,"skin":0,"torso_2":4,"eyebrows_1":0,"face":0,"shoes_1":10,"pants_1":24}', '{"hair_2":0,"hair_color_2":0,"torso_1":57,"bags_1":0,"helmet_2":0,"chain_2":0,"eyebrows_3":0,"makeup_3":0,"makeup_2":0,"tshirt_1":38,"makeup_1":0,"bags_2":0,"makeup_4":0,"eyebrows_4":0,"chain_1":0,"lipstick_4":0,"bproof_2":0,"hair_color_1":0,"decals_2":0,"pants_2":1,"age_2":0,"glasses_2":0,"ears_2":0,"arms":21,"lipstick_1":0,"ears_1":-1,"mask_2":0,"sex":1,"lipstick_3":0,"helmet_1":-1,"shoes_2":0,"beard_2":0,"beard_1":0,"lipstick_2":0,"beard_4":0,"glasses_1":5,"bproof_1":0,"mask_1":0,"decals_1":1,"hair_1":0,"eyebrows_2":0,"beard_3":0,"age_1":0,"tshirt_2":0,"skin":0,"torso_2":0,"eyebrows_1":0,"face":0,"shoes_1":49,"pants_1":11}')
 ;
 
--- ADDON INVENTORY
+-- AVOCAT
 USE `es_extended`;
-CREATE TABLE `addon_inventory` (
-	`name` VARCHAR(60) NOT NULL,
-	`label` VARCHAR(100) NOT NULL,
-	`shared` INT NOT NULL,
-	PRIMARY KEY (`name`)
-);
-CREATE TABLE `addon_inventory_items` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`inventory_name` VARCHAR(100) NOT NULL,
-	`name` VARCHAR(100) NOT NULL,
-	`count` INT NOT NULL,
-	`owner` VARCHAR(40) DEFAULT NULL,
-	PRIMARY KEY (`id`),
-	INDEX `index_addon_inventory_items_inventory_name_name` (`inventory_name`, `name`),
-	INDEX `index_addon_inventory_items_inventory_name_name_owner` (`inventory_name`, `name`, `owner`),
-	INDEX `index_addon_inventory_inventory_name` (`inventory_name`)
-);
+INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+(83, 'avocat', 0, 'boss', 'Patron', 500, '', '');
+INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
+('avocat', 'Avocat', 1);
+INSERT INTO `addon_account` (name, label, shared) VALUES 
+    ('society_avocat','Avocat',1)
+;
+INSERT INTO `datastore` (name, label, shared) VALUES 
+    ('society_avocat','Avocat',1)
+;
+INSERT INTO `addon_inventory` (name, label, shared) VALUES 
+    ('society_avocat', 'Avocat', 1)
+;
 
 -- VEHICLES SHOPS
 USE `es_extended`;
@@ -516,7 +568,6 @@ CREATE TABLE `weashops` (
 	`price` int(11) NOT NULL,
 	PRIMARY KEY (`id`)
 );
-
 INSERT INTO `licenses` (`type`, `label`) VALUES
 	('weapon', "Permis de port d'arme")
 ;
@@ -572,24 +623,6 @@ CREATE TABLE `user_parkings` (
   `zone` int(11) NOT NULL,
   `vehicle` longtext,
   PRIMARY KEY (`id`)
-);
-
--- DATASTORE
-USE `es_extended`;
-CREATE TABLE `datastore` (
-	`name` VARCHAR(60) NOT NULL,
-	`label` VARCHAR(100) NOT NULL,
-	`shared` INT NOT NULL,
-	PRIMARY KEY (`name`)
-);
-CREATE TABLE `datastore_data` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(60) NOT NULL,
-	`owner` VARCHAR(40),
-	`data` LONGTEXT,
-	PRIMARY KEY (`id`),
-	UNIQUE INDEX `index_datastore_data_name_owner` (`name`, `owner`),
-	INDEX `index_datastore_data_name` (`name`)
 );
 
 -- PROPRIETES
@@ -917,7 +950,6 @@ ALTER TABLE `users`
 
 -- UNICORN JOB
 USE `es_extended`;
-
 SET @job_name = 'unicorn';
 SET @society_name = 'society_unicorn';
 SET @job_Name_Caps = 'Unicorn';
@@ -1015,17 +1047,6 @@ INSERT INTO `jobs` (`name`, `label`) VALUES
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
 ('trucker', 0, 'employee', 'Employé', 200, '{"tshirt_1":59,"torso_1":89,"arms":31,"pants_1":36,"glasses_1":19,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":2,"glasses_2":0,"torso_2":1,"shoes":35,"hair_1":0,"skin":0,"sex":0,"glasses_1":19,"pants_2":0,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":5}', '{"tshirt_1":36,"torso_1":0,"arms":68,"pants_1":30,"glasses_1":15,"decals_2":0,"hair_color_2":0,"helmet_2":0,"hair_color_1":0,"face":27,"glasses_2":0,"torso_2":11,"shoes":26,"hair_1":5,"skin":0,"sex":1,"glasses_1":15,"pants_2":2,"hair_2":0,"decals_1":0,"tshirt_2":0,"helmet_1":19}');
 
--- CONVOYEUR JOB
-USE `es_extended`;
-INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
-('brinks', 'Convoyeur', 0);
-
-INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
-('brinks', 0, 'interim', 'Convoyeur de fonds', 400, '{}', '{}');
-
-INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
-('sacbillets', 'Sac de Billets', 100, 0, 1);
-
 -- BESOINS VITAUX
 USE `es_extended`;
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES
@@ -1045,7 +1066,7 @@ INSERT INTO `licenses` (`type`, `label`) VALUES
 -- BIJOUTERIE HOLDUP
 USE `es_extended`;
 INSERT INTO `items` (name, label, `weight`) VALUES
-	('jewels', 'Jewels', 1)
+	('jewels', 'Bijoux', 1)
 ;
 
 -- REAL PARKING
@@ -1077,61 +1098,3 @@ INSERT INTO job_grades (`job_name`, `grade`, `name`, `label`, `salary`, `skin_ma
 ('pilot', 0, 'hobbypilot', 'Hobbypilot', 60, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}'),
 ('pilot', 1, 'freightpilot', 'Freightpilot', 80, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}'),
 ('pilot', 2, 'airlinepilot', 'Airlinepilot', 150, '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"glasses":0,"glasses_1":0,"glasses_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"shoes":0,"skin":0,"sex":0}', '{"tshirt_1":0,"tshirt_2":0,"torso_1":0,"torso_2":0,"arms":0,"pants_1":0,"pants_2":0,"decals_1":0,"decals_2":0,"hair_color_1":0,"hair_color_2":0,"shoes":0,"helmet_1":0,"helmet_2":0,"hair_1":0,"hair_2":0,"face":0,"skin":0,"sex":1,"glasses_1":0,"glasses_2":0,"glasses":0}');
-
--- AIR PLANE DEALER
-USE `es_extended`;
-CREATE TABLE `avaible_aeronef` (
-  `id` int(11) NOT NULL,
-  `model` varchar(255) NOT NULL,
-  `label` varchar(50) NOT NULL,
-  `price` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-ALTER TABLE `avaible_aeronef`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `avaible_aeronef`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
--- Part 2
-
-CREATE TABLE `owned_aeronef` (
-  `id` int(11) NOT NULL,
-  `license` varchar(255) NOT NULL,
-  `model` varchar(255) NOT NULL,
-  `props` text NOT NULL,
-  `outside` int(11) NOT NULL DEFAULT '0',
-  `ownedAt` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-ALTER TABLE `owned_aeronef`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `owned_aeronef`
-
-
--- VEHICLE SHOP
-CREATE TABLE IF NOT EXISTS `vehicleshop_categories` (
-  `name` VARCHAR(100) DEFAULT NULL,
-  `label` VARCHAR(100) DEFAULT NULL,
-
-  PRIMARY KEY (`name`)
-);
-
-CREATE TABLE IF NOT EXISTS `vehicleshop_vehicles` (
-  `code` VARCHAR(100) DEFAULT NULL,
-  `hash` VARCHAR(11) NOT NULL,
-  `price` INT(11) NOT NULL,
-  `category` VARCHAR(100) DEFAULT NULL,
-
-  PRIMARY KEY (`code`)
-);
-
-CREATE TABLE IF NOT EXISTS `owned_vehicles` (
-  `owner` varchar(40) NOT NULL,
-  `plate` varchar(12) NOT NULL,
-  `vehicle` LONGTEXT DEFAULT NULL,
-  `type` varchar(20) NOT NULL DEFAULT 'car',
-  `stored` tinyint(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`plate`)
-);
