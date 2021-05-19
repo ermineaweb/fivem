@@ -18,5 +18,5 @@ server_scripts {
 dependencies {
     'es_extended',
     'esx_outlawalert',
-    'progressBars'
+    -- 'progressBars'
 }
