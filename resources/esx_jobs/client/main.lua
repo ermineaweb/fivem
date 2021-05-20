@@ -261,7 +261,7 @@ function refreshBlips()
 						else
 							_Pos = zoneValues.Pos
 						end
-						print(_Pos.x)
+						-- print(_Pos.x)
 						local blip = AddBlipForCoord(_Pos.x, _Pos.y, _Pos.z)
 						SetBlipSprite  (blip, jobValues.BlipInfos.Sprite)
 						SetBlipDisplay (blip, 4)
@@ -469,7 +469,9 @@ Citizen.CreateThread(function()
 				end
 
 				if IsControlJustReleased(0, Keys['E']) and not menuIsShowed and isInMarker then
+					print("jobs : on est la 1")
 					if onDuty or zone.Type == "cloakroom" or PlayerData.job.name == "reporter" then
+						print("jobs : on est la 2")
 						TriggerEvent('esx_jobs:action', job, zone, currentZone)
 					end
 				end
