@@ -1,6 +1,6 @@
 ESX = nil
 local GUI, vehiclePlate, PlayerData = {}, {}, {}
-local lastVehicle
+local lastVehicle = 0
 local lastOpen = false
 GUI.Time = 0
 local arrayWeight = Config.localWeight
