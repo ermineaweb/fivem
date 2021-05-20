@@ -80,7 +80,7 @@ Citizen.CreateThread(function()
 			})
 		end
 
-		Citizen.Wait(1)
+		Citizen.Wait(50)
 	end
 end)
 
@@ -94,7 +94,6 @@ Citizen.CreateThread(function()
 				carSpeed = math.ceil(GetEntitySpeed(PedCar) * 3.6)
 				fuel = exports["esx_fuel"]:GetFuel(PedCar)
 				rpm = GetVehicleCurrentRpm(PedCar)
-				
 
 				SendNUIMessage({
 			showfuel = true,
@@ -103,6 +102,6 @@ Citizen.CreateThread(function()
 			end
 		end
 
-		Citizen.Wait(1)
+		Citizen.Wait(1000)
 	end
 end)

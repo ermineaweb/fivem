@@ -256,7 +256,7 @@ Citizen.CreateThread(function()
   local origChatHideState = -1
 
   while true do
-    Wait(5000)
+    Wait(0)
 
     if not chatInputActive then
       if IsControlPressed(0, isRDR and `INPUT_MP_TEXT_CHAT_ALL` or 245) --[[ INPUT_MP_TEXT_CHAT_ALL ]] then
