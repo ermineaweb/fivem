@@ -1,8 +1,10 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.8,
-	vehicles = 0.8,
-	parked = 0.8
+	peds = 1.0,
+	vehicles = 1.0,
+	parked = 0.5
 }
+
+local isHost = false
 
 Citizen.CreateThread(function()
     while true do
@@ -12,7 +14,9 @@ Citizen.CreateThread(function()
 -- SetRiotModeEnabled(true)
 -- ECHELLE DE TEMPS
 -- SetTimeScale(1.0)
-    	if NetworkIsHost() then
+    	if isHost then
+		-- old version
+    	-- if NetworkIsHost() then
 			-- These natives has to be called every frame.
 			SetPedDensityMultiplierThisFrame(density.peds)
 			SetScenarioPedDensityMultiplierThisFrame(density.peds, density.peds)
@@ -29,12 +33,19 @@ Citizen.CreateThread(function()
 
 		SetGarbageTrucks(false) -- Stop garbage trucks from randomly spawning
 		SetRandomBoats(false) -- Stop random boats from spawning in the water.
-		SetCreateRandomCops(true) -- disable random cops walking/driving around.
+		SetCreateRandomCops(false) -- disable random cops walking/driving around.
 		SetCreateRandomCopsNotOnScenarios(false) -- stop random cops (not in a scenario) from spawning.
 		SetCreateRandomCopsOnScenarios(false) -- stop random cops (in a scenario) from spawning.
 		SetIgnoreLowPriorityShockingEvents(PlayerPedId(), true)
 		
-		Citizen.Wait(0)
+		Citizen.Wait(500)
+    end
+end)
+
+Citizen.CreateThread(function()
+    while(true) do
+        isHost = NetworkIsHost()
+		Citizen.Wait(1000)
     end
 end)
 
@@ -55,7 +66,7 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1000)
 		SetNoWeaponDrops()
+		Citizen.Wait(1000)
 	end
 end)
