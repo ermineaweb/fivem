@@ -68,7 +68,6 @@ Config.Shops = {
     {coords = vector3(23.39, -1105.6, 29.8-0.98), heading = 155.02, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(809.0, -2159.04, 29.62-0.98), heading = 348.43, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-330.87, 6085.85, 31.45-0.98), heading = 193.5, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
-    {coords = vector3(23.6, -1105.81, 29.8-0.98), heading = 156.16, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(2571.86, 297.05, 108.73-0.98), heading = 81.19, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-661.25, -933.51, 21.83-0.98), heading = 169.83, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1692.77, 3761.64, 34.71-0.98), heading = 223.58, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
