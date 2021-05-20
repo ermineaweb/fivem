@@ -110,13 +110,13 @@ INSERT INTO `addon_account` (name, label, shared) VALUES
 	('caution', 'Caution', 0)
 ;
 INSERT INTO `jobs` (name, label) VALUES
-	('reporter', 'Journaliste'),
-	('tailor', 'Couturier'),
-	('slaughterer', 'Boucher'),
+	('slaughterer', 'Abatteur'),
 	('fisherman', 'Pêcheur'),
-	('lumberjack', 'Bûcheron'),
 	('miner', 'Mineur'),
-	('fueler', 'Raffineur')
+	('lumberjack', 'Bûcheron'),
+	('fueler', 'Raffineur'),
+	('reporter', 'Journaliste'),
+	('tailor', 'Couturier')
 ;
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
 	('lumberjack', 0, 'employee', 'Intérimaire', 0, '{}', '{}'),

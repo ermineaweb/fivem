@@ -8,8 +8,14 @@ version '1.1.0'
 
 server_scripts {
 	'@es_extended/locale.lua',
+	'locales/br.lua',
 	'locales/en.lua',
+	'locales/es.lua',
+	'locales/fi.lua',
 	'locales/fr.lua',
+	'locales/sv.lua',
+	'locales/cs.lua',
+	'locales/de.lua',
 	'config.lua',
 
 	'jobs/fisherman.lua',
@@ -25,8 +31,13 @@ server_scripts {
 
 client_scripts {
 	'@es_extended/locale.lua',
+	'locales/br.lua',
+	'locales/fi.lua',
 	'locales/en.lua',
+	'locales/es.lua',
 	'locales/fr.lua',
+	'locales/sv.lua',
+	'locales/cs.lua',
 	'config.lua',
 
 	'jobs/fisherman.lua',

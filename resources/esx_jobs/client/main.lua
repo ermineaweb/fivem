@@ -417,7 +417,7 @@ end)
 Citizen.CreateThread(function()
 	while true do
 
-		Citizen.Wait(0)
+		Citizen.Wait(1)
 
 		if PlayerData.job ~= nil and PlayerData.job.name ~= 'unemployed' then
 			local zones = nil
