@@ -92,6 +92,30 @@ Config.GradeVehicles = {
 			label = 'Dodo',
 			value = 'dodo'
 		},
+		velum2 = {
+			label = 'Velum2',
+			value = 'velum2'
+		},
+		cuban800 = {
+			label = 'Cuban800',
+			value = 'cuban800'
+		},
+		luxor = {
+			label = 'Luxor',
+			value = 'luxor'
+		},
+		buzzard2 = {
+			label = 'Buzzard2',
+			value = 'buzzard2'
+		},
+		frogger2 = {
+			label = 'Frogger2',
+			value = 'frogger2'
+		},
+		supervolito2 = {
+			label = 'Supervolito2',
+			value = 'supervolito2'
+		},
 	},
 
 	freightpilot = {

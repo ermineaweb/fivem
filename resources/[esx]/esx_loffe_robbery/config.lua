@@ -72,6 +72,7 @@ Config.Shops = {
     {coords = vector3(-661.25, -933.51, 21.83-0.98), heading = 169.83, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1692.77, 3761.64, 34.71-0.98), heading = 223.58, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-1118.34, 2700.56, 18.55-0.98), heading = 216.18, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(841.51, -1035.42, 28.19-0.98), heading = 351.1, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     -- unicorn club
     {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {3000, 8000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
     -- bahamas mama

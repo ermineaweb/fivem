@@ -68,7 +68,7 @@ Citizen.CreateThread(function()
 
     Wait(0)
 
-    if IsControlPressed(0, 183) and (GetGameTimer() - GUI.Time) > 150 then
+    if IsControlJustReleased(0, 246) and IsInputDisabled(0) then
         local vehFront = VehicleInFront()
 	    local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1),true))
 	    local closecar = GetClosestVehicle(x, y, z, 4.0, 0, 71)
@@ -96,7 +96,7 @@ Citizen.CreateThread(function()
           end
       lastOpen = true
       GUI.Time  = GetGameTimer()
-    elseif lastOpen and IsControlPressed(0, 177) and (GetGameTimer() - GUI.Time) > 150 then
+    elseif lastOpen and IsControlJustReleased(0, 246) and IsInputDisabled(0) then
       lastOpen = false
       ESX.UI.Menu.CloseAll()
       if lastVehicle > 0 then
