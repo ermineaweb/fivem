@@ -137,11 +137,11 @@ Citizen.CreateThread(function()
 									-- 	TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
 									-- end
 									
-									if useFlashingScreen == true then
-										Citizen.Wait(500)
-										StopScreenEffect('RaceTurbo')
-										-- TriggerServerEvent('esx_speedcamera:closeGUI')
-									end
+									-- if useFlashingScreen == true then
+									-- 	Citizen.Wait(500)
+									-- 	StopScreenEffect('RaceTurbo')
+									-- 	-- TriggerServerEvent('esx_speedcamera:closeGUI')
+									-- end
 									-- FLASHING EFFECT (END)								
 								
 									TriggerEvent("pNotify:SendNotification", {text = "You've been caught by the speedcamera in a 60 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", type = "error", timeout = 5000, layout = "centerLeft"})
