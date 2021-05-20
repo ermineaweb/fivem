@@ -138,7 +138,7 @@ Citizen.CreateThread(function()
 									end
 									
 									if useFlashingScreen == true then
-										Citizen.Wait(5)
+										Citizen.Wait(1)
 										-- StopScreenEffect('RaceTurbo')
 										TriggerServerEvent('esx_speedcamera:closeGUI')
 									end
