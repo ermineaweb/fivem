@@ -203,10 +203,10 @@ function RefreshVehicles(xPlayer, src, parkingName)
 			end
 		end
 	else
-		local nrs = MySQL.Sync.fetchAll("SELECT identifier, firstname, lastname FROM users")
+		local nrs = MySQL.Sync.fetchAll("SELECT identifier, lastname FROM users")
 		if type(nrs) == 'table' then
 			for k, v in pairs(nrs) do
-				nameList[v.identifier] = v.firstname .. " " .. v.lastname
+				nameList[v.identifier] = v.lastname
 			end
 		end
 	end

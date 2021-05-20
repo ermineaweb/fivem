@@ -16,7 +16,7 @@ Config.ParkingLocations = {
 		size   = 50.0,                                  -- The parking range radius (Horizontal)
 		height = 10.0,                                  -- The parking range radius (Vertical)
 		name   = "Public Parking",                      -- The name of the parking (blips)
-		fee    = 1000,                                  -- How much parking fee per day (Real life time), set 0 to disable
+		fee    = 0,                                  -- How much parking fee per day (Real life time), set 0 to disable
 		enter  = {x = -279.25, y = -890.39, z = 30.08}, -- The entrance of the parking
 		maxcar = 30,
 	},
@@ -27,7 +27,7 @@ Config.ParkingLocations = {
 		size   = 15.0,         -- The parking range radius (Horizontal)
 		height = 10.0,         -- The parking range radius (Vertical)
 		name   = "Public Parking", -- The name of the parking (blips)
-		fee    = 500,          -- How much parking fee per day (Real life time), set false to disable
+		fee    = 0,          -- How much parking fee per day (Real life time), set false to disable
 		enter  = {x = -338.57, y = 267.16, z = 85.73},
 		maxcar = 10,
 	},
@@ -38,7 +38,7 @@ Config.ParkingLocations = {
 		size   = 25.0,         -- The parking range radius (Horizontal)
 		height = 10.0,         -- The parking range radius (Vertical)
 		name   = "Public Parking", -- The name of the parking (blips)
-		fee    = 800,          -- How much parking fee per day (Real life time), set false to disable
+		fee    = 0,          -- How much parking fee per day (Real life time), set false to disable
 		enter  = {x = 467.96, y = 265.07, z = 103.09},
 		maxcar = 20,
 	},
@@ -49,7 +49,7 @@ Config.ParkingLocations = {
 		size   = 20.0,         -- The parking range radius (Horizontal)
 		height = 10.0,         -- The parking range radius (Vertical)
 		name   = "Public Parking", -- The name of the parking (blips)
-		fee    = 700,          -- How much parking fee per day (Real life time), set false to disable
+		fee    = 0,          -- How much parking fee per day (Real life time), set false to disable
 		enter  = {x = 364.77, y = 298.98, z = 103.5},
 		maxcar = 15,
 	},
