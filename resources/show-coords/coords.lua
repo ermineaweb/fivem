@@ -13,7 +13,7 @@ end
 
 Citizen.CreateThread(function()
     while true do
-		Citizen.Wait(0)
+		Citizen.Wait(50)
 		local entity = IsPedInAnyVehicle(PlayerPedId()) and GetVehiclePedIsIn(PlayerPedId(), false) or PlayerPedId()
 		x, y, z = table.unpack(GetEntityCoords(entity, true))
 		

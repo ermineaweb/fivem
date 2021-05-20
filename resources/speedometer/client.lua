@@ -80,7 +80,7 @@ Citizen.CreateThread(function()
 			})
 		end
 
-		Citizen.Wait(500)
+		Citizen.Wait(50)
 	end
 end)
 
@@ -102,6 +102,6 @@ Citizen.CreateThread(function()
 			end
 		end
 
-		Citizen.Wait(1000)
+		Citizen.Wait(2000)
 	end
 end)
