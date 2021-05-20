@@ -1,6 +1,6 @@
 -- BELOVE IS YOUR SETTINGS, CHANGE THEM TO WHATEVER YOU'D LIKE & MORE SETTINGS WILL COME IN THE FUTURE! --
 local useBilling = true -- OPTIONS: (true/false)
-local useCameraSound = false -- OPTIONS: (true/false)
+local useCameraSound = true -- OPTIONS: (true/false)
 local useFlashingScreen = true -- OPTIONS: (true/false)
 local useBlips = true -- OPTIONS: (true/false)
 local alertPolice = true -- OPTIONS: (true/false)
@@ -133,12 +133,12 @@ Citizen.CreateThread(function()
 										TriggerServerEvent('esx_speedcamera:openGUI')
 									end
 									
-									-- if useCameraSound == true then
-									-- 	TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
-									-- end
+									if useCameraSound == true then
+										TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
+									end
 									
 									if useFlashingScreen == true then
-										Citizen.Wait(1)
+										Citizen.Wait(5)
 										-- StopScreenEffect('RaceTurbo')
 										TriggerServerEvent('esx_speedcamera:closeGUI')
 									end

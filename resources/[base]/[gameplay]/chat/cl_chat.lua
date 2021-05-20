@@ -251,6 +251,8 @@ end
 Citizen.CreateThread(function()
   SetTextChatEnabled(false)
   SetNuiFocus(false)
+  -- FIX ?
+  Wait(1000)
 
   local lastChatHideState = -1
   local origChatHideState = -1
