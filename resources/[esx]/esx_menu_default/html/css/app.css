@@ -90,7 +90,8 @@
 }
 
 .menu .menu-items .menu-item.selected {
-	background-color: rgba(20, 20, 20, 1);
+	background-color: rgb(241, 241, 241);
+	color: #292929;
 	border-top: 2px solid 	#e76767;
 	border-bottom: 2px solid		#e76767;
 }
