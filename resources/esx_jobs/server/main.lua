@@ -6,7 +6,6 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1000)
 		local timeNow = os.clock()
 
 		for playerId,data in pairs(playersWorking) do
@@ -46,6 +45,7 @@ Citizen.CreateThread(function()
 								if v.name ~= _U('delivery') then
 									-- chances to drop the item
 									-- if v.drop == 100 then
+									print("server jobs")
 										xPlayer.addInventoryItem(v.db_name, v.add)
 									-- else
 									-- 	local chanceToDrop = math.random(100)
@@ -74,6 +74,7 @@ Citizen.CreateThread(function()
 			end
 		end
 	end
+	Citizen.Wait(1000)
 end)
 
 RegisterServerEvent('esx_jobs:startWork')
