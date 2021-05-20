@@ -129,7 +129,7 @@ Citizen.CreateThread(function()
 								
 									-- FLASHING EFFECT (START)
 									if useFlashingScreen == true then
-										StartScreenEffect('RaceTurbo', 0, false)
+										StartScreenEffect('RaceTurbo', 1000, false)
 										-- TriggerServerEvent('esx_speedcamera:openGUI')
 									end
 									
