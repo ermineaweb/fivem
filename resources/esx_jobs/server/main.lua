@@ -45,14 +45,14 @@ Citizen.CreateThread(function()
 							else
 								if v.name ~= _U('delivery') then
 									-- chances to drop the item
-									if v.drop == 100 then
+									-- if v.drop == 100 then
 										xPlayer.addInventoryItem(v.db_name, v.add)
-									else
-										local chanceToDrop = math.random(100)
-										if chanceToDrop <= v.drop then
-											xPlayer.addInventoryItem(v.db_name, v.add)
-										end
-									end
+									-- else
+									-- 	local chanceToDrop = math.random(100)
+									-- 	if chanceToDrop <= v.drop then
+									-- 		xPlayer.addInventoryItem(v.db_name, v.add)
+									-- 	end
+									-- end
 								else
 									xPlayer.addMoney(v.price)
 								end
