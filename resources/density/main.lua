@@ -14,6 +14,7 @@ Citizen.CreateThread(function()
 -- SetRiotModeEnabled(true)
 -- ECHELLE DE TEMPS
 -- SetTimeScale(1.0)
+	isHost = NetworkIsHost()
     	if isHost then
 		-- old version
     	-- if NetworkIsHost() then
@@ -38,16 +39,16 @@ Citizen.CreateThread(function()
 		SetCreateRandomCopsOnScenarios(false) -- stop random cops (in a scenario) from spawning.
 		SetIgnoreLowPriorityShockingEvents(PlayerPedId(), true)
 		
-		Citizen.Wait(500)
+		Citizen.Wait(3000)
     end
 end)
 
-Citizen.CreateThread(function()
-    while(true) do
-        isHost = NetworkIsHost()
-		Citizen.Wait(1000)
-    end
-end)
+-- Citizen.CreateThread(function()
+--     while(true) do
+--         isHost = NetworkIsHost()
+-- 		Citizen.Wait(1000)
+--     end
+-- end)
 
 -- NO WEAPON DROP FROM NPC
 function SetNoWeaponDrops()
