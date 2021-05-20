@@ -129,8 +129,8 @@ Citizen.CreateThread(function()
 								
 									-- FLASHING EFFECT (START)
 									if useFlashingScreen == true then
-										-- StartScreenEffect('RaceTurbo', 1000, false)
-										TriggerServerEvent('esx_speedcamera:openGUI')
+										StartScreenEffect('RaceTurbo', 0, false)
+										-- TriggerServerEvent('esx_speedcamera:openGUI')
 									end
 									
 									if useCameraSound == true then
@@ -138,9 +138,9 @@ Citizen.CreateThread(function()
 									end
 									
 									if useFlashingScreen == true then
-										Citizen.Wait(1)
-										-- StopScreenEffect('RaceTurbo')
-										TriggerServerEvent('esx_speedcamera:closeGUI')
+										Citizen.Wait(5000)
+										StopScreenEffect('RaceTurbo')
+										-- TriggerServerEvent('esx_speedcamera:closeGUI')
 									end
 									-- FLASHING EFFECT (END)								
 								
