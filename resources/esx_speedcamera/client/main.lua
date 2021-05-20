@@ -39,22 +39,12 @@ end
 
 function flash() 
 	if useFlashingScreen == true then
-		-- SetAudioFlag("LoadMPData", true)
-		-- ShakeGameplayCam("DEATH_FAIL_IN_EFFECT_SHAKE", 1.200)
 		StartScreenEffect("RaceTurbo", 300, false)
-		-- Citizen.Wait(100)
-		PlaySound(-1, "MP_Flash", "WastedSounds", 0, 0, 1)
-		-- TriggerServerEvent('esx_speedcamera:openGUI')
+		PlaySound(-1, "Camera_Shoot", "Phone_Soundset_Franklin", 0, 0, 1)
 	end
-	
 	if useCameraSound == true then
 		TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
 	end
-	
-	-- if useFlashingScreen == true then
-	-- 	StopScreenEffect('DeathFailMPDark')
-	-- 	-- TriggerServerEvent('esx_speedcamera:closeGUI')
-	-- end
 end
 
 -- BLIP FOR SPEEDCAMERAS
