@@ -6,6 +6,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 Citizen.CreateThread(function()
 	while true do
+		Citizen.Wait(1000)
 		local timeNow = os.clock()
 
 		for playerId,data in pairs(playersWorking) do
@@ -74,7 +75,6 @@ Citizen.CreateThread(function()
 			end
 		end
 	end
-	Citizen.Wait(1000)
 end)
 
 RegisterServerEvent('esx_jobs:startWork')
