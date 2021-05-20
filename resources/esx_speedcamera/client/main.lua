@@ -37,6 +37,26 @@ function hintToDisplay(text)
 	DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 end
 
+function flash() 
+	if useFlashingScreen == true then
+		-- SetAudioFlag("LoadMPData", true)
+		-- ShakeGameplayCam("DEATH_FAIL_IN_EFFECT_SHAKE", 1.200)
+		StartScreenEffect("RaceTurbo", 500, false)
+		-- Citizen.Wait(100)
+		-- PlaySound(-1, "MP_Flash", "WastedSounds", 0, 0, 1)
+		-- TriggerServerEvent('esx_speedcamera:openGUI')
+	end
+	
+	if useCameraSound == true then
+		TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
+	end
+	
+	-- if useFlashingScreen == true then
+	-- 	StopScreenEffect('DeathFailMPDark')
+	-- 	-- TriggerServerEvent('esx_speedcamera:closeGUI')
+	-- end
+end
+
 -- BLIP FOR SPEEDCAMERAS
 local blips = {
 	-- 60KM/H ZONES
@@ -128,24 +148,8 @@ Citizen.CreateThread(function()
 									-- ALERT POLICE (END)								
 								
 									-- FLASHING EFFECT (START)
-									if useFlashingScreen == true then
-										SetAudioFlag("LoadMPData", true)
-										ShakeGameplayCam("DEATH_FAIL_IN_EFFECT_SHAKE", 1.200)
-										StartScreenEffect("DeathFailMPDark", 0, 0)
-										Citizen.Wait(100)
-										PlaySound(-1, "MP_Flash", "WastedSounds", 0, 0, 1)
-										-- TriggerServerEvent('esx_speedcamera:openGUI')
-									end
-									
-									-- if useCameraSound == true then
-									-- 	TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
-									-- end
-									
-									if useFlashingScreen == true then
-										StopScreenEffect('DeathFailMPDark')
-										-- TriggerServerEvent('esx_speedcamera:closeGUI')
-									end
-									-- FLASHING EFFECT (END)								
+									flash() 
+									-- FLASHING EFFECT (END)			
 								
 									TriggerEvent("pNotify:SendNotification", {text = "You've been caught by the speedcamera in a 60 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", type = "error", timeout = 5000, layout = "centerLeft"})
 									
@@ -213,18 +217,7 @@ Citizen.CreateThread(function()
 									-- ALERT POLICE (END)								
 								
 									-- FLASHING EFFECT (START)
-									if useFlashingScreen == true then
-										TriggerServerEvent('esx_speedcamera:openGUI')
-									end
-									
-									if useCameraSound == true then
-										TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
-									end
-									
-									if useFlashingScreen == true then
-										Citizen.Wait(200)
-										TriggerServerEvent('esx_speedcamera:closeGUI')
-									end
+									flash() 
 									-- FLASHING EFFECT (END)								
 								
 									TriggerEvent("pNotify:SendNotification", {text = "You've been caught by the speedcamera in a 80 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", type = "error", timeout = 5000, layout = "centerLeft"})
@@ -293,18 +286,7 @@ Citizen.CreateThread(function()
 									-- ALERT POLICE (END)
 								
 									-- FLASHING EFFECT (START)
-									if useFlashingScreen == true then
-										TriggerServerEvent('esx_speedcamera:openGUI')
-									end
-									
-									if useCameraSound == true then
-										TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
-									end
-									
-									if useFlashingScreen == true then
-										Citizen.Wait(200)
-										TriggerServerEvent('esx_speedcamera:closeGUI')
-									end
+									flash() 
 									-- FLASHING EFFECT (END)
 								
 									TriggerEvent("pNotify:SendNotification", {text = "You've been caught by the speedcamera in a 120 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", type = "error", timeout = 5000, layout = "centerLeft"})
@@ -340,13 +322,13 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterNetEvent('esx_speedcamera:openGUI')
-AddEventHandler('esx_speedcamera:openGUI', function()
-    SetNuiFocus(false,false)
-    SendNUIMessage({type = 'openSpeedcamera'})
-end)   
+-- RegisterNetEvent('esx_speedcamera:openGUI')
+-- AddEventHandler('esx_speedcamera:openGUI', function()
+--     SetNuiFocus(false,false)
+--     SendNUIMessage({type = 'openSpeedcamera'})
+-- end)   
 
-RegisterNetEvent('esx_speedcamera:closeGUI')
-AddEventHandler('esx_speedcamera:closeGUI', function()
-    SendNUIMessage({type = 'closeSpeedcamera'})
-end)
+-- RegisterNetEvent('esx_speedcamera:closeGUI')
+-- AddEventHandler('esx_speedcamera:closeGUI', function()
+--     SendNUIMessage({type = 'closeSpeedcamera'})
+-- end)
