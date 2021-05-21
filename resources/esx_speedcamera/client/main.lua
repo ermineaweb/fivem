@@ -55,6 +55,11 @@ local blips = {
 	{title="Speedcamera (80KM/H)", colour=1, id=1, x = 2506.0671, y = 4145.2431, z = 38.1054}, -- 80KM/H ZONE
 	{title="Speedcamera (80KM/H)", colour=1, id=1, x = 1258.2006, y = 789.4199, z = 104.2190}, -- 80KM/H ZONE
 	{title="Speedcamera (80KM/H)", colour=1, id=1, x = 980.9982, y = 407.4164, z = 92.2374}, -- 80KM/H ZONE
+	{title="Speedcamera (80KM/H)", colour=1, id=1, x = -632.46, y = -369.55, z = 34.81}, -- 80KM/H ZONE
+	{title="Speedcamera (80KM/H)", colour=1, id=1, x = -1083.71, y = -755.24, z = 19.36}, -- 80KM/H ZONE
+	{title="Speedcamera (80KM/H)", colour=1, id=1, x = 173.66, y = -820.55, z = 31.18}, -- 80KM/H ZONE
+	{title="Speedcamera (80KM/H)", colour=1, id=1, x = -75.71, y = -103.24, z = 57.86}, -- 80KM/H ZONE
+	{title="Speedcamera (80KM/H)", colour=1, id=1, x = 793.57, y = -1434.24, z = 27.18}, -- 80KM/H ZONE
 	
 	-- 120KM/H ZONES
 	{title="Speedcamera (120KM/H)", colour=1, id=1, x = 1584.9281, y = -993.4557, z = 59.3923}, -- 120KM/H ZONE
