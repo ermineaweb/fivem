@@ -1052,9 +1052,11 @@ INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_
 
 -- BESOINS VITAUX
 USE `es_extended`;
-INSERT INTO `items` (`name`, `label`, `weight`) VALUES
-	('bread', 'Pain', 1),
-	('water', 'Eau', 1)
+INSERT INTO `items` (`name`, `label`, `weight`, `limit`) VALUES
+	('bread', 'Burger', 1, 5),
+	('pizza', 'Pizza', 1, 5),
+	('soda', 'Soda', 1, 5)
+	('water', 'Eau', 1, 5)
 ;
 
 -- PERMIS DIVERS

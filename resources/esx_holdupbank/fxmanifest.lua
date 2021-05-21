@@ -1,23 +1,26 @@
-dependency 'essentialmode'
+fx_version 'adamant'
+
+game 'gta5'
+
+version '1.1.0'
 
 client_scripts {
 	'@es_extended/locale.lua',
-	'locales/de.lua',
-	'locales/br.lua',
 	'locales/en.lua',
 	'locales/fr.lua',
-	'locales/sv.lua',
 	'config.lua',
 	'client/client.lua'
 }
 
 server_scripts {
 	'@es_extended/locale.lua',
-	'locales/de.lua',
-	'locales/br.lua',
 	'locales/en.lua',
 	'locales/fr.lua',
-	'locales/sv.lua',
 	'config.lua',
 	'server/server.lua'
+}
+
+
+dependencies {
+	'es_extended',
 }

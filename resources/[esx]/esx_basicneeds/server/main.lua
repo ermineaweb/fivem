@@ -11,6 +11,15 @@ ESX.RegisterUsableItem('bread', function(source)
 	xPlayer.showNotification(_U('used_bread'))
 end)
 
+ESX.RegisterUsableItem('pizza', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.removeInventoryItem('pizza', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'hunger', 200000)
+	TriggerClientEvent('esx_basicneeds:onEat', source)
+	xPlayer.showNotification(_U('used_pizza'))
+end)
+
 ESX.RegisterUsableItem('water', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	xPlayer.removeInventoryItem('water', 1)
@@ -18,6 +27,15 @@ ESX.RegisterUsableItem('water', function(source)
 	TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 	TriggerClientEvent('esx_basicneeds:onDrink', source)
 	xPlayer.showNotification(_U('used_water'))
+end)
+
+ESX.RegisterUsableItem('soda', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.removeInventoryItem('soda', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
+	TriggerClientEvent('esx_basicneeds:onDrink', source)
+	xPlayer.showNotification(_U('used_soda'))
 end)
 
 ESX.RegisterCommand('heal', 'admin', function(xPlayer, args, showError)
