@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.WeedProcessing.coords, true) < 3 then
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.WeedProcessing.coords, true) < 6 then
 			if not isProcessing then
 				ESX.ShowHelpNotification(_U('weed_processprompt'))
 			end
@@ -60,7 +60,7 @@ function ProcessWeed(xCannabis)
 		Citizen.Wait(1000)
 		timeLeft = timeLeft - 1
 
-		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.WeedProcessing.coords, false) > 4 then
+		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.WeedProcessing.coords, false) > 8 then
 			ESX.ShowNotification(_U('weed_processingtoofar'))
 			TriggerServerEvent('esx_weed:cancelProcessing')
 			TriggerServerEvent('esx_weed:outofbound')
@@ -97,7 +97,7 @@ Citizen.CreateThread(function()
 					if canPickUp then
 						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 
-						Citizen.Wait(2000)
+						Citizen.Wait(500)
 						ClearPedTasks(playerPed)
 						Citizen.Wait(1500)
 		
@@ -165,7 +165,7 @@ end
 
 function GenerateWeedCoords()
 	while true do
-		Citizen.Wait(10000)
+		Citizen.Wait(3000)
 
 		local weedCoordX, weedCoordY
 

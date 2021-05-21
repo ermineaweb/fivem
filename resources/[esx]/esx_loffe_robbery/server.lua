@@ -30,7 +30,13 @@ RegisterServerEvent('loffe_robbery:pickUp')
 AddEventHandler('loffe_robbery:pickUp', function(store)
     local xPlayer = ESX.GetPlayerFromId(source)
     local randomAmount = math.random(Config.Shops[store].money[1], Config.Shops[store].money[2])
-    xPlayer.addMoney(randomAmount)
+    if Config.bag == true then
+        xPlayer.addInventoryItem('money_bag', 1)
+    elseif Config.blackMoney == true then
+        xPlayer.addAccountMoney('black_money', randomAmount)
+    else
+        xPlayer.addMoney(randomAmount)
+    end
     TriggerClientEvent('esx:showNotification', source, Translation[Config.Locale]['cashrecieved'] .. ' ~g~' .. randomAmount .. ' ' .. Translation[Config.Locale]['currency'])
     TriggerClientEvent('loffe_robbery:removePickup', -1, store) 
 end)

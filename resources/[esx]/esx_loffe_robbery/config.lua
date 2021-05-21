@@ -3,6 +3,8 @@ Translation = {}
 
 Config.Shopkeeper = -1211756494 -- hash of the shopkeeper ped
 Config.Locale = 'fr' -- 'en', 'sv' or 'custom'
+Config.bag = false
+Config.blackMoney = true
 
 local globalCooldown = {hour = 0, minute = 120, second = 0}
 local globalMoney = {1000, 2500}

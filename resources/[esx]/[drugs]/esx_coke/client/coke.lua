@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.CokeProcessing.coords, true) < 1 then
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.CokeProcessing.coords, true) < 6 then
 			if not isProcessing then
 				ESX.ShowHelpNotification(_U('coke_processprompt'))
 			end
@@ -60,7 +60,7 @@ function ProcessCoke(xCoke)
 		Citizen.Wait(1000)
 		timeLeft = timeLeft - 1
 
-		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.CokeProcessing.coords, false) > 4 then
+		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.CokeProcessing.coords, false) > 8 then
 			ESX.ShowNotification(_U('coke_processingtoofar'))
 			TriggerServerEvent('esx_coke:cancelProcessing')
 			TriggerServerEvent('esx_coke:outofbound')
@@ -97,7 +97,7 @@ Citizen.CreateThread(function()
 					if canPickUp then
 						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 
-						Citizen.Wait(2000)
+						Citizen.Wait(500)
 						ClearPedTasks(playerPed)
 						Citizen.Wait(1500)
 		
@@ -165,7 +165,7 @@ end
 
 function GenerateCokeCoords()
 	while true do
-		Citizen.Wait(12000)
+		Citizen.Wait(3000)
 
 		local cokeCoordX, cokeCoordY
 
