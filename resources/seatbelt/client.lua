@@ -75,7 +75,7 @@ Citizen.CreateThread(function()
 
             if Config.Sounds then  
             -- TriggerEvent("seatbelt:sounds", "buckle", Config.Volume)
-            PlaySound(-1, "Pen_Tick", "DLC_HEIST_PLANNING_BOARD_SOUNDS", 0, 0, 1)
+            PlaySound(-1, "PIN_BUTTON", "ATM_SOUNDS", 0, 0, 1)
             end
             if Config.Notification then
             Notify(Config.Strings.seatbelt_on)
@@ -92,7 +92,8 @@ Citizen.CreateThread(function()
 
             if Config.Sounds then
             -- TriggerEvent("seatbelt:sounds", "unbuckle", Config.Volume)
-            PlaySound(-1, "WEAPON_AMMO_PURCHASE", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
+            -- PlaySound(-1, "WEAPON_AMMO_PURCHASE", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
+            PlaySound(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0, 0, 1)
             end
 
             if Config.Blinker then
