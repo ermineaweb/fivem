@@ -113,7 +113,7 @@ Citizen.CreateThread(function()
 										currentped = pos
 										if distance <= 2 and ped ~= playerPed and ped ~= oldped then
 											DrawText3Ds(pos.x, pos.y, pos.z, GuTu.Text['press'])
-											if IsControlJustPressed(1, 86) then
+											if IsControlJustPressed(1, 47) then
 												oldped = ped
 												--SetEntityHeading(ped, 180)
 												TaskLookAtCoord(ped, coords['x'], coords['y'], coords['z'], -1, 2048, 3)
