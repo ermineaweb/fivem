@@ -22,7 +22,7 @@
         setInterval(changeImage, 2500);
         function changeImage() {
           if (countImg > backgroundImg.length) countImg = 0;
-          document.querySelector(".background").style.backgroundImage = "url('loadscreen" + countImg++ + ".jpg')";
+          document.querySelector(".background").style.backgroundImage = `url('loadscreen${countImg++}.jpg')`;
         }
       };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
