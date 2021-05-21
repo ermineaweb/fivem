@@ -165,7 +165,7 @@ end
 
 function GenerateCokeCoords()
 	while true do
-		Citizen.Wait(3000)
+		Citizen.Wait(6000)
 
 		local cokeCoordX, cokeCoordY
 

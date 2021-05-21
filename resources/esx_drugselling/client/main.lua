@@ -125,7 +125,7 @@ Citizen.CreateThread(function()
 												ESX.ShowNotification(GuTu.Text['process'])
 												Wait(4000)
 												Vente(pos1)
-												ForcePedAiAndAnimationUpdate(oldped)
+												ClearPedTasksImmediately(oldped)
 												-- Wait(2500)
 												-- SetPedAsNoLongerNeeded(oldped)
 											end
