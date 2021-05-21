@@ -11,6 +11,7 @@ body {
     height: 100%;
     background-image: url(loadscreen1.jpg);
     background-size: 100% 100%;
+    transition: background-image, 1s;
 }
 
 .bottom {
