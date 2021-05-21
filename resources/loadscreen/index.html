@@ -5,7 +5,7 @@
   <body>
     <div id="content">
       <div class="letni">
-        <h3></h3>
+        <h3>Un super Serveur</h3>
         <div class="loadbar">
           <div class="thingy"></div>
         </div>
@@ -30,7 +30,7 @@
         var countImg = 0;
         setInterval(changeImage, 1000);
         function changeImage() {
-          document.querySelector("#content").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
+          document.querySelector("body").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
         }
       };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.

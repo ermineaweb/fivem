@@ -1,9 +1,11 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-size: 100% 100%;
+  background-image: url(loadscreen1.jpg); 
 }
 
-#content {
+/* #content {
   background-size: 100% 100%;
   position: relative;
   top: 0px;
@@ -11,7 +13,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(loadscreen1.jpg); 
-}
+} */
 
 .bottom {
   position: absolute;
@@ -35,30 +37,16 @@ body {
   font-style: normal;
 }
 
-h1,
-h2 {
-  position: relative;
-  background: transparent;
-  z-index: 0;
-}
-
 .letni {
   position: absolute;
   left: 5%;
   right: 5%;
   bottom: 10%;
   z-index: 5;
-  color: #fff;
+  color: rgba(251, 251, 251, 0.9);
   font-family: "Segoe UI";
 }
 
-.letni p {
-  font-size: 22px;
-  margin-left: 3px;
-  margin-top: 0px;
-}
-
-.letni h2,
 .letni h3 {
   font-family: BankGothic;
   text-transform: uppercase;
@@ -67,30 +55,9 @@ h2 {
   display: inline-block;
 }
 
-.top {
-  color: #fff;
-  position: absolute;
-  top: 7%;
-  left: 5%;
-  right: 5%;
-}
-
-.top h1 {
-  font-family: BankGothic;
-  font-size: 60px;
-  margin: 0px;
-}
-
-.top h2 {
-  font-family: BankGothic;
-  font-size: 40px;
-  margin: 0px;
-  color: #ddd;
-}
-
 .loadbar {
   width: 100%;
-  background-color: rgba(174, 115, 230, 0.9);
+  background-color: rgba(89, 31, 144, 0.9);
   height: 15px;
   border-radius: 30px;
   margin-left: 2px;
@@ -104,7 +71,7 @@ h2 {
 
 .thingy {
   width: 10%;
-  background-color: #eee;
+  background-color: rgba(204, 169, 236, 0.9);
   height: 20px;
   position: absolute;
   left: 10%;
