@@ -71,7 +71,7 @@ function OpenDrugShop()
 		align    = 'top-left',
 		elements = elements
 	}, function(data, menu)
-		TriggerServerEvent('esx_drugs:sellDrug', data.current.name, data.current.value)
+		TriggerServerEvent('esx_weed:sellDrug', data.current.name, data.current.value)
 	end, function(data, menu)
 		menu.close()
 		menuOpen = false
@@ -111,7 +111,7 @@ function OpenBuyLicenseMenu(licenseName)
 	}, function(data, menu)
 
 		if data.current.value ~= 'no' then
-			ESX.TriggerServerCallback('esx_drugs:buyLicense', function(boughtLicense)
+			ESX.TriggerServerCallback('esx_weed:buyLicense', function(boughtLicense)
 				if boughtLicense then
 					ESX.ShowNotification(_U('license_bought', data.current.licenseName, ESX.Math.GroupDigits(data.current.price)))
 				else
