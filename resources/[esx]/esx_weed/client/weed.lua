@@ -112,7 +112,7 @@ Citizen.CreateThread(function()
 					end
 
 					isPickingUp = false
-				end, 'cannabis')
+				end, 'weed')
 			end
 		else
 			Citizen.Wait(500)
