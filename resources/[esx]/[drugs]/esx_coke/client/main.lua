@@ -8,6 +8,7 @@ local wasOpen = false
 -- 		Citizen.Wait(0)
 -- 	end
 
+
 -- 	while ESX.GetPlayerData().job == nil do
 -- 		Citizen.Wait(100)
 -- 	end
@@ -150,7 +151,6 @@ function CreateBlipCircle(coords, text, radius, color, sprite)
 end
 
 Citizen.CreateThread(function()
-	for k,zone in pairs(Config.CircleZones) do
-		CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
-	end
+	local zone = Config.CircleZones.CokeField
+	CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
 end)

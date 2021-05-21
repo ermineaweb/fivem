@@ -150,7 +150,6 @@ function CreateBlipCircle(coords, text, radius, color, sprite)
 end
 
 Citizen.CreateThread(function()
-	for k,zone in pairs(Config.CircleZones) do
-		CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
-	end
+	local zone = Config.CircleZones.WeedField
+	CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
 end)
