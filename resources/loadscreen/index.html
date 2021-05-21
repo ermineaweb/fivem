@@ -28,7 +28,7 @@
         ];
 
         var countImg = 0;
-        setInterval(changeImage, 3000);
+        setInterval(changeImage, 2000);
         function changeImage() {
           if (countImg > backgroundImg.length) countImg = 0;
           document.querySelector(".background").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
