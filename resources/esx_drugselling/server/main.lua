@@ -51,10 +51,10 @@ AddEventHandler('esx_npcdrugsales:vente', function(deal)
 	
 	if CopsConnected >= GuTu.CopsNeeds then
 		if isIntrested() then
-			if methQTE >= 5 or cokeQTE >= 5 or weedQTE >= 5 or opiumQTE >= 5 then
-				QTE = math.random (1,5)
-			elseif methQTE >= 10 or cokeQTE >= 10 or weedQTE >= 10 or opiumQTE >= 10 then
-				QTE = math.random (1,10)
+			if methQTE >= 2 or cokeQTE >= 2 or weedQTE >= 2 or opiumQTE >= 2 then
+				QTE = math.random (1,2)
+			elseif methQTE >= 4 or cokeQTE >= 4 or weedQTE >= 4 or opiumQTE >= 4 then
+				QTE = math.random (2,4)
 			--elseif methQTE >= 25 or cokeQTE >= 25 or weedQTE >= 25 or opiumQTE >= 25 then
 				--QTE = math.random (1,25)
 			end

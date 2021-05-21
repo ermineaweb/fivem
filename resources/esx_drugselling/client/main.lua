@@ -113,7 +113,7 @@ Citizen.CreateThread(function()
 										currentped = pos
 										if distance <= 2 and ped ~= playerPed and ped ~= oldped then
 											DrawText3Ds(pos.x, pos.y, pos.z, GuTu.Text['press'])
-											if IsControlJustPressed(1, 47) then
+											if IsControlJustPressed(1, 86) then
 												oldped = ped
 												--SetEntityHeading(ped, 180)
 												TaskLookAtCoord(ped, coords['x'], coords['y'], coords['z'], -1, 2048, 3)
@@ -123,10 +123,10 @@ Citizen.CreateThread(function()
 												TriggerServerEvent('esx_npcdrugsales:GetUserInventory')
 												Wait(1000)
 												ESX.ShowNotification(GuTu.Text['process'])
-												Wait(3000)
+												Wait(4000)
 												Vente(pos1)
-												Wait(2500)
-												SetPedAsNoLongerNeeded(oldped)
+												-- Wait(2500)
+												-- SetPedAsNoLongerNeeded(oldped)
 											end
 										end
 									end
@@ -146,11 +146,11 @@ end)
 RegisterNetEvent('esx_npcdrugsales:animation')
 AddEventHandler('esx_npcdrugsales:animation', function()
 	local pid = PlayerPedId()
-	RequestAnimDict("amb@world_human_drug_dealer_hard@male@base")
-	while (not HasAnimDictLoaded("amb@world_human_drug_dealer_hard@male@base")) do Citizen.Wait(0) end
-	TaskPlayAnim(pid,"amb@world_human_drug_dealer_hard@male@base","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0)
+	RequestAnimDict("amb@prop_human_bum_bin@idle_b")
+	while (not HasAnimDictLoaded("amb@prop_human_bum_bin@idle_b")) do Citizen.Wait(0) end
+	TaskPlayAnim(pid,"amb@prop_human_bum_bin@idle_b","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0)
 	Wait(500)
-	StopAnimTask(pid, "amb@world_human_drug_dealer_hard@male@base","idle_d", 1.0)
+	StopAnimTask(pid, "amb@prop_human_bum_bin@idle_b","idle_d", 1.0)
 end)
 
 RegisterNetEvent('esx_npcdrugsales:poucave')

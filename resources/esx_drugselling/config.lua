@@ -30,7 +30,7 @@ GuTu.EN = {
 }
 GuTu.Text = GuTu.FR
 
-GuTu.WeedPrice = math.random (200,300)
+GuTu.WeedPrice = math.random (50,100)
 GuTu.CokePrice = math.random (400,500)
 GuTu.MethPrice = math.random (300,400)
 GuTu.OpiumPrice = math.random (100,200)
