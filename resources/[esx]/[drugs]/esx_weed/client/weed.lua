@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.WeedProcessing.coords, true) < 1 then
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.WeedProcessing.coords, true) < 3 then
 			if not isProcessing then
 				ESX.ShowHelpNotification(_U('weed_processprompt'))
 			end
@@ -129,7 +129,7 @@ AddEventHandler('onResourceStop', function(resource)
 end)
 
 function SpawnWeedPlants()
-	while spawnedWeeds < 25 do
+	while spawnedWeeds < 10 do
 		Citizen.Wait(0)
 		local weedCoords = GenerateWeedCoords()
 
@@ -165,17 +165,17 @@ end
 
 function GenerateWeedCoords()
 	while true do
-		Citizen.Wait(4000)
+		Citizen.Wait(10000)
 
 		local weedCoordX, weedCoordY
 
 		math.randomseed(GetGameTimer())
-		local modX = math.random(-15, 15)
+		local modX = math.random(-10, 10)
 
 		Citizen.Wait(100)
 
 		math.randomseed(GetGameTimer())
-		local modY = math.random(-15, 15)
+		local modY = math.random(-10, 10)
 
 		weedCoordX = Config.CircleZones.WeedField.coords.x + modX
 		weedCoordY = Config.CircleZones.WeedField.coords.y + modY

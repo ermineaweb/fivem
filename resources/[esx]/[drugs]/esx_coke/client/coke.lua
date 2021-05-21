@@ -80,7 +80,7 @@ Citizen.CreateThread(function()
 		local nearbyObject, nearbyID
 
 		for i=1, #cokePlants, 1 do
-			if GetDistanceBetweenCoords(coords, GetEntityCoords(cokePlants[i]), false) < 1 then
+			if GetDistanceBetweenCoords(coords, GetEntityCoords(cokePlants[i]), false) < 3 then
 				nearbyObject, nearbyID = cokePlants[i], i
 			end
 		end
@@ -129,7 +129,7 @@ AddEventHandler('onResourceStop', function(resource)
 end)
 
 function SpawnCokePlants()
-	while spawnedCokes < 25 do
+	while spawnedCokes < 5 do
 		Citizen.Wait(0)
 		local cokeCoords = GenerateCokeCoords()
 
@@ -165,17 +165,17 @@ end
 
 function GenerateCokeCoords()
 	while true do
-		Citizen.Wait(5000)
+		Citizen.Wait(12000)
 
 		local cokeCoordX, cokeCoordY
 
 		math.randomseed(GetGameTimer())
-		local modX = math.random(-15, 15)
+		local modX = math.random(-5, 5)
 
 		Citizen.Wait(100)
 
 		math.randomseed(GetGameTimer())
-		local modY = math.random(-15, 15)
+		local modY = math.random(-5, 5)
 
 		cokeCoordX = Config.CircleZones.CokeField.coords.x + modX
 		cokeCoordY = Config.CircleZones.CokeField.coords.y + modY
