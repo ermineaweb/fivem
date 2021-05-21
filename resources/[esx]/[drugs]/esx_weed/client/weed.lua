@@ -170,12 +170,12 @@ function GenerateWeedCoords()
 		local weedCoordX, weedCoordY
 
 		math.randomseed(GetGameTimer())
-		local modX = math.random(-20, 20)
+		local modX = math.random(-15, 15)
 
 		Citizen.Wait(100)
 
 		math.randomseed(GetGameTimer())
-		local modY = math.random(-20, 20)
+		local modY = math.random(-15, 15)
 
 		weedCoordX = Config.CircleZones.WeedField.coords.x + modX
 		weedCoordY = Config.CircleZones.WeedField.coords.y + modY

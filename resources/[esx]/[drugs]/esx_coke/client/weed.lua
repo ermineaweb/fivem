@@ -112,7 +112,7 @@ Citizen.CreateThread(function()
 					end
 
 					isPickingUp = false
-				end, 'weed')
+				end, 'coke')
 			end
 		else
 			Citizen.Wait(500)
@@ -170,12 +170,12 @@ function GenerateWeedCoords()
 		local weedCoordX, weedCoordY
 
 		math.randomseed(GetGameTimer())
-		local modX = math.random(-90, 90)
+		local modX = math.random(-15, 15)
 
 		Citizen.Wait(100)
 
 		math.randomseed(GetGameTimer())
-		local modY = math.random(-90, 90)
+		local modY = math.random(-15, 15)
 
 		weedCoordX = Config.CircleZones.WeedField.coords.x + modX
 		weedCoordY = Config.CircleZones.WeedField.coords.y + modY
