@@ -57,7 +57,7 @@ body {
 .loadbar {
   width: 100%;
   background-color: rgba(89, 31, 144, 0.9);
-  height: 15px;
+  height: 10px;
   border-radius: 30px;
   margin-left: 2px;
   margin-right: 3px;
