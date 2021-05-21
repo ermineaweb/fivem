@@ -62,14 +62,13 @@ function ToggleVehicleLock()
 
 			if lockStatus == 1 then -- unlocked
 				SetVehicleDoorsLocked(vehicle, 2)
-				PlayVehicleDoorCloseSound(vehicle, 1)
-
+				PlaySound(-1, "Beep_Green", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 0, 0, 1)
 				ESX.ShowNotification(_U('message_locked'), true, true, 210)
 				
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_locked') } })
 			elseif lockStatus == 2 then -- locked
 				SetVehicleDoorsLocked(vehicle, 1)
-				PlayVehicleDoorOpenSound(vehicle, 0)
+				PlaySound(-1, "Beep_Red", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 0, 0, 1)
 				
 				ESX.ShowNotification(_U('message_unlocked'), true, true, 130)
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_unlocked') } })
