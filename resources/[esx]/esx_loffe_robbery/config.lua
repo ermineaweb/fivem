@@ -7,7 +7,7 @@ Config.bag = false
 Config.blackMoney = true
 
 local globalCooldown = {hour = 0, minute = 120, second = 0}
-local globalMoney = {1000, 2500}
+local globalMoney = {1000, 3000}
 local globalBlip = true
 local globalCops = 0
 
@@ -26,7 +26,7 @@ Config.Shops = {
     {coords = vector3(-3040.94, 583.84, 7.91-0.98), heading = 16.93, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-3244.34, 1000.09, 12.83-0.98), heading = 347.91, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1727.99, 6415.71, 35.04-0.98), heading = 233.39, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
-    {coords = vector3(1697.21, 492.45, 42.06-0.98), heading = 318.01, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
+    {coords = vector3(1697.21, 4923.45, 42.06-0.98), heading = 323.61, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1960.02, 3740.15, 32.34-0.98), heading = 301.59, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
     {coords = vector3(1165.52, 2710.95, 38.16-0.98), heading = 187.04, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
     {coords = vector3(-1819.48, 793.57, 138.08-0.98), heading = 134.85, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Superette 7/11', cooldown = globalCooldown, robbed = false},
@@ -76,9 +76,9 @@ Config.Shops = {
     {coords = vector3(-1118.34, 2700.56, 18.55-0.98), heading = 216.18, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     {coords = vector3(841.51, -1035.42, 28.19-0.98), heading = 351.1, money = globalMoney, cops = globalCops, blip = globalBlip, name = 'Armurerie', cooldown = globalCooldown, robbed = false},
     -- unicorn club
-    {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {3000, 8000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
+    {coords = vector3(129.92, -1284.81, 29.27-0.98), heading = 118.94, money = {3000, 6000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 48, minute = 0, second = 0}, robbed = false},
     -- bahamas mama
-    {coords = vector3(-1392.65, -605, 30.32-0.98), heading = 100.13, money = {3000, 8000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 24, minute = 0, second = 0}, robbed = false},
+    {coords = vector3(-1392.65, -605, 30.32-0.98), heading = 100.13, money = {3000, 6000}, cops = globalCops, blip = globalBlip, name = 'Unicorn Club', cooldown = {hour = 48, minute = 0, second = 0}, robbed = false},
 }
 
 Translation = {
