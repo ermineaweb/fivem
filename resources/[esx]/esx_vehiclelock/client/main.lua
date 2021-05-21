@@ -62,15 +62,13 @@ function ToggleVehicleLock()
 
 			if lockStatus == 1 then -- unlocked
 				SetVehicleDoorsLocked(vehicle, 2)
-				PlaySound(-1, "HACKING_SUCCESS", "0", 0, 0, 1)
 				ESX.ShowNotification(_U('message_locked'), true, true, 210)
-				
+				PlaySound(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0, 0, 1)
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_locked') } })
 			elseif lockStatus == 2 then -- locked
 				SetVehicleDoorsLocked(vehicle, 1)
-				PlaySound(-1, "Hack_Success", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 0, 0, 1)
-				
 				ESX.ShowNotification(_U('message_unlocked'), true, true, 130)
+				PlaySound(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0, 0, 1)
 				-- TriggerEvent('chat:addMessage', { args = { _U('message_title'), _U('message_unlocked') } })
 			end
 		end
