@@ -165,7 +165,7 @@ end
 
 function GenerateWeedCoords()
 	while true do
-		Citizen.Wait(1)
+		Citizen.Wait(4000)
 
 		local weedCoordX, weedCoordY
 
