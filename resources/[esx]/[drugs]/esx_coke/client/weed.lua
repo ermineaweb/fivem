@@ -1,4 +1,4 @@
-local spawnedcokes = 0
+local spawnedCokes = 0
 local cokePlants = {}
 local isPickingUp, isProcessing = false, false
 
@@ -7,8 +7,8 @@ Citizen.CreateThread(function()
 		Citizen.Wait(500)
 		local coords = GetEntityCoords(PlayerPedId())
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.cokeField.coords, true) < 50 then
-			SpawncokePlants()
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.CokeField.coords, true) < 50 then
+			SpawnCokePlants()
 		end
 	end
 end)
@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.cokeProcessing.coords, true) < 1 then
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.CokeProcessing.coords, true) < 1 then
 			if not isProcessing then
 				ESX.ShowHelpNotification(_U('coke_processprompt'))
 			end
@@ -28,14 +28,14 @@ Citizen.CreateThread(function()
 				if Config.LicenseEnable then
 					ESX.TriggerServerCallback('esx_license:checkLicense', function(hasProcessingLicense)
 						if hasProcessingLicense then
-							Processcoke()
+							ProcessCoke()
 						else
 							OpenBuyLicenseMenu('coke_processing')
 						end
 					end, GetPlayerServerId(PlayerId()), 'coke_processing')
 				else
-					ESX.TriggerServerCallback('esx_drugs:Coke_count', function(xCoke)
-						Processcoke(xCoke)
+					ESX.TriggerServerCallback('esx_drugs:coke_count', function(xCoke)
+						ProcessCoke(xCoke)
 					end)
 					
 				end
@@ -46,21 +46,21 @@ Citizen.CreateThread(function()
 	end
 end)
 
-function Processcoke(xCoke)
+function ProcessCoke(xCoke)
 	isProcessing = true
 	ESX.ShowNotification(_U('coke_processingstarted'))
   TriggerServerEvent('esx_drugs:processCoke')
 	if(xCoke <= 5) then
 		xCoke = 0
 	end
-  local timeLeft = (Config.Delays.cokeProcessing * xCoke) / 1000
+  local timeLeft = (Config.Delays.CokeProcessing * xCoke) / 1000
 	local playerPed = PlayerPedId()
 
 	while timeLeft > 0 do
 		Citizen.Wait(1000)
 		timeLeft = timeLeft - 1
 
-		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.cokeProcessing.coords, false) > 4 then
+		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.CokeProcessing.coords, false) > 4 then
 			ESX.ShowNotification(_U('coke_processingtoofar'))
 			TriggerServerEvent('esx_drugs:cancelProcessing')
 			TriggerServerEvent('esx_drugs:outofbound')
@@ -104,7 +104,7 @@ Citizen.CreateThread(function()
 						ESX.Game.DeleteObject(nearbyObject)
 		
 						table.remove(cokePlants, nearbyID)
-						spawnedcokes = spawnedcokes - 1
+						spawnedCokes = spawnedCokes - 1
 		
 						TriggerServerEvent('esx_drugs:pickedUpCoke')
 					else
@@ -128,23 +128,23 @@ AddEventHandler('onResourceStop', function(resource)
 	end
 end)
 
-function SpawncokePlants()
-	while spawnedcokes < 25 do
+function SpawnCokePlants()
+	while spawnedCokes < 25 do
 		Citizen.Wait(0)
-		local cokeCoords = GeneratecokeCoords()
+		local cokeCoords = GenerateCokeCoords()
 
 		ESX.Game.SpawnLocalObject('prop_coke_02', cokeCoords, function(obj)
 			PlaceObjectOnGroundProperly(obj)
 			FreezeEntityPosition(obj, true)
 
 			table.insert(cokePlants, obj)
-			spawnedcokes = spawnedcokes + 1
+			spawnedCokes = spawnedCokes + 1
 		end)
 	end
 end
 
-function ValidatecokeCoord(plantCoord)
-	if spawnedcokes > 0 then
+function ValidateCokeCoord(plantCoord)
+	if spawnedCokes > 0 then
 		local validate = true
 
 		for k, v in pairs(cokePlants) do
@@ -153,7 +153,7 @@ function ValidatecokeCoord(plantCoord)
 			end
 		end
 
-		if GetDistanceBetweenCoords(plantCoord, Config.CircleZones.cokeField.coords, false) > 50 then
+		if GetDistanceBetweenCoords(plantCoord, Config.CircleZones.CokeField.coords, false) > 50 then
 			validate = false
 		end
 
@@ -163,7 +163,7 @@ function ValidatecokeCoord(plantCoord)
 	end
 end
 
-function GeneratecokeCoords()
+function GenerateCokeCoords()
 	while true do
 		Citizen.Wait(1)
 
@@ -177,13 +177,13 @@ function GeneratecokeCoords()
 		math.randomseed(GetGameTimer())
 		local modY = math.random(-15, 15)
 
-		cokeCoordX = Config.CircleZones.cokeField.coords.x + modX
-		cokeCoordY = Config.CircleZones.cokeField.coords.y + modY
+		cokeCoordX = Config.CircleZones.CokeField.coords.x + modX
+		cokeCoordY = Config.CircleZones.CokeField.coords.y + modY
 
 		local coordZ = GetCoordZ(cokeCoordX, cokeCoordY)
 		local coord = vector3(cokeCoordX, cokeCoordY, coordZ)
 
-		if ValidatecokeCoord(coord) then
+		if ValidateCokeCoord(coord) then
 			return coord
 		end
 	end

@@ -80,7 +80,7 @@ AddEventHandler('esx_drugs:quitprocess', function()
 	can = false
 end)
 
-ESX.RegisterServerCallback('esx_drugs:Coke_count', function(source, cb)
+ESX.RegisterServerCallback('esx_drugs:coke_count', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local xCoke = xPlayer.getInventoryItem('coke').count
 	cb(xCoke)
@@ -97,7 +97,7 @@ AddEventHandler('esx_drugs:processCoke', function()
     if xCoke.count >= 5 then
       while outofbound == false and can do
 				if playersProcessingCoke[_source] == nil then
-					playersProcessingCoke[_source] = ESX.SetTimeout(Config.Delays.cokeProcessing , function()
+					playersProcessingCoke[_source] = ESX.SetTimeout(Config.Delays.CokeProcessing , function()
             if xCoke.count >= 5 then
               if xPlayer.canSwapItem('coke', 5, 'coke_pooch', 1) then
                 xPlayer.removeInventoryItem('coke', 5)
@@ -117,7 +117,7 @@ AddEventHandler('esx_drugs:processCoke', function()
 						playersProcessingCoke[_source] = nil
 					end)
 				else
-					Wait(Config.Delays.cokeProcessing)
+					Wait(Config.Delays.CokeProcessing)
 				end	
 			end
 		else
