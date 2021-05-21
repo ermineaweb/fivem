@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
 						end
 					end, GetPlayerServerId(PlayerId()), 'coke_processing')
 				else
-					ESX.TriggerServerCallback('esx_drugs:coke_count', function(xCoke)
+					ESX.TriggerServerCallback('esx_coke:coke_count', function(xCoke)
 						ProcessCoke(xCoke)
 					end)
 					
@@ -49,7 +49,7 @@ end)
 function ProcessCoke(xCoke)
 	isProcessing = true
 	ESX.ShowNotification(_U('coke_processingstarted'))
-  TriggerServerEvent('esx_drugs:processCoke')
+  TriggerServerEvent('esx_coke:processCoke')
 	if(xCoke <= 5) then
 		xCoke = 0
 	end
@@ -62,8 +62,8 @@ function ProcessCoke(xCoke)
 
 		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.CokeProcessing.coords, false) > 4 then
 			ESX.ShowNotification(_U('coke_processingtoofar'))
-			TriggerServerEvent('esx_drugs:cancelProcessing')
-			TriggerServerEvent('esx_drugs:outofbound')
+			TriggerServerEvent('esx_coke:cancelProcessing')
+			TriggerServerEvent('esx_coke:outofbound')
 			break
 		end
 	end
@@ -93,7 +93,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 38) and not isPickingUp then
 				isPickingUp = true
 
-				ESX.TriggerServerCallback('esx_drugs:canPickUp', function(canPickUp)
+				ESX.TriggerServerCallback('esx_coke:canPickUp', function(canPickUp)
 					if canPickUp then
 						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 
@@ -106,7 +106,7 @@ Citizen.CreateThread(function()
 						table.remove(cokePlants, nearbyID)
 						spawnedCokes = spawnedCokes - 1
 		
-						TriggerServerEvent('esx_drugs:pickedUpCoke')
+						TriggerServerEvent('esx_coke:pickedUpCoke')
 					else
 						ESX.ShowNotification(_U('coke_inventoryfull'))
 					end
