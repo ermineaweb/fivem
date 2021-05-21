@@ -20,7 +20,6 @@
       window.onload = function () {
         // Array of Images
         var backgroundImg = [
-          "loadscreen0.jpg",
           "loadscreen1.jpg",
           "loadscreen2.jpg",
           "loadscreen3.jpg",
@@ -31,7 +30,7 @@
         var countImg = 0;
         setInterval(changeImage, 1000);
         function changeImage() {
-          if (countImg > 5) countImg = 0;
+          if (countImg > backgroundImg.length) countImg = 0;
           document.querySelector(".background").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
         }
       };
