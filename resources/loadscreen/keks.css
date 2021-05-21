@@ -1,11 +1,9 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-size: 100% 100%;
-  background-image: url(loadscreen1.jpg); 
 }
 
-/* #content {
+.content {
   background-size: 100% 100%;
   position: relative;
   top: 0px;
@@ -13,7 +11,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(loadscreen1.jpg); 
-} */
+} 
 
 .bottom {
   position: absolute;
