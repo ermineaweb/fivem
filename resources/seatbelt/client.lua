@@ -75,7 +75,7 @@ Citizen.CreateThread(function()
 
             if Config.Sounds then  
             -- TriggerEvent("seatbelt:sounds", "buckle", Config.Volume)
-            PlaySound(-1, "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS", 0, 0, 1)
+            PlaySound(-1, "veh_panel_open_car", 0, 0, 0, 1)
             end
             if Config.Notification then
             Notify(Config.Strings.seatbelt_on)
@@ -93,7 +93,7 @@ Citizen.CreateThread(function()
             if Config.Sounds then
             -- TriggerEvent("seatbelt:sounds", "unbuckle", Config.Volume)
             -- PlaySound(-1, "WEAPON_AMMO_PURCHASE", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
-            PlaySound(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0, 0, 1)
+            PlaySound(-1, "veh_panel_shut_car", 0, 0, 0, 1)
             end
 
             if Config.Blinker then
