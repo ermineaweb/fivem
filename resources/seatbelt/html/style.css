@@ -10,7 +10,7 @@ body {
 #container {
 	position: absolute;
 	top: 92%;
-	left: 18%; /*25*/
+	right: 25%; /*25*/
 	width: 80px;
 	height: 80px;
 	display: none;

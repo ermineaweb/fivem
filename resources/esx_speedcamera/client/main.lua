@@ -40,10 +40,9 @@ end
 function flash() 
 	if useFlashingScreen == true then
 		StartScreenEffect("RaceTurbo", 300, false)
-		PlaySound(-1, "Camera_Shoot", "Phone_Soundset_Franklin", 0, 0, 1)
 	end
 	if useCameraSound == true then
-		TriggerServerEvent("InteractSound_SV:PlayOnSource", "speedcamera", 0.5)
+		PlaySound(-1, "Camera_Shoot", "Phone_Soundset_Franklin", 0, 0, 1)
 	end
 end
 

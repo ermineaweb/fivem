@@ -8,7 +8,7 @@ Config.Volume = 0.6
 
 -- Disable/enable Notifications
 Config.Notification = true
-Config.Strings = {seatbelt_on = 'Seatbelt: ~g~connected', seatbelt_off = 'Seatbelt: ~r~disconnected'}
+Config.Strings = {seatbelt_on = 'Ceinture ~g~attachée', seatbelt_off = 'Ceinture ~r~détachée'}
 -- Change to your own translations.
 
 -- Disable/enable blinker image
@@ -21,5 +21,5 @@ Config.Control = 311
 Config.Speed = 100.0
 
 Config.AlarmOnlySpeed = true
-Config.AlarmSpeed = 20
+Config.AlarmSpeed = 10
 

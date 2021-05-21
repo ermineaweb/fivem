@@ -74,7 +74,8 @@ Citizen.CreateThread(function()
           Citizen.Wait(1)
 
             if Config.Sounds then  
-            TriggerEvent("seatbelt:sounds", "buckle", Config.Volume)
+            -- TriggerEvent("seatbelt:sounds", "buckle", Config.Volume)
+            PlaySound(-1, "PICK_UP_SOUND", "HUD_FRONTEND_CUSTOM_SOUNDSET", 0, 0, 1)
             end
             if Config.Notification then
             Notify(Config.Strings.seatbelt_on)
@@ -90,7 +91,8 @@ Citizen.CreateThread(function()
             end
 
             if Config.Sounds then
-            TriggerEvent("seatbelt:sounds", "unbuckle", Config.Volume)
+            -- TriggerEvent("seatbelt:sounds", "unbuckle", Config.Volume)
+            PlaySound(-1, "PICK_UP_SOUND", "HUD_FRONTEND_CUSTOM_SOUNDSET", 0, 0, 1)
             end
 
             if Config.Blinker then
