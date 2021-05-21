@@ -18,12 +18,11 @@
 
     <script type="text/javascript">
       window.onload = function () {
-        var countImg = 0;
-        setInterval(changeImage, 2500);
-        function changeImage() {
-          if (countImg > 5) countImg = 0;
+        var countImg = 1;
+        setInterval(() => {
+          if (countImg > 5) countImg = 1;
           document.querySelector(".background").style.backgroundImage = `url('loadscreen${countImg++}.jpg')`;
-        }
+        }, 2500);
       };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
       // for a set of possible events, see https://github.com/citizenfx/fivem/blob/master/code/components/loading-screens-five/src/LoadingScreens.cpp

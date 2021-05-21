@@ -1,5 +1,5 @@
 ESX = nil
-local playersProcessingCannabis = {}
+local playersProcessingCoke = {}
 local outofbound = true
 local alive = true
 
@@ -53,15 +53,15 @@ ESX.RegisterServerCallback('esx_drugs:buyLicense', function(source, cb, licenseN
 	end
 end)
 
-RegisterServerEvent('esx_drugs:pickedUpCannabis')
-AddEventHandler('esx_drugs:pickedUpCannabis', function()
+RegisterServerEvent('esx_drugs:pickedUpCoke')
+AddEventHandler('esx_drugs:pickedUpCoke', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local cime = math.random(5,10)
 
-	if xPlayer.canCarryItem('weed', cime) then
-		xPlayer.addInventoryItem('weed', cime)
+	if xPlayer.canCarryItem('coke', cime) then
+		xPlayer.addInventoryItem('coke', cime)
 	else
-		xPlayer.showNotification(_U('weed_inventoryfull'))
+		xPlayer.showNotification(_U('coke_inventoryfull'))
 	end
 end)
 
@@ -80,60 +80,60 @@ AddEventHandler('esx_drugs:quitprocess', function()
 	can = false
 end)
 
-ESX.RegisterServerCallback('esx_drugs:cannabis_count', function(source, cb)
+ESX.RegisterServerCallback('esx_drugs:Coke_count', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local xCannabis = xPlayer.getInventoryItem('weed').count
-	cb(xCannabis)
+	local xCoke = xPlayer.getInventoryItem('coke').count
+	cb(xCoke)
 end)
 
-RegisterServerEvent('esx_drugs:processCannabis')
-AddEventHandler('esx_drugs:processCannabis', function()
-  if not playersProcessingCannabis[source] then
+RegisterServerEvent('esx_drugs:processCoke')
+AddEventHandler('esx_drugs:processCoke', function()
+  if not playersProcessingCoke[source] then
 		local _source = source
 		local xPlayer = ESX.GetPlayerFromId(_source)
-		local xCannabis = xPlayer.getInventoryItem('weed')
+		local xCoke = xPlayer.getInventoryItem('coke')
 		local can = true
 		outofbound = false
-    if xCannabis.count >= 5 then
+    if xCoke.count >= 5 then
       while outofbound == false and can do
-				if playersProcessingCannabis[_source] == nil then
-					playersProcessingCannabis[_source] = ESX.SetTimeout(Config.Delays.WeedProcessing , function()
-            if xCannabis.count >= 5 then
-              if xPlayer.canSwapItem('weed', 5, 'weed_pooch', 1) then
-                xPlayer.removeInventoryItem('weed', 5)
-                xPlayer.addInventoryItem('weed_pooch', 1)
-								xPlayer.showNotification(_U('weed_processed'))
+				if playersProcessingCoke[_source] == nil then
+					playersProcessingCoke[_source] = ESX.SetTimeout(Config.Delays.cokeProcessing , function()
+            if xCoke.count >= 5 then
+              if xPlayer.canSwapItem('coke', 5, 'coke_pooch', 1) then
+                xPlayer.removeInventoryItem('coke', 5)
+                xPlayer.addInventoryItem('coke_pooch', 1)
+								xPlayer.showNotification(_U('coke_processed'))
 							else
 								can = false
-								xPlayer.showNotification(_U('weed_processingfull'))
+								xPlayer.showNotification(_U('coke_processingfull'))
 								TriggerEvent('esx_drugs:cancelProcessing')
 							end
 						else						
 							can = false
-							xPlayer.showNotification(_U('weed_processingenough'))
+							xPlayer.showNotification(_U('coke_processingenough'))
 							TriggerEvent('esx_drugs:cancelProcessing')
 						end
 
-						playersProcessingCannabis[_source] = nil
+						playersProcessingCoke[_source] = nil
 					end)
 				else
-					Wait(Config.Delays.WeedProcessing)
+					Wait(Config.Delays.cokeProcessing)
 				end	
 			end
 		else
-			xPlayer.showNotification(_U('weed_processingenough'))
+			xPlayer.showNotification(_U('coke_processingenough'))
 			TriggerEvent('esx_drugs:cancelProcessing')
 		end	
 			
 	else
-		print(('esx_drugs: %s attempted to exploit weed processing!'):format(GetPlayerIdentifiers(source)[1]))
+		print(('esx_drugs: %s attempted to exploit coke processing!'):format(GetPlayerIdentifiers(source)[1]))
 	end
 end)
 
 function CancelProcessing(playerId)
-	if playersProcessingCannabis[playerId] then
-		ESX.ClearTimeout(playersProcessingCannabis[playerId])
-		playersProcessingCannabis[playerId] = nil
+	if playersProcessingCoke[playerId] then
+		ESX.ClearTimeout(playersProcessingCoke[playerId])
+		playersProcessingCoke[playerId] = nil
 	end
 end
 
