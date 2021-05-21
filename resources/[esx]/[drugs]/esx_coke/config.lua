@@ -19,7 +19,7 @@ Config.LicensePrices = {
 Config.GiveBlack = true -- give black money? if disabled it'll give regular cash.
 
 Config.CircleZones = {
-	CokeField = {coords = vector3(2224.35, 5577.4, 53.84), name = _U('blip_cokefield'), color = 25, sprite = 496, radius = 20.0},
-	CokeProcessing = {coords = vector3(1039.24, -3205.34, -38.17), name = _U('blip_cokeprocessing'), color = 25, sprite = 496, radius = 20.0},
+	CokeField = {coords = vector3(1007.92, -3198.4, -38.99), name = _U('radar_drugs_package'), color = 25, sprite = 496, radius = 20.0},
+	CokeProcessing = {coords = vector3(1092.22, -3196.67, -38.99), name = _U('radar_drugs_package'), color = 25, sprite = 496, radius = 20.0},
 	DrugDealer = {coords = vector3(-1172.02, -1571.98, 4.66), name = _U('blip_drugdealer'), color = 6, sprite = 378},
 }
