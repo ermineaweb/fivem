@@ -18,20 +18,11 @@
 
     <script type="text/javascript">
       window.onload = function () {
-        // Array of Images
-        var backgroundImg = [
-          "loadscreen1.jpg",
-          "loadscreen2.jpg",
-          "loadscreen3.jpg",
-          "loadscreen4.jpg",
-          "loadscreen5.jpg",
-        ];
-
         var countImg = 0;
-        setInterval(changeImage, 2000);
+        setInterval(changeImage, 2500);
         function changeImage() {
           if (countImg > backgroundImg.length) countImg = 0;
-          document.querySelector(".background").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
+          document.querySelector(".background").style.backgroundImage = "url('loadscreen" + countImg++ + ".jpg')";
         }
       };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
