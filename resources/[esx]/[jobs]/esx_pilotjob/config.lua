@@ -36,7 +36,7 @@ Config.Airports = {
 
 Config.Clothes = {
 	LSX = {
-		Pos		= { x = -941.73, y = -2957.86, z = 13.95 },
+		Pos		= { x = -941.73, y = -2957.86, z = 5 },
 		Size	= { x = 1.5, y = 1.5, z = 1.0 },
 		Colour	= { r = 204, g = 204, b = 0 },
 		Marker	= 1
@@ -51,16 +51,16 @@ Config.Clothes = {
 
 Config.Vehicles = {
 	LSX = {
-		Pos		= { x = -1025.9, y = -3011.88, z = 13.95 },
+		Pos		= { x = -1025.9, y = -3011.88, z = 5 },
 		Size	= { x = 1.5, y = 1.5, z = 1.0 },
 		Colour	= { r = 204, g = 204, b = 0 },
 		Marker	= 1,
 		SpawnPoint = {
-			Pos		= { x = -1051.14, y = -2996.84, z = 13.95 },
+			Pos		= { x = -1051.14, y = -2996.84, z = 5 },
 			Heading	= 330.166
 		},
 		Deleter	= {
-			Pos		= { x = -1359.840, y = -2719.073, z = 12.944 },
+			Pos		= { x = -1046.44, y = -2947, z = 5 },
 			Colour	= { r = 255, g = 0, b = 0 },
 			Size	= { x = 5.0, y = 5.0, z = 2.0 }
 		},
