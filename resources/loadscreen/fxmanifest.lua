@@ -10,7 +10,11 @@ files {
     'index.html',
     'keks.css',
     'bankgothic.ttf',
-    'loadscreen.jpg'
+    'loadscreen1.jpg',
+    'loadscreen2.jpg',
+    'loadscreen3.jpg',
+    'loadscreen4.jpg',
+    'loadscreen5.jpg'
 }
 
 loadscreen 'index.html'

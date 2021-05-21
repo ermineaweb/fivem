@@ -3,7 +3,7 @@
     <link href="keks.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="content">
+    <div class="background">
       <div class="letni">
         <h3>Un super Serveur</h3>
         <div class="loadbar">
@@ -17,22 +17,22 @@
     </div>
 
     <script type="text/javascript">
-      // window.onload = function () {
-      //   // Array of Images
-      //   var backgroundImg = [
-      //     "loadscreen1.jpg",
-      //     "loadscreen2.jpg",
-      //     "loadscreen3.jpg",
-      //     "loadscreen4.jpg",
-      //     "loadscreen5.jpg",
-      //   ];
+      window.onload = function () {
+        // Array of Images
+        var backgroundImg = [
+          "loadscreen1.jpg",
+          "loadscreen2.jpg",
+          "loadscreen3.jpg",
+          "loadscreen4.jpg",
+          "loadscreen5.jpg",
+        ];
 
-      //   var countImg = 0;
-      //   setInterval(changeImage, 1000);
-      //   function changeImage() {
-      //     document.querySelector(".content").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
-      //   }
-      // };
+        var countImg = 0;
+        setInterval(changeImage, 1000);
+        function changeImage() {
+          document.querySelector(".background").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
+        }
+      };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
       // for a set of possible events, see https://github.com/citizenfx/fivem/blob/master/code/components/loading-screens-five/src/LoadingScreens.cpp
       var count = 0;
