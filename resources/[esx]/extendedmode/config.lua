@@ -15,9 +15,9 @@ Config.EnableHud            = false -- enable the default hud? Display current j
 Config.EnablePvP            = true -- enable pvp?
 Config.MaxWeight            = 24000   -- the max inventory weight without backpack(this is in grams, not kg!)
 
-Config.PaycheckInterval     = 15 * 60000 -- how often to recieve pay checks in milliseconds
+Config.PaycheckInterval     = 30 * 60000 -- how often to recieve pay checks in milliseconds
 
-Config.EnableDebug          = false
+Config.EnableDebug          = true
 Config.PrimaryIdentifier	= "steam" -- Options: steam, license (social club), fivem, discord, xbl, live (default steam, recommended: fivem) this SHOULD function with most older scripts too!
 
 -- The default player model you will use if no other scripts control your player model
