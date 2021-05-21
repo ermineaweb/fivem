@@ -133,7 +133,7 @@ function SpawnCokePlants()
 		Citizen.Wait(0)
 		local cokeCoords = GenerateCokeCoords()
 
-		ESX.Game.SpawnLocalObject('prop_coke_02', cokeCoords, function(obj)
+		ESX.Game.SpawnLocalObject('ex_office_swag_drugbag2', cokeCoords, function(obj)
 			PlaceObjectOnGroundProperly(obj)
 			FreezeEntityPosition(obj, true)
 
