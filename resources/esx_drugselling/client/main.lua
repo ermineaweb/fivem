@@ -91,7 +91,7 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Wait(15)
+		Wait(0)
 		
 		--if myJob == "police" or myJob == "sheriff" then
 			--return
