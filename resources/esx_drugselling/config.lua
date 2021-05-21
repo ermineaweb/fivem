@@ -1,7 +1,7 @@
 GuTu = {}
 
 GuTu.FR = {
-	['press'] = 'Press ~r~E ~w~pour vendre de la drogue.',
+	['press'] = 'Press ~r~G ~w~pour vendre de la drogue.',
     ['process'] = 'Deal en cours.',
 	['meth'] = ' pochons de meth',
 	['coke'] = ' pochons de coke',

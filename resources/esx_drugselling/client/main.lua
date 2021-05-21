@@ -146,11 +146,11 @@ end)
 RegisterNetEvent('esx_npcdrugsales:animation')
 AddEventHandler('esx_npcdrugsales:animation', function()
 	local pid = PlayerPedId()
-	RequestAnimDict("amb@prop_human_bum_bin@idle_b")
-	while (not HasAnimDictLoaded("amb@prop_human_bum_bin@idle_b")) do Citizen.Wait(0) end
-	TaskPlayAnim(pid,"amb@prop_human_bum_bin@idle_b","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0)
-	Wait(750)
-	StopAnimTask(pid, "amb@prop_human_bum_bin@idle_b","idle_d", 1.0)
+	RequestAnimDict("amb@world_human_drug_dealer_hard@male@base")
+	while (not HasAnimDictLoaded("amb@world_human_drug_dealer_hard@male@base")) do Citizen.Wait(0) end
+	TaskPlayAnim(pid,"amb@world_human_drug_dealer_hard@male@base","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0)
+	Wait(500)
+	StopAnimTask(pid, "amb@world_human_drug_dealer_hard@male@base","idle_d", 1.0)
 end)
 
 RegisterNetEvent('esx_npcdrugsales:poucave')
