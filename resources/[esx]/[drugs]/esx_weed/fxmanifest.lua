@@ -20,7 +20,6 @@ client_scripts {
 	'locales/en.lua',
 	'locales/fr.lua',
 	'config.lua',
-	'client/main.lua',
 	'client/weed.lua'
 }
 
