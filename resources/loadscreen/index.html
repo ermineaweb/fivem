@@ -10,31 +10,35 @@
             </div> -->
 
       <div class="letni">
-        <div class="loadbar"><div class="thingy"></div></div>
+        <h3></h3>
+        <div class="loadbar">
+          <div class="thingy"></div>
+        </div>
       </div>
+
       <div class="bottom">
         <div id="gradient"></div>
       </div>
     </div>
 
     <script type="text/javascript">
-      // window.onload = function () {
-      //   // Array of Images
-      //   var backgroundImg = [
-      //     "loadscreen1.jpg",
-      //     "loadscreen2.jpg",
-      //     "loadscreen3.jpg",
-      //     "loadscreen4.jpg",
-      //     "loadscreen5.jpg",
-      //     "loadscreen6.jpg",
-      //   ];
+      window.onload = function () {
+        // Array of Images
+        var backgroundImg = [
+          "loadscreen1.jpg",
+          "loadscreen2.jpg",
+          "loadscreen3.jpg",
+          "loadscreen4.jpg",
+          "loadscreen5.jpg",
+          "loadscreen6.jpg",
+        ];
 
-      //   setInterval(changeImage, 3000);
-      //   function changeImage() {
-      //     var i = Math.floor(Math.random() * 3);
-      //     document.querySelector("#content").style.backgroundImage = "url('" + backgroundImg[i] + "')";
-      //   }
-      // };
+        setInterval(changeImage, 3000);
+        function changeImage() {
+          var i = Math.floor(Math.random() * 3);
+          document.querySelector("#content").style.backgroundImage = "url('" + backgroundImg[i] + "')";
+        }
+      };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
       // for a set of possible events, see https://github.com/citizenfx/fivem/blob/master/code/components/loading-screens-five/src/LoadingScreens.cpp
       var count = 0;
