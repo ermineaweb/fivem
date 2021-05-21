@@ -90,18 +90,15 @@ h2 {
 
 .loadbar {
   width: 100%;
-  background-color: rgba(140, 140, 140, 0.9);
-  height: 20px;
+  background-color: rgba(174, 115, 230, 0.9);
+  height: 15px;
+  border-radius: 30px;
   margin-left: 2px;
   margin-right: 3px;
-
   margin-top: 5px;
   margin-bottom: 5px;
-
   overflow: hidden;
-
   position: relative;
-
   display: block;
 }
 
@@ -109,7 +106,6 @@ h2 {
   width: 10%;
   background-color: #eee;
   height: 20px;
-
   position: absolute;
   left: 10%;
 }

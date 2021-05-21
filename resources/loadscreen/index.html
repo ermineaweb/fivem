@@ -4,11 +4,6 @@
   </head>
   <body>
     <div id="content">
-      <!-- <div class="top">
-                <h1 title="Free Mode">Hachitaka</h1>
-                <h2 title="Not Algonquin">Est une petite crotte</h2>
-            </div> -->
-
       <div class="letni">
         <h3></h3>
         <div class="loadbar">
@@ -30,13 +25,12 @@
           "loadscreen3.jpg",
           "loadscreen4.jpg",
           "loadscreen5.jpg",
-          "loadscreen6.jpg",
         ];
 
-        setInterval(changeImage, 3000);
+        var countImg = 0;
+        setInterval(changeImage, 1000);
         function changeImage() {
-          var i = Math.floor(Math.random() * 3);
-          document.querySelector("#content").style.backgroundImage = "url('" + backgroundImg[i] + "')";
+          document.querySelector("#content").style.backgroundImage = "url('" + backgroundImg[countImg++] + "')";
         }
       };
       // this will actually restart the loading bar a lot, making multiple loading bars is an exercise to the reader... for now.
