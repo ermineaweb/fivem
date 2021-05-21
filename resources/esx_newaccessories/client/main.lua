@@ -394,7 +394,7 @@ Citizen.CreateThread(function()
 		local currentZone = nil
 		for k,v in pairs(Config.Zones) do
 			for i = 1, #v.Pos, 1 do
-				if GetDistanceBetweenCoords(coords, v.Pos[i], true) < Config.Size.x then
+				if GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true) < Config.Size.x then
 					isInMarker  = true
 					currentZone = k
 				end
