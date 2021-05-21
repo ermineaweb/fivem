@@ -18,7 +18,7 @@ body {
     background-image: url(loadscreen4.jpg);
   }
 }
-.content {
+#content {
   animation: changeBg 1s infinite;
   background-size: 100% 100%;
   position: relative;
