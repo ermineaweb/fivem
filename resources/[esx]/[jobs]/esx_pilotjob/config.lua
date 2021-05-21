@@ -6,12 +6,12 @@ Config.Locale			= 'en'
 Config.Airports = {
 	LSX = {
 		Airline = true, -- Allow airline pilots to fly and spawn planes here? Not recommended on smaller airstrips..
-		Pos		= { x = -1031.268, y = -2741.703, z = 12.796 },
+		Pos		= { x = -1051.14, y = -2996.84, z = 13.95 },
 		Size	= { x = 1.5, y = 1.5, z = 1.0 },
 		Colour	= { r = 204, g = 204, b = 0 },
 		Marker	= 1,
 		Blips	= {
-			Pos		= { x = -1031.268, y = -2741.703, z = 12.796 },
+			Pos		= { x = -1025.9, y = -3011.88, z = 13.95 },
 			Sprite	= 90,
 			Colour	= 5,
 			Scale	= 1.2,
@@ -36,7 +36,7 @@ Config.Airports = {
 
 Config.Clothes = {
 	LSX = {
-		Pos		= { x = -1142.651, y = -2703.666, z = 12.957 },
+		Pos		= { x = -941.73, y = -2957.86, z = 13.95 },
 		Size	= { x = 1.5, y = 1.5, z = 1.0 },
 		Colour	= { r = 204, g = 204, b = 0 },
 		Marker	= 1
@@ -51,12 +51,12 @@ Config.Clothes = {
 
 Config.Vehicles = {
 	LSX = {
-		Pos		= { x = -1154.058, y = -2715.184, z = 18.887 },
+		Pos		= { x = -1025.9, y = -3011.88, z = 13.95 },
 		Size	= { x = 1.5, y = 1.5, z = 1.0 },
 		Colour	= { r = 204, g = 204, b = 0 },
 		Marker	= 1,
 		SpawnPoint = {
-			Pos		= { x = -1359.840, y = -2719.073, z = 13.944 },
+			Pos		= { x = -1051.14, y = -2996.84, z = 13.95 },
 			Heading	= 330.166
 		},
 		Deleter	= {

@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
 						end
 					end, GetPlayerServerId(PlayerId()), 'weed_processing')
 				else
-					ESX.TriggerServerCallback('esx_drugs:cannabis_count', function(xCannabis)
+					ESX.TriggerServerCallback('esx_weed:cannabis_count', function(xCannabis)
 						ProcessWeed(xCannabis)
 					end)
 					
@@ -49,7 +49,7 @@ end)
 function ProcessWeed(xCannabis)
 	isProcessing = true
 	ESX.ShowNotification(_U('weed_processingstarted'))
-  TriggerServerEvent('esx_drugs:processCannabis')
+  TriggerServerEvent('esx_weed:processCannabis')
 	if(xCannabis <= 5) then
 		xCannabis = 0
 	end
@@ -62,8 +62,8 @@ function ProcessWeed(xCannabis)
 
 		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.WeedProcessing.coords, false) > 4 then
 			ESX.ShowNotification(_U('weed_processingtoofar'))
-			TriggerServerEvent('esx_drugs:cancelProcessing')
-			TriggerServerEvent('esx_drugs:outofbound')
+			TriggerServerEvent('esx_weed:cancelProcessing')
+			TriggerServerEvent('esx_weed:outofbound')
 			break
 		end
 	end
@@ -93,7 +93,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 38) and not isPickingUp then
 				isPickingUp = true
 
-				ESX.TriggerServerCallback('esx_drugs:canPickUp', function(canPickUp)
+				ESX.TriggerServerCallback('esx_weed:canPickUp', function(canPickUp)
 					if canPickUp then
 						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 
@@ -106,7 +106,7 @@ Citizen.CreateThread(function()
 						table.remove(weedPlants, nearbyID)
 						spawnedWeeds = spawnedWeeds - 1
 		
-						TriggerServerEvent('esx_drugs:pickedUpCannabis')
+						TriggerServerEvent('esx_weed:pickedUpCannabis')
 					else
 						ESX.ShowNotification(_U('weed_inventoryfull'))
 					end
