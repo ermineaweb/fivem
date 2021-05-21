@@ -75,7 +75,7 @@ Citizen.CreateThread(function()
 
             if Config.Sounds then  
             -- TriggerEvent("seatbelt:sounds", "buckle", Config.Volume)
-            PlaySound(-1, "Success", "DLC_HEIST_HACKING_SNAKE_SOUNDS", 0, 0, 1)
+            PlaySound(-1, "CLOSED", "MP_PROPERTIES_ELEVATOR_DOORS", 0, 0, 1)
             end
             if Config.Notification then
             Notify(Config.Strings.seatbelt_on)
