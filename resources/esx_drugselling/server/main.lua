@@ -27,11 +27,11 @@ end
 CountCops()
 
 function isIntrested()
-  	local percent = math.random(1, 2)
+  	local percent = math.random(1, 4)
   	if percent == 1  then 
-		return true
-  	else 
 		return false
+	else 
+		return true
   	end
 end
 
@@ -82,8 +82,10 @@ AddEventHandler('esx_npcdrugsales:vente', function(deal)
 			xPlayer.addAccountMoney('black_money', PrixFinal)
 			TriggerClientEvent('esx:showNotification', source, GuTu.Text['done'] .. QTE .. LABEL .. GuTu.Text['for'] .. PrixFinal)
 			
-			local poukichance = math.random (1,4)
-			if poukichance == 1 then
+		else
+			TriggerClientEvent('esx:showNotification', source, GuTu.Text['no'])
+			-- local poukichance = math.random (1,5)
+			-- if poukichance == 1 then
 				for i=1, #xPlayers, 1 do
 					local xPlayer2 = ESX.GetPlayerFromId(xPlayers[i])
 					if xPlayer2.job.name == 'police' then
@@ -91,9 +93,7 @@ AddEventHandler('esx_npcdrugsales:vente', function(deal)
 						TriggerClientEvent('esx_npcdrugsales:poucave', xPlayers[i], deal.x, deal.y, deal.z)
 					end
 				end
-			end
-		else
-			TriggerClientEvent('esx:showNotification', source, GuTu.Text['no'])
+			-- end
 		end
 	else
 		TriggerClientEvent('esx:showNotification', source, GuTu.Text['cops1'] .. CopsConnected .. "/" .. GuTu.CopsNeeds .. GuTu.Text['cops2'])

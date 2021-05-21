@@ -11,14 +11,29 @@ Config.Zones = {
 		Items = {
 			{
 				name = "bread",
-				label = "bread",
+				label = "Burger",
+				price = 100
+			},
+			{
+				name = "pizza",
+				label = "Pizza",
+				price = 100
+			},
+			{
+				name = "soda",
+				label = "Soda",
 				price = 100
 			},
 			{
 				name = "water",
-				label = "water",
+				label = "Eau",
 				price = 100
-			}
+			},
+			{
+				name = "drill",
+				label = "Chalumeau",
+				price = 1000
+			},
 		},
 		Pos = {
 			vector3(373.8, 325.8, 102.5),
@@ -40,15 +55,15 @@ Config.Zones = {
 	RobsLiquor = {
 		Items = {
 			{
-				name = "bread",
-				label = "bread",
+				name = "pizza",
+				label = "Pizza",
 				price = 100
 			},
 			{
-				name = "water",
-				label = "water",
+				name = "soda",
+				label = "Soda",
 				price = 100
-			}
+			},
 		},
 		Pos = {
 			vector3(1135.8, -982.2, 45.4),
@@ -72,14 +87,29 @@ Config.Zones = {
 		Items = {
 			{
 				name = "bread",
-				label = "bread",
+				label = "Burger",
+				price = 100
+			},
+			{
+				name = "pizza",
+				label = "Pizza",
+				price = 100
+			},
+			{
+				name = "soda",
+				label = "Soda",
 				price = 100
 			},
 			{
 				name = "water",
-				label = "water",
+				label = "Eau",
 				price = 100
-			}
+			},
+			{
+				name = "drill",
+				label = "Chalumeau",
+				price = 1000
+			},
 		},
 		Pos = {
 			vector3(-48.5,  -1757.5, 28.4),
