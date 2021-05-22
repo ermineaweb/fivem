@@ -172,9 +172,7 @@ Citizen.CreateThread(function()
 					letSleep = false
 
 					if v.PoliceRequired <= connectedPolice and v.Marker.Type ~= -1 then
-						-- DrawMarker(v.Marker.Type, v.Coords, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, 100, false, false, 2, false, false, false, false)
-						DrawMarker(1, v.Coords, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
-			
+						DrawMarker(v.Marker.Type, v.Coords, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, 100, false, false, 2, false, false, false, false)
 					end
 
 					if v.PoliceRequired <= connectedPolice and distance < v.Marker.x then

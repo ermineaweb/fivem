@@ -1,6 +1,6 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.4,
-	vehicles = 0.4,
+	peds = 0.2,
+	vehicles = 0.3,
 	parked = 0.2
 }
 

@@ -30,9 +30,7 @@ CreateThread(function()
                 -- ensure per-frame tick
                 relevanceTimer = 0
 
-                -- DrawMarker(29, data.coords.x, data.coords.y, data.coords.z, 0, 0, 0, 0.0, 0, 0, 1.0, 1.0, 1.0, 0, 150, 0, 120, false, true, 2, false, nil, nil, false)
-                DrawMarker(1, data.coords.x, data.coords.y, data.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
-				
+                DrawMarker(29, data.coords.x, data.coords.y, data.coords.z, 0, 0, 0, 0.0, 0, 0, 1.0, 1.0, 1.0, 0, 150, 0, 120, false, true, 2, false, nil, nil, false)
             else
                 -- put the relevance timer back to the way it was
                 relevanceTimer = 500

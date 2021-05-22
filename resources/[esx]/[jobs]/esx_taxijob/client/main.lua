@@ -519,9 +519,7 @@ Citizen.CreateThread(function()
 
 				if v.Type ~= -1 and distance < Config.DrawDistance then
 					letSleep = false
-					-- DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, false, 2, v.Rotate, nil, nil, false)
-					DrawMarker(1, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
-		
+					DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, false, 2, v.Rotate, nil, nil, false)
 				end
 
 				if distance < v.Size.x then
@@ -637,9 +635,7 @@ Citizen.CreateThread(function()
 							end
 
 							if targetCoords then
-								-- DrawMarker(36, targetCoords.x, targetCoords.y, targetCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
-								DrawMarker(1, targetCoords.x, targetCoords.y, targetCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
-		
+								DrawMarker(36, targetCoords.x, targetCoords.y, targetCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
 							end
 						else
 							RemoveBlip(CurrentCustomerBlip)
@@ -674,9 +670,8 @@ Citizen.CreateThread(function()
 							CustomerEnteredVehicle = true
 						end
 					else
-						-- DrawMarker(36, customerCoords.x, customerCoords.y, customerCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
-						DrawMarker(1, customerCoords.x, customerCoords.y, customerCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
-		
+						DrawMarker(36, customerCoords.x, customerCoords.y, customerCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
+
 						if not CustomerEnteredVehicle then
 							if customerDistance <= 40.0 then
 
