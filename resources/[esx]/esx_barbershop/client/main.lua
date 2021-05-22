@@ -127,7 +127,7 @@ Citizen.CreateThread(function()
 			if distance < Config.DrawDistance then
 				letSleep = false
 				-- DrawMarker(Config.MarkerType, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, nil, nil, false)
-				ESX.DrawCustomMarker("primary", v) 
+				ESX.Markers.DrawCustomMarker("primary", v) 
 				if distance < 1.5 then
 					isInMarker, currentZone = true, k
 				end
