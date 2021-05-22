@@ -127,8 +127,9 @@ Citizen.CreateThread(function()
 			if distance < Config.DrawDistance then
 				letSleep = false
 				-- DrawMarker(Config.MarkerType, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, nil, nil, false)
-				DrawMarker(27, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 1.0), 255, 255, 255, 100, false, false, 2, true, nil, nil, false)
-
+				DrawMarker(27, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
+				-- DrawMarker(1, 1190.4223632812, -3329.8059082032, 5.6322560310364 - 1.0001, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 13, 232, 255, 155, 0, 0, 2, 0, 0, 0, 0)
+        
 				if distance < 1.5 then
 					isInMarker, currentZone = true, k
 				end
