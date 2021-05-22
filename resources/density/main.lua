@@ -1,7 +1,7 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.5,
-	vehicles = 0.5,
-	parked = 0.3
+	peds = 0.4,
+	vehicles = 0.4,
+	parked = 0.2
 }
 
 local isHost = false
@@ -33,8 +33,8 @@ Citizen.CreateThread(function()
 		end
 
 		SetGarbageTrucks(false) -- Stop garbage trucks from randomly spawning
-		SetRandomBoats(false) -- Stop random boats from spawning in the water.
-		SetCreateRandomCops(false) -- disable random cops walking/driving around.
+		SetRandomBoats(true) -- Stop random boats from spawning in the water.
+		SetCreateRandomCops(true) -- disable random cops walking/driving around.
 		SetCreateRandomCopsNotOnScenarios(false) -- stop random cops (not in a scenario) from spawning.
 		SetCreateRandomCopsOnScenarios(false) -- stop random cops (in a scenario) from spawning.
 		SetIgnoreLowPriorityShockingEvents(PlayerPedId(), true)

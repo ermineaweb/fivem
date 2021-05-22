@@ -1,7 +1,7 @@
 Config = {}
 Config.Locale = 'fr'
 
-Config.Price = 350
+Config.Price = 320
 
 Config.DrawDistance = 50.0
 Config.MarkerSize   = {x = 1.5, y = 1.5, z = 1.0}

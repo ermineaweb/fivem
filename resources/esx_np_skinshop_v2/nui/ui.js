@@ -154,7 +154,7 @@ $(function(){
             }
             
         }
-        if(data.which == 65 || (data.which == 65 && data.repeat)){ //a if
+        if(data.which == 81 || (data.which == 81 && data.repeat)){ //a if
             //lastTime = Date.now();
             $.post('https://esx_np_skinshop_v2/rotate', JSON.stringify("left"));
         }
