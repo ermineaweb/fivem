@@ -195,7 +195,8 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(Config.Marker.type, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, Config.Marker.a, false, false, 2, Config.Marker.rotate, nil, nil, false)
+						-- DrawMarker(Config.Marker.type, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, Config.Marker.a, false, false, 2, Config.Marker.rotate, nil, nil, false)
+						ESX.Game.DrawCustomMarker(v)
 						letSleep = false
 
 						if distance < Config.Marker.x then
@@ -209,7 +210,8 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(Config.Marker.type, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, Config.Marker.a, false, false, 2, Config.Marker.rotate, nil, nil, false)
+						-- DrawMarker(Config.Marker.type, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, Config.Marker.a, false, false, 2, Config.Marker.rotate, nil, nil, false)
+						ESX.Game.DrawCustomMarker(v)
 						letSleep = false
 
 						if distance < Config.Marker.x then
@@ -223,7 +225,8 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.Spawner)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(v.Marker.type, v.Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						-- DrawMarker(v.Marker.type, v.Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						ESX.Game.DrawCustomMarker(v.Spawner)
 						letSleep = false
 
 						if distance < v.Marker.x then
@@ -237,7 +240,8 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.Spawner)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(v.Marker.type, v.Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						-- DrawMarker(v.Marker.type, v.Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						ESX.Game.DrawCustomMarker(v.Spawner)
 						letSleep = false
 
 						if distance < v.Marker.x then
@@ -251,7 +255,8 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.From)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(v.Marker.type, v.From, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						-- DrawMarker(v.Marker.type, v.From, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+						ESX.Game.DrawCustomMarker(v.From)
 						letSleep = false
 
 						if distance < v.Marker.x then
@@ -302,7 +307,8 @@ Citizen.CreateThread(function()
 				local distance = #(playerCoords - v.From)
 
 				if distance < Config.DrawDistance then
-					DrawMarker(v.Marker.type, v.From, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+					-- DrawMarker(v.Marker.type, v.From, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Marker.x, v.Marker.y, v.Marker.z, v.Marker.r, v.Marker.g, v.Marker.b, v.Marker.a, false, false, 2, v.Marker.rotate, nil, nil, false)
+					ESX.Game.DrawCustomMarker(v.From)
 					letSleep = false
 
 					if distance < v.Marker.x then

@@ -102,24 +102,28 @@ Citizen.CreateThread(function()
 			-- Clothes
 			for k,v in pairs(Config.Clothes) do
 				if (GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-					DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					-- DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					ESX.Game.DrawCustomMarker(v.Pos)
 				end
 			end
 
 			-- Jobmenu
 			for k,v in pairs(Config.Airports) do
 				if (GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-					DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					-- DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					ESX.Game.DrawCustomMarker(v.Pos)
 				end
 			end
 
 			-- Vehicles (garage)
 			for k,v in pairs(Config.Vehicles) do
 				if (GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-					DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					-- DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Colour.r, v.Colour.g, v.Colour.b, 100, false, true, 2, false, false, false, false)
+					ESX.Game.DrawCustomMarker(v.Pos)
 				end
 				if (GetDistanceBetweenCoords(coords, v.Deleter.Pos.x, v.Deleter.Pos.y, v.Deleter.Pos.z, true) < Config.DrawDistance) then
-					DrawMarker(v.Marker, v.Deleter.Pos.x, v.Deleter.Pos.y, v.Deleter.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Deleter.Size.x, v.Deleter.Size.y, v.Deleter.Size.z, v.Deleter.Colour.r, v.Deleter.Colour.g, v.Deleter.Colour.b, 100, false, true, 2, false, false, false, false)
+					-- DrawMarker(v.Marker, v.Deleter.Pos.x, v.Deleter.Pos.y, v.Deleter.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Deleter.Size.x, v.Deleter.Size.y, v.Deleter.Size.z, v.Deleter.Colour.r, v.Deleter.Colour.g, v.Deleter.Colour.b, 100, false, true, 2, false, false, false, false)
+					ESX.Game.DrawCustomMarker(v.Deleter.Pos)
 				end
 			end
 

@@ -182,7 +182,8 @@ Citizen.CreateThread(function()
 						letSleep = false
 
 						if Config.HospMarker.Type ~= -1 then
-							DrawMarker(Config.HospMarker.Type, v.Coords[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.HospMarker.x, Config.HospMarker.y, Config.HospMarker.z, Config.HospMarker.r, Config.HospMarker.g, Config.HospMarker.b, 100, false, true, 2, false, nil, nil, false)
+							-- DrawMarker(Config.HospMarker.Type, v.Coords[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.HospMarker.x, Config.HospMarker.y, Config.HospMarker.z, Config.HospMarker.r, Config.HospMarker.g, Config.HospMarker.b, 100, false, true, 2, false, nil, nil, false)
+							ESX.Game.DrawCustomMarker(v.Coords[i])
 						end
 
 						if distance < Config.HospMarker.x then
@@ -202,7 +203,8 @@ Citizen.CreateThread(function()
 						letSleep = false
 
 						if Config.SurgMarker.Type ~= -1 then
-							DrawMarker(Config.SurgMarker.Type, v.Coords[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.SurgMarker.x, Config.SurgMarker.y, Config.SurgMarker.z, Config.SurgMarker.r, Config.SurgMarker.g, Config.SurgMarker.b, 100, false, true, 2, false, nil, nil, false)
+							-- DrawMarker(Config.SurgMarker.Type, v.Coords[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.SurgMarker.x, Config.SurgMarker.y, Config.SurgMarker.z, Config.SurgMarker.r, Config.SurgMarker.g, Config.SurgMarker.b, 100, false, true, 2, false, nil, nil, false)
+							ESX.Game.DrawCustomMarker(v.Coords[i])
 						end
 
 						if distance < Config.SurgMarker.x then

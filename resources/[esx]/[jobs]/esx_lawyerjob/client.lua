@@ -31,7 +31,8 @@ AddEventHandler('esx:playerLoaded', function(xPlayer)
   		Citizen.Wait(0)
 
   		if(PlayerData.job ~= nil and PlayerData.job.name == "avocat") then
-  			DrawMarker(1,takeJob.x,takeJob.y,takeJob.z-1,0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
+  			-- DrawMarker(1,takeJob.x,takeJob.y,takeJob.z-1,0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
+			ESX.Game.DrawCustomMarker(takeJob)
 
   			if(GetDistanceBetweenCoords(takeJob.x,takeJob.y,takeJob.z,  GetEntityCoords(GetPlayerPed(-1)), true) < 3) then 
   				Info("Press ~g~E~w~ to open your locker.")
@@ -65,7 +66,9 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(10)
 		local distance = GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)),x,y,z, true)
-		DrawMarker(1,x,y,z-1,0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
+		-- DrawMarker(1,x,y,z-1,0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
+		ESX.Game.DrawCustomMarker({x,y,z-1})
+
 		if(distance > 3 and menuShowed) then
 			ESX.UI.Menu.CloseAll()
 		end

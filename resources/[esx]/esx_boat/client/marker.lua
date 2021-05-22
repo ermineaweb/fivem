@@ -88,7 +88,8 @@ Citizen.CreateThread(function()
 			local distance = GetDistanceBetweenCoords(coords, Config.Zones.BoatShops[i].Outside, true)
 
 			if distance < Config.DrawDistance then
-				DrawMarker(Config.MarkerType, Config.Zones.BoatShops[i].Outside, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, nil, nil, false)
+				-- DrawMarker(Config.MarkerType, Config.Zones.BoatShops[i].Outside, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, nil, nil, false)
+				ESX.Game.DrawCustomMarker(Config.Zones.BoatShops[i].Outside)
 				letSleep = false
 			end
 
@@ -103,7 +104,8 @@ Citizen.CreateThread(function()
 			local distance = GetDistanceBetweenCoords(coords, Config.Zones.Garages[i].GaragePos, true)
 
 			if distance < Config.DrawDistance then
-				DrawMarker(Config.MarkerType, Config.Zones.Garages[i].GaragePos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, nil, nil, false)
+				-- DrawMarker(Config.MarkerType, Config.Zones.Garages[i].GaragePos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, nil, nil, false)
+				ESX.Game.DrawCustomMarker(Config.Zones.Garages[i].GaragePos)
 				letSleep = false
 			end
 
@@ -116,7 +118,8 @@ Citizen.CreateThread(function()
 			distance = GetDistanceBetweenCoords(coords, Config.Zones.Garages[i].StorePos, true)
 
 			if distance < Config.DrawDistance then
-				DrawMarker(Config.MarkerType, Config.Zones.Garages[i].StorePos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.StoreMarker.x, Config.StoreMarker.y, Config.StoreMarker.z, Config.StoreMarker.r, Config.StoreMarker.g, Config.StoreMarker.b, 100, false, true, 2, false, nil, nil, false)
+				-- DrawMarker(Config.MarkerType, Config.Zones.Garages[i].StorePos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.StoreMarker.x, Config.StoreMarker.y, Config.StoreMarker.z, Config.StoreMarker.r, Config.StoreMarker.g, Config.StoreMarker.b, 100, false, true, 2, false, nil, nil, false)
+				ESX.Game.DrawCustomMarker(Config.Zones.Garages[i].StorePos)
 				letSleep = false
 			end
 

@@ -519,7 +519,8 @@ Citizen.CreateThread(function()
 
 				if v.Type ~= -1 and distance < Config.DrawDistance then
 					letSleep = false
-					DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, false, 2, v.Rotate, nil, nil, false)
+					-- DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, false, 2, v.Rotate, nil, nil, false)
+					ESX.Game.DrawCustomMarker(v.Pos)
 				end
 
 				if distance < v.Size.x then
@@ -635,7 +636,8 @@ Citizen.CreateThread(function()
 							end
 
 							if targetCoords then
-								DrawMarker(36, targetCoords.x, targetCoords.y, targetCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
+								-- DrawMarker(36, targetCoords.x, targetCoords.y, targetCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
+								ESX.Game.DrawCustomMarker(targetCoords)
 							end
 						else
 							RemoveBlip(CurrentCustomerBlip)
@@ -670,7 +672,8 @@ Citizen.CreateThread(function()
 							CustomerEnteredVehicle = true
 						end
 					else
-						DrawMarker(36, customerCoords.x, customerCoords.y, customerCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
+						-- DrawMarker(36, customerCoords.x, customerCoords.y, customerCoords.z + 1.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 234, 223, 72, 155, false, false, 2, true, nil, nil, false)
+						ESX.Game.DrawCustomMarker(customerCoords)
 
 						if not CustomerEnteredVehicle then
 							if customerDistance <= 40.0 then

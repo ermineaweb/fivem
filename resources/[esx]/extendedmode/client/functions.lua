@@ -1238,6 +1238,6 @@ end)
 
 
 -- CUSTOM FUNCTIONS
-ESX.Game.DrawMarker = function(pos) 
+ESX.Game.DrawCustomMarker = function(pos) 
 	DrawMarker(1, pos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.3), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
 end
