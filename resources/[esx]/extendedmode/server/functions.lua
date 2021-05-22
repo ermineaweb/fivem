@@ -320,3 +320,9 @@ if ExM.IsOneSync then
 		return CreateObjectNoOffset(model, coords.xyz, true, dynamic)
 	end
 end
+
+
+-- Custom functions
+ESX.DrawCustomMarker = function(type, position) 
+	DrawMarker(1, position, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.4), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
+end
