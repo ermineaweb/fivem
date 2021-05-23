@@ -1,7 +1,7 @@
 local density = { -- 0.0 to 1.0
-	peds = 0.1,
-	vehicles = 0.1,
-	parked = 0.1
+	peds = 0.2,
+	vehicles = 0.3,
+	parked = 0.2
 }
 
 local isHost = false
