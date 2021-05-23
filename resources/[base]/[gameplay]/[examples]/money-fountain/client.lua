@@ -30,8 +30,7 @@ CreateThread(function()
                 -- ensure per-frame tick
                 relevanceTimer = 0
 
-                -- DrawMarker(29, data.coords.x, data.coords.y, data.coords.z, 0, 0, 0, 0.0, 0, 0, 1.0, 1.0, 1.0, 0, 150, 0, 120, false, true, 2, false, nil, nil, false)
-                ESX.Game.DrawCustomMarker(data.coords)
+                DrawMarker(29, data.coords.x, data.coords.y, data.coords.z, 0, 0, 0, 0.0, 0, 0, 1.0, 1.0, 1.0, 0, 150, 0, 120, false, true, 2, false, nil, nil, false)
             else
                 -- put the relevance timer back to the way it was
                 relevanceTimer = 500
