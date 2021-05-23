@@ -1224,7 +1224,8 @@ CreateThread(function()
 			else
 				if #(pedCoords - marker.pos) < marker.range then
 					markerWait = 1
-					DrawMarker(marker.type, marker.pos, marker.dir, marker.rot, marker.scale, marker.r, marker.g, marker.b, marker.a, marker.bob, marker.faceCam, 0, false, marker.dict, marker.name, false)
+					-- DrawMarker(marker.type, marker.pos, marker.dir, marker.rot, marker.scale, marker.r, marker.g, marker.b, marker.a, marker.bob, marker.faceCam, 0, false, marker.dict, marker.name, false)
+					ESX.Game.DrawCustomMarker(marker.pos)
 				end
 				if #(pedCoords - marker.pos) < marker.scale.x then
 					marker.isInside = true
@@ -1239,5 +1240,6 @@ end)
 
 -- CUSTOM FUNCTIONS
 ESX.Game.DrawCustomMarker = function(pos) 
-	DrawMarker(1, pos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.3), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
+	-- DrawMarker(1, pos, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, vector3(1.5, 1.5, 0.3), 13, 232, 255, 155, false, false, 2, false, nil, nil, false)
+	ESX.Game.DrawCustomMarker(pos)
 end

@@ -50,7 +50,8 @@ Citizen.CreateThread(function()
 			local distance = GetDistanceBetweenCoords(coords, Config.Zones[i], true)
 
 			if distance < Config.DrawDistance then
-				DrawMarker(Config.MarkerType, Config.Zones[i], 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.ZoneSize.x, Config.ZoneSize.y, Config.ZoneSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
+				-- DrawMarker(Config.MarkerType, Config.Zones[i], 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.ZoneSize.x, Config.ZoneSize.y, Config.ZoneSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
+				ESX.Game.DrawCustomMarker(Config.Zones[i])
 			end
 
 			if distance < (Config.ZoneSize.x / 2) then
