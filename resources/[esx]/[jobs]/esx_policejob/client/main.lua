@@ -1250,8 +1250,7 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.Cloakrooms[i])
 
 					if distance < Config.DrawDistance then
-						-- DrawMarker(Config.MarkerType.Cloakrooms, v.Cloakrooms[i], 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
-						ESX.Game.DrawCustomMarker(v.Cloakrooms[i])
+						DrawMarker(Config.MarkerType.Cloakrooms, v.Cloakrooms[i], 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 						letSleep = false
 
 						if distance < Config.MarkerSize.x then
@@ -1264,8 +1263,7 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.Armories[i])
 
 					if distance < Config.DrawDistance then
-						-- DrawMarker(Config.MarkerType.Armories, v.Armories[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
-						ESX.Game.DrawCustomMarker(v.Armories[i])
+						DrawMarker(Config.MarkerType.Armories, v.Armories[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 						letSleep = false
 
 						if distance < Config.MarkerSize.x then
@@ -1278,8 +1276,7 @@ Citizen.CreateThread(function()
 					local distance = #(playerCoords - v.Vehicles[i].Spawner)
 
 					if distance < Config.DrawDistance then
-						-- DrawMarker(Config.MarkerType.Vehicles, v.Vehicles[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
-						ESX.Game.DrawCustomMarker(v.Vehicles[i].Spawner)
+						DrawMarker(Config.MarkerType.Vehicles, v.Vehicles[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 						letSleep = false
 
 						if distance < Config.MarkerSize.x then
@@ -1292,8 +1289,7 @@ Citizen.CreateThread(function()
 					local distance =  #(playerCoords - v.Helicopters[i].Spawner)
 
 					if distance < Config.DrawDistance then
-						-- DrawMarker(Config.MarkerType.Helicopters, v.Helicopters[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
-						ESX.Game.DrawCustomMarker(v.Helicopters[i].Spawner)
+						DrawMarker(Config.MarkerType.Helicopters, v.Helicopters[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 						letSleep = false
 
 						if distance < Config.MarkerSize.x then
@@ -1307,8 +1303,7 @@ Citizen.CreateThread(function()
 						local distance = #(playerCoords - v.BossActions[i])
 
 						if distance < Config.DrawDistance then
-							-- DrawMarker(Config.MarkerType.BossActions, v.BossActions[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
-							ESX.Game.DrawCustomMarker(v.BossActions[i])
+							DrawMarker(Config.MarkerType.BossActions, v.BossActions[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 							letSleep = false
 
 							if distance < Config.MarkerSize.x then

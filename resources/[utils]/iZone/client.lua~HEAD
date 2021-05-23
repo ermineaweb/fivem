@@ -39,7 +39,8 @@ Citizen.CreateThread(function()
 
 		if #points > 0 then
 			for i = 1, #points do
-				DrawMarker(0, points[i].x, points[i].y, points[i].z, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 3.0, 46, 89, 227, 230, 0, 0, 0,0)
+				-- DrawMarker(0, points[i].x, points[i].y, points[i].z, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 3.0, 46, 89, 227, 230, 0, 0, 0,0)
+				ESX.Game.DrawCustomMarker(points[i])
 				draw3DText(points[i].x, points[i].y, points[i].z + 2.01 , "Point ~r~" .. i, 1, 0.5, 0.5)
 			end
 		end

@@ -348,13 +348,15 @@ Citizen.CreateThread(function()
 						TriggerEvent("izone:getZoneCenter", v.Zone, function(center)
 							if (not(center == nil)) then
 								if(v.Marker ~= -1 and GetDistanceBetweenCoords(coords, center.x, center.y, center.z, true) < Config.DrawDistance) then
-									DrawMarker(v.Marker, center.x, center.y, center.z - 1, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+									-- DrawMarker(v.Marker, center.x, center.y, center.z - 1, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+									ESX.Game.DrawCustomMarker(center)
 								end
 							end
 						end)
 					else
 						if(v.Marker ~= -1 and GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-							DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+							-- DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+							ESX.Game.DrawCustomMarker(v.Pos)
 						end
 					end
 				end
@@ -370,7 +372,8 @@ Citizen.CreateThread(function()
 		local coords = GetEntityCoords(PlayerPedId())
 		for k,v in pairs(Config.PublicZones) do
 			if(v.Marker ~= -1 and GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-				DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+				-- DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+				ESX.Game.DrawCustomMarker(v.Pos)
 			end
 		end
 	end
