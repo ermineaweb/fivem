@@ -32,5 +32,29 @@ services:
     depends_on:
       - fivem
 
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: dbwp
+      WORDPRESS_DB_USER: rom
+      WORDPRESS_DB_PASSWORD: rom
+      WORDPRESS_DB_NAME: fivemdb
+    volumes:
+      - wordpress:/var/www/html
+
+  dbwp:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: fivemdb
+      MYSQL_USER: rom
+      MYSQL_PASSWORD: rom
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
 volumes:
   mariadb:
