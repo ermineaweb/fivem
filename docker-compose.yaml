@@ -36,7 +36,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8080:80
+      - 6000:80
     environment:
       WORDPRESS_DB_HOST: dbwp
       WORDPRESS_DB_USER: rom
