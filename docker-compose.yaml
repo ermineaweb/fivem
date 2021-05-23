@@ -54,7 +54,9 @@ services:
       MYSQL_PASSWORD: rom
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
-      - db:/var/lib/mysql
+      - dbwp:/var/lib/mysql
 
 volumes:
   mariadb:
+  wordpress:
+  dbwp:
