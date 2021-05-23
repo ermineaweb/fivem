@@ -8,6 +8,7 @@ Locales ['fr'] = {
   ['weed_processingenough'] = 'vous devez avoir ~b~5x~s~ ~g~Weed~s~ pour lancer une transformation.',
   ['weed_processed'] = 'vous avez transformé ~b~5x~s~ ~g~Weed~s~ en ~b~1x~s~ ~g~Pochon de Weed~s~',
   ['weed_processingtoofar'] = 'la transformation a été ~r~annulée~s~. Vous êtes sorti de la zone.',
+  ['weed_needmoreplayers'] = 'Vous devez être au moins deux pour ramasser de la ~g~Weed~s~',
 
   -- drug dealer
   ['dealer_prompt'] = 'appuyez sur ~INPUT_CONTEXT~ pour parler avec le ~r~Drug Dealer~s~.',

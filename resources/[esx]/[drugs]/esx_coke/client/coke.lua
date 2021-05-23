@@ -25,19 +25,24 @@ Citizen.CreateThread(function()
 			end
 
 			if IsControlJustReleased(0, 38) and not isProcessing then
-				if Config.LicenseEnable then
-					ESX.TriggerServerCallback('esx_license:checkLicense', function(hasProcessingLicense)
-						if hasProcessingLicense then
-							ProcessCoke()
-						else
-							OpenBuyLicenseMenu('coke_processing')
-						end
-					end, GetPlayerServerId(PlayerId()), 'coke_processing')
+				local closestPlayer, closestPlayerDistance = ESX.Game.GetClosestPlayer()
+				if closestPlayer == -1 or closestPlayerDistance > 50.0 then
+					ESX.ShowNotification('Vous devez être au moins deux pour faire cela.')
 				else
-					ESX.TriggerServerCallback('esx_coke:coke_count', function(xCoke)
-						ProcessCoke(xCoke)
-					end)
-					
+					if Config.LicenseEnable then
+						ESX.TriggerServerCallback('esx_license:checkLicense', function(hasProcessingLicense)
+							if hasProcessingLicense then
+								ProcessCoke()
+							else
+								OpenBuyLicenseMenu('coke_processing')
+							end
+						end, GetPlayerServerId(PlayerId()), 'coke_processing')
+					else
+						ESX.TriggerServerCallback('esx_coke:coke_count', function(xCoke)
+							ProcessCoke(xCoke)
+						end)
+						
+					end
 				end
 			end
 		else

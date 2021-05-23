@@ -8,7 +8,7 @@ Config.blackMoney = true
 
 local globalCooldown = {hour = 0, minute = 120, second = 0}
 local globalMoney = {1000, 3000}
-local globalBlip = true
+local globalBlip = false
 local globalCops = 0
 
 Config.Shops = {

@@ -91,28 +91,35 @@ Citizen.CreateThread(function()
 			end
 
 			if IsControlJustReleased(0, 38) and not isPickingUp then
-				isPickingUp = true
 
-				ESX.TriggerServerCallback('esx_weed:canPickUp', function(canPickUp)
-					if canPickUp then
-						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
+				local closestPlayer, closestPlayerDistance = ESX.Game.GetClosestPlayer()
+				if closestPlayer == -1 or closestPlayerDistance > 50.0 then
+					ESX.ShowNotification('Vous devez être au moins deux pour faire cela.')
+				else
+					isPickingUp = true
 
-						Citizen.Wait(500)
-						ClearPedTasks(playerPed)
-						Citizen.Wait(1500)
-		
-						ESX.Game.DeleteObject(nearbyObject)
-		
-						table.remove(weedPlants, nearbyID)
-						spawnedWeeds = spawnedWeeds - 1
-		
-						TriggerServerEvent('esx_weed:pickedUpCannabis')
-					else
-						ESX.ShowNotification(_U('weed_inventoryfull'))
-					end
+					ESX.TriggerServerCallback('esx_weed:canPickUp', function(canPickUp)
+						if canPickUp then
+							TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
+	
+							Citizen.Wait(500)
+							ClearPedTasks(playerPed)
+							Citizen.Wait(1500)
+			
+							ESX.Game.DeleteObject(nearbyObject)
+			
+							table.remove(weedPlants, nearbyID)
+							spawnedWeeds = spawnedWeeds - 1
+			
+							TriggerServerEvent('esx_weed:pickedUpCannabis')
+						else
+							ESX.ShowNotification(_U('weed_inventoryfull'))
+						end
+	
+						isPickingUp = false
+					end, 'weed')
+				end
 
-					isPickingUp = false
-				end, 'weed')
 			end
 		else
 			Citizen.Wait(500)
