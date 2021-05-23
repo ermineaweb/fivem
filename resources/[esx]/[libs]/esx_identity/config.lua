@@ -3,7 +3,7 @@ Config.Locale           = 'en'
 
 -- [Config.EnableCommands]
 -- Enables Commands Such As /char and /chardel
-Config.EnableCommands   = true
+Config.EnableCommands   = false
 
 -- [Config.UseSteamID]
 -- Changes the identifiers from Rockstar License To Steam. In order to use this, you will have to have
@@ -15,7 +15,7 @@ Config.EnableCommands   = true
 -- before they ever join the server. This still needs time of testing to see what issues that we have
 -- in linux servers and windows servers, and which artifacts it will work on, and which artifacts it
 -- will not work on. If you don't know a lot about this, I would suggest to set it false for now.
-Config.UseDeferrals     = false -- EXPERIMENTAL Character Registration Method.
+Config.UseDeferrals     = true -- EXPERIMENTAL Character Registration Method.
 
 
 -- These values are for the second input validation in server/main.lua

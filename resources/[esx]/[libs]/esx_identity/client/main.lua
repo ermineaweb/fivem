@@ -47,7 +47,7 @@ if not Config.UseDeferrals then
 		TriggerEvent('esx_skin:resetFirstSpawn')
 
 		if not isDead then
-			-- EnableGui(true)
+			EnableGui(true)
 		end
 	end)
 
