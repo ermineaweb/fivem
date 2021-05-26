@@ -9,7 +9,8 @@ Config.Locale                     = 'pl'
 Config.Gangs = {
 	Ballas = {
 		JobName = "ballas", -- need to be same as in SQL
-		Blip = { -- if you want blip on the map, just simply fill fields below. You can delete this section if neccessary.
+		-- if you want blip on the map, just simply fill fields below. You can delete this section if neccessary.
+		Blip = { 
 		  Pos     = { x = 425.130, y = -979.558, z = 30.711 },
 		  Sprite  = 59,
 		  Display = 4,
@@ -22,7 +23,7 @@ Config.Gangs = {
 			{x = 426.2, y = -981.14, z = 29.71 },
 		},
 		AuthorizedToBossActionsRanks = { -- ranks from SQL to have access to player management
-			"boss", "secondrank"
+			"rank4",
 		},
 		Vehicles = { -- gangs garage. You can delete this section, but remember to delete VehicleDeleters and Authorized Vehicles! You can add multiple garages.
 			{
